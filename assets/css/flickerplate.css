@@ -125,7 +125,7 @@
   font-size: 28px;
   font-size: 1.75rem;
 }
-@media only screen and (min-width: 43.813em) {
+@media (min-width: 43.813em) {
   .flickerplate ul.flicks > li .flick-title {
     line-height: 75px;
     line-height: 4.6875rem;
@@ -222,7 +222,7 @@
   z-index: 100;
 }
 
-@media screen and (max-width: 767px){
+@media (max-width: 767px){
     .flickerplate .dot-navigation {
     display: none;
     }
@@ -357,7 +357,7 @@
   -moz-transition: -moz-transform 0.2s ease-out;
   transition: transform 0.2s ease-out;
 }
-@media only screen and (min-width: 43.813em) {
+@media (min-width: 43.813em) {
   .flickerplate.animate-transform-slide ul.flicks {
     -webkit-transition: -webkit-transform 0.6s ease-out;
     -o-transition: -o-transform 0.6s ease-out;
@@ -374,7 +374,7 @@
   -ms-transition: left 0.2s ease-out 0s;
   transition: left 0.2s ease-out 0s;
 }
-@media only screen and (min-width: 43.813em) {
+@media (min-width: 43.813em) {
   .flickerplate.animate-transition-slide ul.flicks {
     -webkit-transition: left 0.6s ease-out 0s;
     -moz-transition: left 0.6s ease-out 0s;

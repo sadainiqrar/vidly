@@ -79,6 +79,7 @@ body, h1, h2, h3, h4, h5, h6, p, span, a, li, ul, div{
 body{
     background: #00100e !important;
     color: #fff !important;
+    overflow-x: hidden;
 }
 .recent-section{
     margin-top: -10%;
@@ -311,14 +312,17 @@ body{
     .download-image{
         display: block;
     }
+    .download-image img{
+        width: 100%;
+    }
     .download{
-        padding-top: 12%;
+        padding-top: 160px;
         padding-bottom: 30px;
     }
     .download h1{
         margin-left: 30%;
         margin-right: 30%;
-        width: 310px;
+        width: 60%;
         font-family: 'lato-black';
         color: #000;
     
@@ -328,14 +332,14 @@ body{
         margin-right: 30%;
         padding-top: 10px;
         padding-bottom: 10px;
-        width: 310px;   
+        width: 60%;
         font-family: 'lato-regular';
         color: #000; 
     }
     .download .download-actions{
         margin-left: 30%;
         margin-right: 30%;
-        width: 310px;    
+        width: 60%;
     }
     .download-button{
         width: 130px;
@@ -491,6 +495,20 @@ body{
         color: #000;
     }
 
+    .navbar-toggle{
+
+        padding: 12px 10px !important;
+    }
+    .navbar-default .navbar-toggle{
+        border-color: transparent !important;
+    }
+    .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+        background-color: transparent !important;
+    }
+    .navbar-default .navbar-toggle .icon-bar{
+        background-color: #fff !important;
+    }
+
     
 
 
@@ -512,25 +530,48 @@ body{
 
 
 
-    @media screen and (min-width: 768px) {
+    @media (min-width: 768px) {
         .navbar-default .navbar-collapse{
             background: transparent !important;
         }
         
       }
 
+    @media (max-width: 767px){
+
+        .download h1{
+           width: 100%;
+           
+           margin-left: 0%;
+           margin-right: 0%;
+        
+        }
+        .download p{
+            width: 100%;
+            
+           
+           margin-left: 0%;
+           margin-right: 0%;
+        }
+        .download .download-actions{
+            width: 100%;
+           
+            margin-left: 0%;
+            margin-right: 0%;
+        }
+
+    }
+
     
-    @media screen and (min-width: 768px) and (max-width: 992px) {
+    @media (min-width: 768px) and (max-width: 992px) {
         .overlay .play-label h5{
             margin-top: 10%;
             margin-bottom: 10%;
           font-size: 16px
       }
     }
-    @media screen and (max-width: 992px){
-        .download-image{
-            display: none;
-        }
+
+    @media (min-width: 768px) and (max-width: 992px){
 
         .download h1{
             margin-left: 10%;
@@ -544,6 +585,15 @@ body{
         .download .download-actions{
             margin-left: 10%;
             margin-right: 10%;
+        }
+    }
+    @media (max-width: 992px){
+        .download-image{
+            display: none;
+        }
+
+        .heading-container .action a{
+            font-size: 12px;
         }
         .bottom{
             display: none;
