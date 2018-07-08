@@ -82,7 +82,6 @@ body{
     overflow-x: hidden;
 }
 .recent-section{
-    margin-top: -10%;
 }
 .card{
     background-color: #19bc98;
@@ -195,9 +194,9 @@ body{
 
 
   .play-icon{
-      padding: 1% 4%;
+    padding: 1% 4%;
     float: left;
-    width: 20%;
+    width: 45px;
   }
   .play-icon img{
     width: 100%;
@@ -212,7 +211,12 @@ body{
 
   .overlay .play-label{
     float: left;
-    padding: 2%;
+    padding: 8px;
+    width: 50%;
+    height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 .card-title{
     font-weight: 700;
@@ -240,9 +244,50 @@ body{
 .heading-container .heading{
     padding: 0;
     margin: 0;
-    width: 100%;
+    width: 80px;
 
 }
+
+.desc{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.hide{
+    display: none
+}
+.description img{
+    width: 100%;
+}
+.description{
+    background: #fff;
+}
+
+.make-visible{
+    display: block;
+}
+
+.desc-after, .desc-before {
+	bottom: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.desc-after {
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #88b7d5;
+    border-width: 30px;
+}
+.desc-before {
+	border-color: rgba(194, 225, 245, 0);
+	border-width: 36px;
+	margin-left: -36px;
+}
+
 .heading-container .line{
     height: 15px;
     border-bottom: 1px solid rgb(25,188,152);
@@ -250,12 +295,14 @@ body{
     .heading-container .action{
         padding-top: 2px;
     }
-    .heading-container .action a{
+    .heading-container .action button{
         color: rgb(25,188,152);
+        padding-left: 0;
+        background: transparent;
+        border: none;
+        text-align: start
         font-size: 16px;
         font-weight: 600;
-        float: right;
-        float: left;
     }
 
     .card-body{
@@ -263,11 +310,16 @@ body{
     }
     .tile-title{
         font-family: 'lato-black';
-        font-weight: 700;
-        font-size: 14px;
-        padding: 0;
-        margin: 0;
-        max-height: 1em;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 0;
+    margin: 0;
+    max-height: 1em;
+    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     }
     .tile-text{
         
@@ -276,7 +328,11 @@ body{
         font-size: 10px;
         padding: 0;
         margin: 0;
-        max-height: 1.3em;
+        line-height: 20px;
+       max-height: 1.6em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     .tile-icon{
         padding: 1px 1px;
@@ -307,10 +363,12 @@ body{
         background-repeat: no-repeat;
         background-size: cover;
         
-    background-position: center; 
+    background-position: top; 
     }
-    .download-image{
-        display: block;
+    .download-image{ 
+        align-items: flex-end;
+        display: flex;
+        flex-direction: column;
     }
     .download-image img{
         width: 100%;
@@ -363,7 +421,7 @@ body{
     
 
     .logo{
-        width: 80%;
+        width: 100%;
 
     }
 
@@ -381,7 +439,7 @@ body{
     }
 
     .menu-icon{
-        width: 50px;
+        width: 80px;
         filter: grayscale(100%);
         color: #fff;
     }
@@ -408,16 +466,16 @@ body{
         text-align: center;
     }
     .sign-in{
-        padding-top: 15px;
-      padding-bottom: 15px;
+        padding-top: 12px;
+      padding-bottom: 12px;
     }
     .btn-sign{
         background: transparent !important;
         color: rgb(25,188,152) !important;
         border-color: rgb(25,188,152) !important;
-        padding: 2px 20px !important;
+        padding: 3px 30px !important;
         border-radius: 20px !important;
-        font-size: 12px !important;
+        font-size: 16px !important;
     }
 
     .bottom{
@@ -528,8 +586,7 @@ body{
 
 
 
-
-
+    
     @media (min-width: 768px) {
         .navbar-default .navbar-collapse{
             background: transparent !important;
@@ -537,7 +594,23 @@ body{
         
       }
 
+    @media (min-width: 425px) and (max-width: 992px){
+        .heading-container .heading{
+            width: 60px;
+        
+        }
+    
+    }
+    @media (max-width: 600px){
+        .heading-container .heading{
+            width: 40px;
+        
+        }
+    
+    }
+
     @media (max-width: 767px){
+        
 
         .download h1{
            width: 100%;
@@ -565,10 +638,28 @@ body{
     
     @media (min-width: 768px) and (max-width: 992px) {
         .overlay .play-label h5{
-            margin-top: 10%;
-            margin-bottom: 10%;
           font-size: 16px
       }
+      .overlay .play-label{
+        padding: 4px;
+      }
+    }
+    @media(max-width: 420px){
+        .overlay .play-label h5{
+            font-size: 14px
+        }
+        .play-icon img {
+            width: 26px;
+        }
+    }
+
+    @media(min-width: 1441px){
+        .overlay .play-label h5{
+            font-size: 20px
+        }
+        .play-icon img {
+            width: 40px;
+        }
     }
 
     @media (min-width: 768px) and (max-width: 992px){
@@ -587,21 +678,35 @@ body{
             margin-right: 10%;
         }
     }
+    .text-button{
+    }
+    @media(min-width: 420px) and (max-width: 992px){
+        .heading-container .action button{
+            
+            font-size: 10px;
+        }
+    }
+    @media(max-width: 420px){
+        .heading-container .action button{
+            
+            font-size: 8px;
+        }
+    }
+
     @media (max-width: 992px){
         .download-image{
             display: none;
         }
 
-        .heading-container .action a{
-            font-size: 12px;
-        }
+        
         .bottom{
             display: none;
         }
         .bottom-mobile{
             text-align: center;
-            display: block;
-            padding-top: 20%;
+            
+     display: block;
+     padding-top: 100px;
             
 
         }
