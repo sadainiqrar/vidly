@@ -1,0 +1,1107 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Bajao</title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="Sadain Iqrar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--  linking to style.css. All bootstrap overrides declared here -->
+    <style id="myStyle">
+    </style>
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+
+    <link href="assets/css/flickerplate.css" type="text/css" rel="stylesheet">
+
+
+
+
+    <!-- HTML5 Shim and  Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js  doesn't work if you view the page via file:// -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/scriber.js"></script>
+
+    <!-- Include Hammer (optional) -->
+    <script src="assets/js/hammer-v2.0.3.js"></script>
+
+    <!-- Include Flickerplate -->
+    <script src="assets/js/flickerplate.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+            <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                            aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="home.html">
+                            <img src="assets/images/logo.png" class="logo">
+                        </a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="movies.html">
+                                    <img src="assets/images/movie-logo.png" class="menu-icon">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="music.html">
+                                    <img src="assets/images/music-logo.png" class="menu-icon">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="video.html">
+                                    <img src="assets/images/video-logo.png" class="menu-icon">
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="season.html">
+                                    <img src="assets/images/season-logo.png" class="menu-icon">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contact">
+    
+                                    <i class="material-icons icon">search</i>
+                                </a>
+                            </li>
+                            <li class="sign-in">
+                                <button type="button" class="btn-subscribe btn btn-primary ">Subscribe</button>
+                            </li>
+                            <li class="dropdown profile">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <image src="assets/images/profile.png" />
+                                    <i class="material-icons pull-down">
+                                        expand_more
+                                    </i>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="/Profile">Profile</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="/logout">Sign Out</a>
+                                    </li>
+                                </ul>
+                            </li>
+    
+    
+    
+    
+                        </ul>
+    
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </nav>
+
+        <div class="container-fluid" style="padding: 0">
+            <section class="banner-image" style="background-image: url(assets/images/season-banner.png)">
+                <div class="banner-content container">
+                    <div class="banner-text">
+                        <img src="assets/images/season-title.png" />
+                        <h2>Sit back and Relax!</h1>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </header>
+
+    <div class="container">
+        <div class="row padding">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding">
+
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                    <div class="form-group form-inline">
+                        <label for="sel1" class="dropdown-label">Category </label>
+                        <select class="dropdown-select form-input" id="sel1">
+                            <option>Hollywood</option>
+                            <option>Bollywood</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group form-inline">
+                        <label for="sel1" class="dropdown-label">Genre </label>
+                        <select class="dropdown-select form-input" id="sel1">
+                            <option>Hollywood</option>
+                            <option>Bollywood</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 right-center">
+                    <div class="form-group form-inline">
+                        <label for="sel1" class="dropdown-label">Sort By </label>
+                        <select class="dropdown-select form-input" id="sel1">
+                            <option>Hollywood</option>
+                            <option>Bollywood</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <article class="content">
+
+            <div class="heading-container">
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 no-padding">
+                    <img src="assets/images/movie-logo.png" class="heading ">
+                </div>
+                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="padding-right: 0">
+
+                    <div class="wrap">
+                        <div class="line">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="content-section">
+                <div class="row">
+
+                    <div class="desc col-lg-12 col-md-12 col-sm-12 col-xs-12 hide" id="season">
+                        <div class="" id="before"></div>
+                        <div class="container description" id="description-content">
+                            <div class="pull-right quit" onclick="quit('season')">
+                                <i class="material-icons">
+                                    close
+                                </i>
+                            </div>
+                            <div class="desc-container" style="width: 100%">
+                                <div class="desc-content" style="width: 100%">
+                                    <ul class="custom-tabs">
+                                        <li class="active">
+                                            <a data-toggle="tab" href="#home">Season 1</a>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="tab" href="#menu1">Season 2</a>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="tab" href="#menu2">Season 3</a>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="tab" href="#menu3">Season 4</a>
+                                        </li>
+                                    </ul>
+
+                                    <div class="music-header">
+                                        <div class="col-md-1 col-sm-2 col-lg-1 col-xs-2 no-padding">
+                                            <img src="assets/images/recent1.png" />
+                                        </div>
+                                        <div class="col-md-8 col-sm-7 col-lg-8 col-xs-7">
+                                            <div class="season-top">
+
+                                                <span>
+                                                    <i class="fas fa-star rating-icon"></i> 8.3
+                                                </span>
+                                                Romance | Biography</div>
+                                            <div class="season-title">Strings: The Band</div>
+                                            <div class="season-sub">1 hr 50 mins | 2,456 Views</div>
+                                            <div class="movie-actions">
+                                                <button type="button" class="season-action btn btn-primary ">
+                                                    <img class="music-action-icon" src="assets/images/play_icon.png">Play All</button>
+                                                <button type="button" class="season-action btn btn-primary ">
+                                                    <img class="music-action-icon" src="assets/images/bookmark.png">Watch Trailer</button>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 col-sm-2 col-lg-2 col-xs-2 no-padding">
+                                            <div class="music-extra">
+                                                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                    <i class="material-icons fav">
+                                                        favorite
+                                                    </i>
+                                                    <p>23</p>
+                                                </div>
+                                                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                    <i class="material-icons add">
+                                                        add
+                                                    </i>
+                                                    <p>Add to Playlist</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-1 col-lg-1 col-sm-1 col-xs-1 no-padding"></div>
+                                    </div>
+                                    <div class="table-responsive music-table">
+                                        <table class="table custom-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sr</th>
+                                                    <th>Title</th>
+                                                    <th>Rating</th>
+                                                    <th>Release Date</th>
+                                                    <th>Duration</th>
+                                                    <th>Total Plays</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td class="title">Mera Bichra Yaar</td>
+                                                    <td>
+                                                        <span>
+                                                            <i class="fas fa-star rating-icon" style="font-size: 10px;"></i> 8.3
+                                                        </span>
+                                                    </td>
+                                                    <td>Mar 31, 2017</td>
+                                                    <td>2:00</td>
+                                                    <td>
+                                                        <div class="tile-icon" style="min-height: auto">
+                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                        </div>
+                                                        <div class="tile-label">
+                                                            <p class="continue-text" style="color:#fff">
+                                                                300
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="music-extra" style="text-align: center; margin: 0">
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons fav" style="font-size: 16px;">
+                                                                favorite
+                                                            </i>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons add" style="font-size: 16px;">
+                                                                add
+                                                            </i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="active-row">
+                                                    <td><i class="material-icons play">
+                                                            play_circle_filled
+                                                        </i></td>
+                                                    <td class="title">Mera Bichra Yaar</td>
+                                                    <td>
+                                                        <span>
+                                                            <i class="fas fa-star rating-icon" style="font-size: 10px;"></i> 8.3
+                                                        </span>
+                                                    </td>
+                                                    <td>Mar 31, 2017</td>
+                                                    <td>2:00</td>
+                                                    <td>
+                                                        <div class="tile-icon" style="min-height: auto">
+                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                        </div>
+                                                        <div class="tile-label">
+                                                            <p class="continue-text" style="color:#fff">
+                                                                300
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="music-extra" style="text-align: center; margin: 0">
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons fav" style="font-size: 16px;">
+                                                                favorite
+                                                            </i>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons add" style="font-size: 16px;">
+                                                                add
+                                                            </i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td class="title">Mera Bichra Yaar</td>
+                                                    <td>
+                                                        <span>
+                                                            <i class="fas fa-star rating-icon" style="font-size: 10px;"></i> 8.3
+                                                        </span>
+                                                    </td>
+                                                    <td>Mar 31, 2017</td>
+                                                    <td>2:00</td>
+                                                    <td>
+                                                        <div class="tile-icon" style="min-height: auto">
+                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                        </div>
+                                                        <div class="tile-label">
+                                                            <p class="continue-text" style="color:#fff">
+                                                                300
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="music-extra" style="text-align: center; margin: 0">
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons fav" style="font-size: 16px;">
+                                                                favorite
+                                                            </i>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons add" style="font-size: 16px;">
+                                                                add
+                                                            </i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td class="title">Mera Bichra Yaar</td>
+                                                    <td>
+                                                        <span>
+                                                            <i class="fas fa-star rating-icon" style="font-size: 10px;"></i> 8.3
+                                                        </span>
+                                                    </td>
+                                                    <td>Mar 31, 2017</td>
+                                                    <td>2:00</td>
+                                                    <td>
+                                                        <div class="tile-icon" style="min-height: auto">
+                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                        </div>
+                                                        <div class="tile-label">
+                                                            <p class="continue-text" style="color:#fff">
+                                                                300
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="music-extra" style="text-align: center; margin: 0">
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons fav" style="font-size: 16px;">
+                                                                favorite
+                                                            </i>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons add" style="font-size: 16px;">
+                                                                add
+                                                            </i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td class="title">Mera Bichra Yaar</td>
+                                                    <td>
+                                                        <span>
+                                                            <i class="fas fa-star rating-icon" style="font-size: 10px;"></i> 8.3
+                                                        </span>
+                                                    </td>
+                                                    <td>Mar 31, 2017</td>
+                                                    <td>2:00</td>
+                                                    <td>
+                                                        <div class="tile-icon" style="min-height: auto">
+                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                        </div>
+                                                        <div class="tile-label">
+                                                            <p class="continue-text" style="color:#fff">
+                                                                300
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="music-extra" style="text-align: center; margin: 0">
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons fav" style="font-size: 16px;">
+                                                                favorite
+                                                            </i>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons add" style="font-size: 16px;">
+                                                                add
+                                                            </i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td class="title">Mera Bichra Yaar</td>
+                                                    <td>
+                                                        <span>
+                                                            <i class="fas fa-star rating-icon" style="font-size: 10px;"></i> 8.3
+                                                        </span>
+                                                    </td>
+                                                    <td>Mar 31, 2017</td>
+                                                    <td>2:00</td>
+                                                    <td>
+                                                        <div class="tile-icon" style="min-height: auto">
+                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                        </div>
+                                                        <div class="tile-label">
+                                                            <p class="continue-text" style="color:#fff">
+                                                                300
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="music-extra" style="text-align: center; margin: 0">
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons fav" style="font-size: 16px;">
+                                                                favorite
+                                                            </i>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons add" style="font-size: 16px;">
+                                                                add
+                                                            </i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td class="title">Mera Bichra Yaar</td>
+                                                    <td>
+                                                        <span>
+                                                            <i class="fas fa-star rating-icon" style="font-size: 10px;"></i> 8.3
+                                                        </span>
+                                                    </td>
+                                                    <td>Mar 31, 2017</td>
+                                                    <td>2:00</td>
+                                                    <td>
+                                                        <div class="tile-icon" style="min-height: auto">
+                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                        </div>
+                                                        <div class="tile-label">
+                                                            <p class="continue-text" style="color:#fff">
+                                                                300
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="music-extra" style="text-align: center; margin: 0">
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons fav" style="font-size: 16px;">
+                                                                favorite
+                                                            </i>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons add" style="font-size: 16px;">
+                                                                add
+                                                            </i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td class="title">Mera Bichra Yaar</td>
+                                                    <td>
+                                                        <span>
+                                                            <i class="fas fa-star rating-icon" style="font-size: 10px;"></i> 8.3
+                                                        </span>
+                                                    </td>
+                                                    <td>Mar 31, 2017</td>
+                                                    <td>2:00</td>
+                                                    <td>
+                                                        <div class="tile-icon" style="min-height: auto">
+                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                        </div>
+                                                        <div class="tile-label">
+                                                            <p class="continue-text" style="color:#fff">
+                                                                300
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="music-extra" style="text-align: center; margin: 0">
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons fav" style="font-size: 16px;">
+                                                                favorite
+                                                            </i>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons add" style="font-size: 16px;">
+                                                                add
+                                                            </i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td class="title">Mera Bichra Yaar</td>
+                                                    <td>
+                                                        <span>
+                                                            <i class="fas fa-star rating-icon" style="font-size: 10px;"></i> 8.3
+                                                        </span>
+                                                    </td>
+                                                    <td>Mar 31, 2017</td>
+                                                    <td>2:00</td>
+                                                    <td>
+                                                        <div class="tile-icon" style="min-height: auto">
+                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                        </div>
+                                                        <div class="tile-label">
+                                                            <p class="continue-text" style="color:#fff">
+                                                                300
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="music-extra" style="text-align: center; margin: 0">
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons fav" style="font-size: 16px;">
+                                                                favorite
+                                                            </i>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons add" style="font-size: 16px;">
+                                                                add
+                                                            </i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="" id="after"></div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="season-1">
+                        <div class="card">
+                            <img class="card-img" src="assets/images/recent1.png" alt="Card image cap">
+                            <div class="middle item-overlay">
+                                <div class="v-align">
+                                    <div class="play-button">
+                                        <img src="assets/images/play_icon.png">
+                                    </div>
+                                    <div class="play-label overlay-label">Bechara Dil</div>
+                                    <div class="play-text overlay-text">
+                                        <p>Genre: Romance</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star rating-icon"></i> 6.3
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="tile-icon">
+                                <i class="material-icons icon outlined">play_arrow</i>
+                            </div>
+                            <div class="tile-label">
+                                <h5 class="tile-title">
+                                    Ae Dil he Mushkil
+                                </h5>
+                                <p class="tile-text">Genre: Romance</p>
+                                <p class="tile-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="season-2">
+                        <div class="card">
+                            <img class="card-img" src="assets/images/recent2.png" alt="Card image cap">
+                            <div class="middle item-overlay">
+                                <div class="v-align">
+                                    <div class="play-button">
+                                        <img src="assets/images/play_icon.png">
+                                    </div>
+                                    <div class="play-label overlay-label">Bechara Dil</div>
+                                    <div class="play-text overlay-text">
+                                        <p>Genre: Romance</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star rating-icon"></i> 6.3
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="tile-icon">
+                                <i class="material-icons icon outlined">play_arrow</i>
+                            </div>
+                            <div class="tile-label">
+                                <h5 class="tile-title">
+                                    Ae Dil he Mushkil
+                                </h5>
+                                <p class="tile-text">Genre: Romance</p>
+                                <p class="tile-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6  tile" onclick="clicked(event)" id="season-3">
+                        <div class="card">
+                            <img class="card-img" src="assets/images/recent3.png" alt="Card image cap">
+                            <div class="middle item-overlay">
+                                <div class="v-align">
+                                    <div class="play-button">
+                                        <img src="assets/images/play_icon.png">
+                                    </div>
+                                    <div class="play-label overlay-label">Bechara Dil</div>
+                                    <div class="play-text overlay-text">
+                                        <p>Genre: Romance</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star rating-icon"></i> 6.3
+                            </div>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="tile-icon">
+                                <i class="material-icons icon outlined">play_arrow</i>
+                            </div>
+                            <div class="tile-label">
+                                <h5 class="tile-title">
+                                    Ae Dil he Mushkil
+                                </h5>
+                                <p class="tile-text">Genre: Romance</p>
+                                <p class="tile-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="season-4">
+                        <div class="card">
+                            <img class="card-img" src="assets/images/recent4.png" alt="Card image cap">
+                            <div class="middle item-overlay">
+                                <div class="v-align">
+                                    <div class="play-button">
+                                        <img src="assets/images/play_icon.png">
+                                    </div>
+                                    <div class="play-label overlay-label">Bechara Dil</div>
+                                    <div class="play-text overlay-text">
+                                        <p>Genre: Romance</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star rating-icon"></i> 6.3
+                            </div>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="tile-icon">
+                                <i class="material-icons icon outlined">play_arrow</i>
+                            </div>
+                            <div class="tile-label">
+                                <h5 class="tile-title">
+                                    Ae Dil he Mushkil
+                                </h5>
+                                <p class="tile-text">Genre: Romance</p>
+                                <p class="tile-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="season-5">
+                        <div class="card">
+                            <img class="card-img" src="assets/images/recent5.png" alt="Card image cap">
+                            <div class="middle item-overlay">
+                                <div class="v-align">
+                                    <div class="play-button">
+                                        <img src="assets/images/play_icon.png">
+                                    </div>
+                                    <div class="play-label overlay-label">Bechara Dil</div>
+                                    <div class="play-text overlay-text">
+                                        <p>Genre: Romance</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star rating-icon"></i> 6.3
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="tile-icon">
+                                <i class="material-icons icon outlined">play_arrow</i>
+                            </div>
+                            <div class="tile-label">
+                                <h5 class="tile-title">
+                                    Ae Dil he Mushkil
+                                </h5>
+                                <p class="tile-text">Genre: Romance</p>
+                                <p class="tile-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="season-6">
+                        <div class="card">
+                            <img class="card-img" src="assets/images/recent6.png" alt="Card image cap">
+                            <div class="middle item-overlay">
+                                <div class="v-align">
+                                    <div class="play-button">
+                                        <img src="assets/images/play_icon.png">
+                                    </div>
+                                    <div class="play-label overlay-label">Bechara Dil</div>
+                                    <div class="play-text overlay-text">
+                                        <p>Genre: Romance</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star rating-icon"></i> 6.3
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="tile-icon">
+                                <i class="material-icons icon outlined">play_arrow</i>
+                            </div>
+                            <div class="tile-label">
+                                <h5 class="tile-title">
+                                    Ae Dil he Mushkil
+                                </h5>
+                                <p class="tile-text">Genre: Romance</p>
+                                <p class="tile-text">2 Tracks</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="season-7">
+                        <div class="card">
+                            <img class="card-img" src="assets/images/recent1.png" alt="Card image cap">
+                            <div class="middle item-overlay">
+                                <div class="v-align">
+                                    <div class="play-button">
+                                        <img src="assets/images/play_icon.png">
+                                    </div>
+                                    <div class="play-label overlay-label">Bechara Dil</div>
+                                    <div class="play-text overlay-text">
+                                        <p>Genre: Romance</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star rating-icon"></i> 6.3
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="tile-icon">
+                                <i class="material-icons icon outlined">play_arrow</i>
+                            </div>
+                            <div class="tile-label">
+                                <h5 class="tile-title">
+                                    Ae Dil he Mushkil
+                                </h5>
+                                <p class="tile-text">Genre: Romance</p>
+                                <p class="tile-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="season-8">
+                        <div class="card">
+                            <img class="card-img" src="assets/images/recent2.png" alt="Card image cap">
+                            <div class="middle item-overlay">
+                                <div class="v-align">
+                                    <div class="play-button">
+                                        <img src="assets/images/play_icon.png">
+                                    </div>
+                                    <div class="play-label overlay-label">Bechara Dil</div>
+                                    <div class="play-text overlay-text">
+                                        <p>Genre: Romance</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star rating-icon"></i> 6.3
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="tile-icon">
+                                <i class="material-icons icon outlined">play_arrow</i>
+                            </div>
+                            <div class="tile-label">
+                                <h5 class="tile-title">
+                                    Ae Dil he Mushkil
+                                </h5>
+                                <p class="tile-text">Genre: Romance</p>
+                                <p class="tile-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6  tile" onclick="clicked(event)" id="season-9">
+                        <div class="card">
+                            <img class="card-img" src="assets/images/recent3.png" alt="Card image cap">
+                            <div class="middle item-overlay">
+                                <div class="v-align">
+                                    <div class="play-button">
+                                        <img src="assets/images/play_icon.png">
+                                    </div>
+                                    <div class="play-label overlay-label">Bechara Dil</div>
+                                    <div class="play-text overlay-text">
+                                        <p>Genre: Romance</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star rating-icon"></i> 6.3
+                            </div>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="tile-icon">
+                                <i class="material-icons icon outlined">play_arrow</i>
+                            </div>
+                            <div class="tile-label">
+                                <h5 class="tile-title">
+                                    Ae Dil he Mushkil
+                                </h5>
+                                <p class="tile-text">Genre: Romance</p>
+                                <p class="tile-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="season-10">
+                        <div class="card">
+                            <img class="card-img" src="assets/images/recent4.png" alt="Card image cap">
+                            <div class="middle item-overlay">
+                                <div class="v-align">
+                                    <div class="play-button">
+                                        <img src="assets/images/play_icon.png">
+                                    </div>
+                                    <div class="play-label overlay-label">Bechara Dil</div>
+                                    <div class="play-text overlay-text">
+                                        <p>Genre: Romance</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star rating-icon"></i> 6.3
+                            </div>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="tile-icon">
+                                <i class="material-icons icon outlined">play_arrow</i>
+                            </div>
+                            <div class="tile-label">
+                                <h5 class="tile-title">
+                                    Ae Dil he Mushkil
+                                </h5>
+                                <p class="tile-text">Genre: Romance</p>
+                                <p class="tile-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="season-11">
+                        <div class="card">
+                            <img class="card-img" src="assets/images/recent5.png" alt="Card image cap">
+                            <div class="middle item-overlay">
+                                <div class="v-align">
+                                    <div class="play-button">
+                                        <img src="assets/images/play_icon.png">
+                                    </div>
+                                    <div class="play-label overlay-label">Bechara Dil</div>
+                                    <div class="play-text overlay-text">
+                                        <p>Genre: Romance</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star rating-icon"></i> 6.3
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="tile-icon">
+                                <i class="material-icons icon outlined">play_arrow</i>
+                            </div>
+                            <div class="tile-label">
+                                <h5 class="tile-title">
+                                    Ae Dil he Mushkil
+                                </h5>
+                                <p class="tile-text">Genre: Romance</p>
+                                <p class="tile-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+    </div>
+
+
+
+    <footer class="container-fluid footer-section" style="padding:0">
+        <div class="container bottom">
+            <div class="col-md-4">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.png" />
+                </div>
+                <div class="footer-desc">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                        laoreet dolore magna aliquam erat volutpat. </p>
+                    <a href="">Read More...</a>
+                </div>
+                <div class="footer-copy">
+                    <span>Copyright © 2018</span> |
+                    <span>Privacy Policy</span> |
+                    <span>FAQ</span> |
+                    <span>Support</span>
+                </div>
+            </div>
+            <div class="col-md-5 text-center">
+                <div class="col-lg-6 col-md-6  links">
+                    <div class="footer-support">
+                        <h4>Support</h4>
+                    </div>
+                    <div class="footer-support">
+                        <a hred="">Help Center</a>
+                    </div>
+                    <div class="footer-support">
+                        <a hred="">Get Started</a>
+                    </div>
+                    <div class="footer-support">
+                        <a hred="">Contact Us</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 links">
+                    <div class="footer-support">
+                        <h4>About Us</h4>
+                    </div>
+                    <div class="footer-support">
+                        <a hred="">About Us</a>
+                    </div>
+                    <div class="footer-support">
+                        <a hred="">Terms of Use</a>
+                    </div>
+                    <div class="footer-support">
+                        <a hred="">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="col-lg-3 col-md-3 links">
+                    <div class="footer-social">
+                        <a hred="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                    <div class="footer-social">
+                        <a hred="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                    <div class="footer-social">
+                        <a hred="">
+                            <i class="fab fa-google-plus-g"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3  links">
+                    <div class="footer-social">
+                        <a hred="">
+                            <i class="fab fa-tumblr"></i>
+                        </a>
+                    </div>
+                    <div class="footer-social">
+                        <a hred="">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                    <div class="footer-social">
+                        <a hred="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="container bottom-mobile">
+            <div class="footer-logo">
+                <img src="assets/images/logo.png" />
+            </div>
+            <div class="footer-desc-mobile">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                    dolore magna aliquam erat volutpat. </p>
+                <a href="">Read More...</a>
+            </div>
+
+            <div class="footer-social-mobile">
+                <ul>
+                    <li>
+                        <a href="https://twitter.com">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com">
+                            <i class="fab fa-google-plus-g"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com">
+                            <i class="fab fa-tumblr"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pinterest.com">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-copy-mobile">
+
+                <span>Copyright © 2018</span> |
+                <span>Privacy Policy</span> |
+                <span>FAQ</span> |
+                <span>Support</span>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        new flickerplate('.flicker-example');
+    </script>
+
+</body>
+
+</html>

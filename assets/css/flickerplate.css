@@ -144,7 +144,27 @@
   line-height: 1.525rem;
   font-weight: 400;
 }
-@media (min-width: 1441px){
+@media (min-width: 1441px) and (max-width: 2000px){
+  .flickerplate ul.flicks > li .flick-sub-text{
+    font-size: 16pt;
+    line-height: 2.5rem;
+    width: 80%;
+}
+.flickerplate ul.flicks > li .flick-title {
+  line-height: 75px;
+  line-height: 4.6875rem;
+  font-size: 60pt;
+  font-size: 2.75rem;
+  width: 80%;
+}
+.flick-top{
+  font-family: 'lato-light';
+  font-size: 16pt;
+  width: 80%;
+}
+
+}
+@media (min-width: 2001px){
   .flickerplate ul.flicks > li .flick-sub-text{
     font-size: 18pt;
     line-height: 3rem;

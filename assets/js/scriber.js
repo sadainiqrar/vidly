@@ -2,13 +2,24 @@ $(window).scroll(function() {
   $("nav").toggleClass("scrolled", $(this).scrollTop() > 50);
 });
 
-
+$( window ).resize(function() {
+  $( "#movie" ).removeClass( "make-visible" );
+  $( "#movie" ).addClass( "hide" );
+  $( "#season" ).removeClass( "make-visible" );
+  $( "#season" ).addClass( "hide" );
+  $( "#video" ).removeClass( "make-visible" );
+  $( "#video" ).addClass( "hide" );
+  $( "#music" ).removeClass( "make-visible" );
+  $( "#music" ).addClass( "hide" );
+});
 
 
 
 
 function clicked(el) {
-	
+  var screen = el.view.screen;
+  
+  console.log(screen)
   var element = el.srcElement.closest(".tile");
   console.log(element.id)
   var res = element.id.split("-");
@@ -52,9 +63,23 @@ function clicked(el) {
   //document.styleSheets[0].addRule('description:before','left: "'+offset+'px";');
   before.setAttribute('style', 'left:'+ offset + 'px;');
   after.setAttribute('style', 'left:'+ offset + 'px;');
-  
+  if(screen.width > 1023){
   d.classList.add("make-visible");
 
   d.classList.remove("hide");
+  }
   
 }
+
+function quit(id){
+  console.log(id)
+  
+  var elem = document.getElementById(id);
+  console.log(elem)
+  
+  elem.classList.add("hide");
+  
+  
+  elem.classList.remove("make-visible");
+}
+

@@ -1,0 +1,757 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Bajao</title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="Sadain Iqrar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--  linking to style.css. All bootstrap overrides declared here -->
+    <style id="myStyle">
+    </style>
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+
+    <link href="assets/css/flickerplate.css" type="text/css" rel="stylesheet">
+
+
+
+
+    <!-- HTML5 Shim and  Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js  doesn't work if you view the page via file:// -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/scriber.js"></script>
+
+    <!-- Include Hammer (optional) -->
+    <script src="assets/js/hammer-v2.0.3.js"></script>
+
+    <!-- Include Flickerplate -->
+    <script src="assets/js/flickerplate.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+            <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                            aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="home.html">
+                            <img src="assets/images/logo.png" class="logo">
+                        </a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="movies.html">
+                                    <img src="assets/images/movie-logo.png" class="menu-icon">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="music.html">
+                                    <img src="assets/images/music-logo.png" class="menu-icon">
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="video.html">
+                                    <img src="assets/images/video-logo.png" class="menu-icon">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="season.html">
+                                    <img src="assets/images/season-logo.png" class="menu-icon">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contact">
+    
+                                    <i class="material-icons icon">search</i>
+                                </a>
+                            </li>
+                            <li class="sign-in">
+                                <button type="button" class="btn-subscribe btn btn-primary ">Subscribe</button>
+                            </li>
+                            <li class="dropdown profile">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <image src="assets/images/profile.png" />
+                                    <i class="material-icons pull-down">
+                                        expand_more
+                                    </i>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="/Profile">Profile</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="/logout">Sign Out</a>
+                                    </li>
+                                </ul>
+                            </li>
+    
+    
+    
+    
+                        </ul>
+    
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </nav>
+
+        <div class="container-fluid" style="padding: 0">
+            <section class="banner-image" style="background-image: url(assets/images/video-banner.png)">
+                <div class="banner-content container">
+                    <div class="banner-text">
+                        <img src="assets/images/video-title.png" />
+                        <h2>Dive in the Collection of Videos</h1>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </header>
+
+    <div class="container">
+        <div class="row padding">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding">
+
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                    <div class="form-group form-inline">
+                        <label for="sel1" class="dropdown-label">Category </label>
+                        <select class="dropdown-select form-input" id="sel1">
+                            <option>Hollywood</option>
+                            <option>Bollywood</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group form-inline">
+                        <label for="sel1" class="dropdown-label">Genre </label>
+                        <select class="dropdown-select form-input" id="sel1">
+                            <option>Hollywood</option>
+                            <option>Bollywood</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 right-center">
+                    <div class="form-group form-inline">
+                        <label for="sel1" class="dropdown-label">Sort By </label>
+                        <select class="dropdown-select form-input" id="sel1">
+                            <option>Hollywood</option>
+                            <option>Bollywood</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <article class="content">
+
+            <div class="heading-container">
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 no-padding">
+                    <img src="assets/images/movie-logo.png" class="heading ">
+                </div>
+                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="padding-right: 0">
+
+                    <div class="wrap">
+                        <div class="line">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="content-section">
+                <div class="row">
+                    <div class="desc col-lg-12 col-md-12 col-sm-12 col-xs-12 hide" id="video">
+                        <div class="desc-before" id="before"></div>
+                        <div class="container description" id="description-content" style="background: url(assets/images/video-back.png)">
+                            <div class="pull-right quit" onclick="quit('video')">
+                                <i class="material-icons">
+                                    close
+                                </i>
+                            </div>
+                            <div class="desc-container">
+                                <div class="desc-content">
+                                    <div class="movie-top">
+
+                                        <span>
+                                                <i class="fas fa-star rating-icon"></i> 6.3
+                                        </span>
+                                    </div>
+                                    <div class="movie-title">Jurassic World: Fallen Kingdom</div>
+                                    <div class="movie-head">Maroon 5 ft Cardi B</div>
+                                    <div class="movie-sub">1 hr 50 min | 2,546 Views</div>
+                                    <div class="movie-sub-text">Shah is a 2015 Pakistani biographical sports film directed and written by Adnan Sarwar.
+                                        The film, produced under the Logos Films & Media banner, is based on the life of
+                                        boxer Hussain Shah, who won the bronze medal at the 1988 Summer Olympics </div>
+                                    <div class="movie-actions">
+                                        <button type="button" class="movie-action btn btn-primary " onclick="window.location.href='watchseason.html'">
+                                            <img class="movie-action-icon" src="assets/images/play_icon.png">Watch Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pull-right movie-extra">
+                                <i class="material-icons fav">
+                                    favorite
+                                </i>
+                                <i class="material-icons add">
+                                    add
+                                </i>
+                            </div>
+                        </div>
+                        <div class="desc-after" id="after"></div>
+                    </div>
+
+
+
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="video-1">
+                        <div class="card">
+                            <img class="card-img" src="assets/images/recent1.png" alt="Card image cap">
+                            <div class="middle item-overlay">
+                                <div class="v-align">
+                                    <div class="play-button">
+                                        <img src="assets/images/play_icon.png">
+                                    </div>
+                                    <div class="play-label overlay-label">Bechara Dil</div>
+                                    <div class="play-text overlay-text">
+                                        <p>Genre: Romance</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star rating-icon"></i> 6.3
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="tile-icon">
+                                <i class="material-icons icon outlined">play_arrow</i>
+                            </div>
+                            <div class="tile-label">
+                                <h5 class="tile-title">
+                                    Ae Dil he Mushkil
+                                </h5>
+                                <p class="tile-text">Genre: Romance</p>
+                                <p class="tile-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="video-2">
+                        <div class="card">
+                            <img class="card-img" src="assets/images/recent2.png" alt="Card image cap">
+                            <div class="middle item-overlay">
+                                <div class="v-align">
+                                    <div class="play-button">
+                                        <img src="assets/images/play_icon.png">
+                                    </div>
+                                    <div class="play-label overlay-label">Bechara Dil</div>
+                                    <div class="play-text overlay-text">
+                                        <p>Genre: Romance</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star rating-icon"></i> 6.3
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="tile-icon">
+                                <i class="material-icons icon outlined">play_arrow</i>
+                            </div>
+                            <div class="tile-label">
+                                <h5 class="tile-title">
+                                    Ae Dil he Mushkil
+                                </h5>
+                                <p class="tile-text">Genre: Romance</p>
+                                <p class="tile-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6  tile" onclick="clicked(event)" id="video-3">
+                        <div class="card">
+                            <img class="card-img" src="assets/images/recent3.png" alt="Card image cap">
+                            <div class="middle item-overlay">
+                                <div class="v-align">
+                                    <div class="play-button">
+                                        <img src="assets/images/play_icon.png">
+                                    </div>
+                                    <div class="play-label overlay-label">Bechara Dil</div>
+                                    <div class="play-text overlay-text">
+                                        <p>Genre: Romance</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star rating-icon"></i> 6.3
+                            </div>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="tile-icon">
+                                <i class="material-icons icon outlined">play_arrow</i>
+                            </div>
+                            <div class="tile-label">
+                                <h5 class="tile-title">
+                                    Ae Dil he Mushkil
+                                </h5>
+                                <p class="tile-text">Genre: Romance</p>
+                                <p class="tile-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="video-4">
+                        <div class="card">
+                            <img class="card-img" src="assets/images/recent4.png" alt="Card image cap">
+                            <div class="middle item-overlay">
+                                <div class="v-align">
+                                    <div class="play-button">
+                                        <img src="assets/images/play_icon.png">
+                                    </div>
+                                    <div class="play-label overlay-label">Bechara Dil</div>
+                                    <div class="play-text overlay-text">
+                                        <p>Genre: Romance</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star rating-icon"></i> 6.3
+                            </div>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="tile-icon">
+                                <i class="material-icons icon outlined">play_arrow</i>
+                            </div>
+                            <div class="tile-label">
+                                <h5 class="tile-title">
+                                    Ae Dil he Mushkil
+                                </h5>
+                                <p class="tile-text">Genre: Romance</p>
+                                <p class="tile-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="video-5">
+                        <div class="card">
+                            <img class="card-img" src="assets/images/recent5.png" alt="Card image cap">
+                            <div class="middle item-overlay">
+                                <div class="v-align">
+                                    <div class="play-button">
+                                        <img src="assets/images/play_icon.png">
+                                    </div>
+                                    <div class="play-label overlay-label">Bechara Dil</div>
+                                    <div class="play-text overlay-text">
+                                        <p>Genre: Romance</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star rating-icon"></i> 6.3
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="tile-icon">
+                                <i class="material-icons icon outlined">play_arrow</i>
+                            </div>
+                            <div class="tile-label">
+                                <h5 class="tile-title">
+                                    Ae Dil he Mushkil
+                                </h5>
+                                <p class="tile-text">Genre: Romance</p>
+                                <p class="tile-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="video-6">
+                        <div class="card">
+                            <img class="card-img" src="assets/images/recent6.png" alt="Card image cap">
+                            <div class="middle item-overlay">
+                                <div class="v-align">
+                                    <div class="play-button">
+                                        <img src="assets/images/play_icon.png">
+                                    </div>
+                                    <div class="play-label overlay-label">Bechara Dil</div>
+                                    <div class="play-text overlay-text">
+                                        <p>Genre: Romance</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star rating-icon"></i> 6.3
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="tile-icon">
+                                <i class="material-icons icon outlined">play_arrow</i>
+                            </div>
+                            <div class="tile-label">
+                                <h5 class="tile-title">
+                                    Ae Dil he Mushkil
+                                </h5>
+                                <p class="tile-text">Genre: Romance</p>
+                                <p class="tile-text">2 Tracks</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="video-7">
+                        <div class="card">
+                            <img class="card-img" src="assets/images/recent1.png" alt="Card image cap">
+                            <div class="middle item-overlay">
+                                <div class="v-align">
+                                    <div class="play-button">
+                                        <img src="assets/images/play_icon.png">
+                                    </div>
+                                    <div class="play-label overlay-label">Bechara Dil</div>
+                                    <div class="play-text overlay-text">
+                                        <p>Genre: Romance</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star rating-icon"></i> 6.3
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="tile-icon">
+                                <i class="material-icons icon outlined">play_arrow</i>
+                            </div>
+                            <div class="tile-label">
+                                <h5 class="tile-title">
+                                    Ae Dil he Mushkil
+                                </h5>
+                                <p class="tile-text">Genre: Romance</p>
+                                <p class="tile-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="video-8">
+                        <div class="card">
+                            <img class="card-img" src="assets/images/recent2.png" alt="Card image cap">
+                            <div class="middle item-overlay">
+                                <div class="v-align">
+                                    <div class="play-button">
+                                        <img src="assets/images/play_icon.png">
+                                    </div>
+                                    <div class="play-label overlay-label">Bechara Dil</div>
+                                    <div class="play-text overlay-text">
+                                        <p>Genre: Romance</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star rating-icon"></i> 6.3
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="tile-icon">
+                                <i class="material-icons icon outlined">play_arrow</i>
+                            </div>
+                            <div class="tile-label">
+                                <h5 class="tile-title">
+                                    Ae Dil he Mushkil
+                                </h5>
+                                <p class="tile-text">Genre: Romance</p>
+                                <p class="tile-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6  tile" onclick="clicked(event)" id="video-9">
+                        <div class="card">
+                            <img class="card-img" src="assets/images/recent3.png" alt="Card image cap">
+                            <div class="middle item-overlay">
+                                <div class="v-align">
+                                    <div class="play-button">
+                                        <img src="assets/images/play_icon.png">
+                                    </div>
+                                    <div class="play-label overlay-label">Bechara Dil</div>
+                                    <div class="play-text overlay-text">
+                                        <p>Genre: Romance</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star rating-icon"></i> 6.3
+                            </div>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="tile-icon">
+                                <i class="material-icons icon outlined">play_arrow</i>
+                            </div>
+                            <div class="tile-label">
+                                <h5 class="tile-title">
+                                    Ae Dil he Mushkil
+                                </h5>
+                                <p class="tile-text">Genre: Romance</p>
+                                <p class="tile-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="video-10">
+                        <div class="card">
+                            <img class="card-img" src="assets/images/recent4.png" alt="Card image cap">
+                            <div class="middle item-overlay">
+                                <div class="v-align">
+                                    <div class="play-button">
+                                        <img src="assets/images/play_icon.png">
+                                    </div>
+                                    <div class="play-label overlay-label">Bechara Dil</div>
+                                    <div class="play-text overlay-text">
+                                        <p>Genre: Romance</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star rating-icon"></i> 6.3
+                            </div>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="tile-icon">
+                                <i class="material-icons icon outlined">play_arrow</i>
+                            </div>
+                            <div class="tile-label">
+                                <h5 class="tile-title">
+                                    Ae Dil he Mushkil
+                                </h5>
+                                <p class="tile-text">Genre: Romance</p>
+                                <p class="tile-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="video-11">
+                        <div class="card">
+                            <img class="card-img" src="assets/images/recent5.png" alt="Card image cap">
+                            <div class="middle item-overlay">
+                                <div class="v-align">
+                                    <div class="play-button">
+                                        <img src="assets/images/play_icon.png">
+                                    </div>
+                                    <div class="play-label overlay-label">Bechara Dil</div>
+                                    <div class="play-text overlay-text">
+                                        <p>Genre: Romance</p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star rating-icon"></i> 6.3
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="tile-icon">
+                                <i class="material-icons icon outlined">play_arrow</i>
+                            </div>
+                            <div class="tile-label">
+                                <h5 class="tile-title">
+                                    Ae Dil he Mushkil
+                                </h5>
+                                <p class="tile-text">Genre: Romance</p>
+                                <p class="tile-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+    </div>
+
+
+
+    <footer class="container-fluid footer-section" style="padding:0">
+        <div class="container bottom">
+            <div class="col-md-4">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.png" />
+                </div>
+                <div class="footer-desc">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                        laoreet dolore magna aliquam erat volutpat. </p>
+                    <a href="">Read More...</a>
+                </div>
+                <div class="footer-copy">
+                    <span>Copyright © 2018</span> |
+                    <span>Privacy Policy</span> |
+                    <span>FAQ</span> |
+                    <span>Support</span>
+                </div>
+            </div>
+            <div class="col-md-5 text-center">
+                <div class="col-lg-6 col-md-6  links">
+                    <div class="footer-support">
+                        <h4>Support</h4>
+                    </div>
+                    <div class="footer-support">
+                        <a hred="">Help Center</a>
+                    </div>
+                    <div class="footer-support">
+                        <a hred="">Get Started</a>
+                    </div>
+                    <div class="footer-support">
+                        <a hred="">Contact Us</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 links">
+                    <div class="footer-support">
+                        <h4>About Us</h4>
+                    </div>
+                    <div class="footer-support">
+                        <a hred="">About Us</a>
+                    </div>
+                    <div class="footer-support">
+                        <a hred="">Terms of Use</a>
+                    </div>
+                    <div class="footer-support">
+                        <a hred="">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="col-lg-3 col-md-3 links">
+                    <div class="footer-social">
+                        <a hred="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                    <div class="footer-social">
+                        <a hred="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                    <div class="footer-social">
+                        <a hred="">
+                            <i class="fab fa-google-plus-g"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3  links">
+                    <div class="footer-social">
+                        <a hred="">
+                            <i class="fab fa-tumblr"></i>
+                        </a>
+                    </div>
+                    <div class="footer-social">
+                        <a hred="">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                    <div class="footer-social">
+                        <a hred="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="container bottom-mobile">
+            <div class="footer-logo">
+                <img src="assets/images/logo.png" />
+            </div>
+            <div class="footer-desc-mobile">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                    dolore magna aliquam erat volutpat. </p>
+                <a href="">Read More...</a>
+            </div>
+
+            <div class="footer-social-mobile">
+                <ul>
+                    <li>
+                        <a href="https://twitter.com">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com">
+                            <i class="fab fa-google-plus-g"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com">
+                            <i class="fab fa-tumblr"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pinterest.com">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-copy-mobile">
+
+                <span>Copyright © 2018</span> |
+                <span>Privacy Policy</span> |
+                <span>FAQ</span> |
+                <span>Support</span>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        new flickerplate('.flicker-example');
+    </script>
+
+</body>
+
+</html>
