@@ -1,0 +1,615 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Bajao</title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="Sadain Iqrar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--  linking to style.css. All bootstrap overrides declared here -->
+    <style id="myStyle">
+    </style>
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+
+    <link href="assets/css/flickerplate.css" type="text/css" rel="stylesheet">
+
+    <link href="https://vjs.zencdn.net/7.0.5/video-js.css" rel="stylesheet">
+
+
+    <!-- HTML5 Shim and  Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js  doesn't work if you view the page via file:// -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/scriber.js"></script>
+
+    <!-- Include Hammer (optional) -->
+    <script src="assets/js/hammer-v2.0.3.js"></script>
+
+    <!-- Include Flickerplate -->
+    <script src="assets/js/flickerplate.js"></script>
+
+    <script src="http://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
+
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                            aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="home.html">
+                            <img src="assets/images/logo.png" class="logo">
+                        </a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="movies.html">
+                                    <img src="assets/images/movie-logo.png" class="menu-icon">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="music.html">
+                                    <img src="assets/images/music-logo.png" class="menu-icon">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="video.html">
+                                    <img src="assets/images/video-logo.png" class="menu-icon">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="season.html">
+                                    <img src="assets/images/season-logo.png" class="menu-icon">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contact">
+
+                                    <i class="material-icons icon">search</i>
+                                </a>
+                            </li>
+                            <li class="sign-in">
+                                <button type="button" class="btn-subscribe btn btn-primary ">Subscribe</button>
+                            </li>
+                            <li class="dropdown profile">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <image src="assets/images/profile.png" />
+                                    <i class="material-icons pull-down">
+                                        expand_more
+                                    </i>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="/Profile">Profile</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="/logout">Sign Out</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+
+
+
+                        </ul>
+
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </nav>
+
+
+        </header>
+
+        <!-- Trigger the modal with a button -->
+        <!-- Remove This Button for modal usage -->
+        <button type="button" class="btn btn-info" style="margin-top: 100px" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+        <div class="container">
+
+
+
+            <article class="content watch">
+                <section class="player-section">
+                    <div class="video-path">Home/Movies/Movie1</div>
+                    <div class="video-section">
+                        <video id="watch-video" class="video-js vjs-fluid vjs-big-play-centered custom-video" controls preload="auto" width="640"
+                            height="264" poster="assets/images/banner1.png" data-setup="{}">
+                            <source src="https://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>
+                            <track kind="captions" src="" srclang="en" label="English"></track>
+                            <!-- Tracks need an ending tag thanks to IE9 -->
+                            <track kind="subtitles" src="" srclang="en" label="English"></track>
+                            <!-- Tracks need an ending tag thanks to IE9 -->
+
+                            <p class="vjs-no-js">
+                                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                            </p>
+                        </video>
+                        <div class="container video-content">
+                            <div class="play-title">Batman Vs Superman | Dawn of the Justice</div>
+                            <div class="play-sub">1 hr 50 min | 2016 | Fantasy / Sci-Fi</div>
+                            <div class="play-rating">
+                                <span>
+                                    <i class="fas fa-heart like"></i> 23
+                                </span>
+                                <span>
+                                    <i class="fas fa-eye view"></i> 300
+                                </span>
+                                <span>
+                                    <i class="fas fa-star rate"></i> 6.6
+                                </span>
+                            </div>
+                            <div class="play-sub-text">Shah is a 2015 Pakistani biographical sports film directed and written by Adnan Sarwar. The film,
+                                produced under the Logos Films & Media banner, is based on the life of boxer Hussain Shah,
+                                who won the bronze medal at the 1988 Summer Olympics </div>
+                            <div class="play-content-title">Cast</div>
+                            <div class="play-content">
+                                <div class="image-item">
+                                    <img src="assets/images/recent1.png" />
+                                    <h1>Henry Cavil</h5>
+                                        <p>Superman</p>
+                                </div>
+                                <div class="image-item">
+                                    <img src="assets/images/recent1.png" />
+                                    <h1>Henry Cavil</h5>
+                                        <p>Superman</p>
+                                </div>
+                                <div class="image-item">
+                                    <img src="assets/images/recent1.png" />
+                                    <h1>Henry Cavil</h5>
+                                        <p>Superman</p>
+                                </div>
+                                <div class="image-item">
+                                    <img src="assets/images/recent1.png" />
+                                    <h1>Catherine Zeta Jones</h5>
+                                        <p>Superman</p>
+                                </div>
+                                <div class="image-item">
+                                    <img src="assets/images/recent1.png" />
+                                    <h1>Henry Cavil</h5>
+                                        <p>Superman</p>
+                                </div>
+                                <div class="image-item">
+                                    <img src="assets/images/recent1.png" />
+                                    <h1>Henry Cavil</h5>
+                                        <p>Superman</p>
+                                </div>
+                                <div class="image-item">
+                                    <img src="assets/images/recent1.png" />
+                                    <h1>Henry Cavil</h5>
+                                        <p>Superman</p>
+                                </div>
+                                <div class="image-item">
+                                    <img src="assets/images/recent1.png" />
+                                    <h1>Henry Cavil</h5>
+                                        <p>Superman</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+
+        </div>
+
+
+
+        <footer class="container-fluid footer-section" style="padding:0">
+            <div class="container bottom">
+                <div class="col-md-4">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo.png" />
+                    </div>
+                    <div class="footer-desc">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                            ut laoreet dolore magna aliquam erat volutpat. </p>
+                        <a href="">Read More...</a>
+                    </div>
+                    <div class="footer-copy">
+                        <span>Copyright © 2018</span> |
+                        <span>Privacy Policy</span> |
+                        <span>FAQ</span> |
+                        <span>Support</span>
+                    </div>
+                </div>
+                <div class="col-md-5 text-center">
+                    <div class="col-lg-6 col-md-6  links">
+                        <div class="footer-support">
+                            <h4>Support</h4>
+                        </div>
+                        <div class="footer-support">
+                            <a hred="">Help Center</a>
+                        </div>
+                        <div class="footer-support">
+                            <a hred="">Get Started</a>
+                        </div>
+                        <div class="footer-support">
+                            <a hred="">Contact Us</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 links">
+                        <div class="footer-support">
+                            <h4>About Us</h4>
+                        </div>
+                        <div class="footer-support">
+                            <a hred="">About Us</a>
+                        </div>
+                        <div class="footer-support">
+                            <a hred="">Terms of Use</a>
+                        </div>
+                        <div class="footer-support">
+                            <a hred="">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="col-lg-3 col-md-3 links">
+                        <div class="footer-social">
+                            <a hred="">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                        <div class="footer-social">
+                            <a hred="">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                        <div class="footer-social">
+                            <a hred="">
+                                <i class="fab fa-google-plus-g"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3  links">
+                        <div class="footer-social">
+                            <a hred="">
+                                <i class="fab fa-tumblr"></i>
+                            </a>
+                        </div>
+                        <div class="footer-social">
+                            <a hred="">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                        </div>
+                        <div class="footer-social">
+                            <a hred="">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="container bottom-mobile">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.png" />
+                </div>
+                <div class="footer-desc-mobile">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                        laoreet dolore magna aliquam erat volutpat. </p>
+                    <a href="">Read More...</a>
+                </div>
+
+                <div class="footer-social-mobile">
+                    <ul>
+                        <li>
+                            <a href="https://twitter.com">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com">
+                                <i class="fab fa-google-plus-g"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://facebook.com">
+                                <i class="fab fa-tumblr"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://pinterest.com">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-copy-mobile">
+
+                    <span>Copyright © 2018</span> |
+                    <span>Privacy Policy</span> |
+                    <span>FAQ</span> |
+                    <span>Support</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header custom-header" style="text-align: center; border-radius: 6px 6px 0px 0px">
+                    <div class="pull-right modal-close" data-dismiss="modal" style="padding: 0;">
+                        <i class="material-icons" style="background: #0be6af !important">
+                            close
+                        </i>
+                    </div>
+                    <h4 class="modal-title">Add to Playlist</h4>
+                </div>
+                <div class="modal-body">
+                    <nav class="custom-nav" style="padding: 0px 50px">
+                        <ul class="custom-tabs modal-tabs" id="custom-tabs">
+                            <li class="active">
+                                <a data-toggle="tab" href="#existing" style="color: #ddd" onclick="switchPlaylist('existing', 'new')">Existing Playlist</a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#new" style="color: #ddd" onclick="switchPlaylist('new', 'existing')">Create New Playlist</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div id="existing" class="tab-pane fade in active make-visible">
+                        <div class="input-container modal-input" style="margin-bottom: 5px;">
+
+                            <input type="text" id="#{label}" required="required">
+                            <label for="#{label}" style="top: 2px;">
+                                <i class="fas fa-search" style="padding-right: 15px;color: #ddd !important"></i>
+                                Search Playlist</label>
+                            <div class="bar" style="background: #ddd"></div>
+                        </div>
+                        <div class="dialog-table">
+                        <table class="table list-table">
+                            <tbody>
+                                <tr>
+                                    <td class="first">
+                                        <img src="assets/images/recent1.png">
+                                    </td>
+                                    <td class="text">
+                                        <p class="title">My Bollywood List</p>
+                                        <p class="sub-title">8 Tracks</p>
+
+                                    </td>
+                                    <td class="button">
+                                        <button type="button" class="playlist-button active">Added</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <img src="assets/images/recent1.png">
+                                    </td>
+                                    <td class="text">
+                                        <p class="title">My Bollywood List</p>
+                                        <p class="sub-title">8 Tracks</p>
+
+                                    </td>
+                                    <td class="button">
+                                        <button type="button" class="playlist-button">Added</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <img src="assets/images/recent1.png">
+                                    </td>
+                                    <td class="text">
+                                        <p class="title">My Bollywood List</p>
+                                        <p class="sub-title">8 Tracks</p>
+
+                                    </td>
+                                    <td class="button">
+                                        <button type="button" class="playlist-button">Added</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first">
+                                        <img src="assets/images/recent1.png">
+                                    </td>
+                                    <td class="text">
+                                        <p class="title">My Bollywood List</p>
+                                        <p class="sub-title">8 Tracks</p>
+
+                                    </td>
+                                    <td class="button">
+                                        <button type="button" class="playlist-button">Added</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                        <td class="first">
+                                            <img src="assets/images/recent1.png">
+                                        </td>
+                                        <td class="text">
+                                            <p class="title">My Bollywood List</p>
+                                            <p class="sub-title">8 Tracks</p>
+    
+                                        </td>
+                                        <td class="button">
+                                            <button type="button" class="playlist-button">Added</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                            <td class="first">
+                                                <img src="assets/images/recent1.png">
+                                            </td>
+                                            <td class="text">
+                                                <p class="title">My Bollywood List</p>
+                                                <p class="sub-title">8 Tracks</p>
+        
+                                            </td>
+                                            <td class="button">
+                                                <button type="button" class="playlist-button">Added</button>
+                                            </td>
+                                        </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    </div>
+
+                    <div id="new" class="tab-pane fade hide">
+                            <div class="input-container modal-input" style="margin-bottom: 5px;">
+
+                                    <input type="text" id="#{label}" required="required">
+                                    <label for="#{label}" style="top: 2px;">
+                                        Playlist Title</label>
+                                    <div class="bar" style="background: #ddd"></div>
+                                </div>
+                                <div class="dialog-table">
+                                <table class="table list-table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="first">
+                                                <img src="assets/images/recent1.png">
+                                            </td>
+                                            <td class="text">
+                                                <p class="title">My Bollywood List</p>
+                                                <p class="sub-title">8 Tracks</p>
+        
+                                            </td>
+                                            <td class="button">
+                                                <button type="button" class="playlist-button active">Added</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="divider">
+                                Add more songs to your playlist
+                            </div>
+                            <div class="dialog-table">
+                                    <table class="table list-table">
+                                        <tbody>
+                                            <tr>
+                                                <td class="first">
+                                                    <img src="assets/images/recent1.png">
+                                                </td>
+                                                <td class="text">
+                                                    <p class="title">My Bollywood List</p>
+                                                    <p class="sub-title">8 Tracks</p>
+            
+                                                </td>
+                                                <td class="button">
+                                                    <button type="button" class="playlist-button">Added</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="first">
+                                                    <img src="assets/images/recent1.png">
+                                                </td>
+                                                <td class="text">
+                                                    <p class="title">My Bollywood List</p>
+                                                    <p class="sub-title">8 Tracks</p>
+            
+                                                </td>
+                                                <td class="button">
+                                                    <button type="button" class="playlist-button">Added</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="first">
+                                                    <img src="assets/images/recent1.png">
+                                                </td>
+                                                <td class="text">
+                                                    <p class="title">My Bollywood List</p>
+                                                    <p class="sub-title">8 Tracks</p>
+            
+                                                </td>
+                                                <td class="button">
+                                                    <button type="button" class="playlist-button">Added</button>
+                                                </td>
+                                            </tr>
+            
+                                            <tr>
+                                                    <td class="first">
+                                                        <img src="assets/images/recent1.png">
+                                                    </td>
+                                                    <td class="text">
+                                                        <p class="title">My Bollywood List</p>
+                                                        <p class="sub-title">8 Tracks</p>
+                
+                                                    </td>
+                                                    <td class="button">
+                                                        <button type="button" class="playlist-button">Added</button>
+                                                    </td>
+                                                </tr>
+            
+                                                <tr>
+                                                        <td class="first">
+                                                            <img src="assets/images/recent1.png">
+                                                        </td>
+                                                        <td class="text">
+                                                            <p class="title">My Bollywood List</p>
+                                                            <p class="sub-title">8 Tracks</p>
+                    
+                                                        </td>
+                                                        <td class="button">
+                                                            <button type="button" class="playlist-button">Added</button>
+                                                        </td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                    </div>
+
+
+
+
+                    <!--
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script>
+        new flickerplate('.flicker-example');
+    </script>
+
+    <script src="https://vjs.zencdn.net/7.0.5/video.js"></script>
+
+
+</body>
+
+</html>

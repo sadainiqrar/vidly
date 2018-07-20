@@ -43,78 +43,78 @@
 <body>
 
     <header>
-            <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-                            aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="home.html">
-                            <img src="assets/images/logo.png" class="logo">
-                        </a>
-                    </div>
-                    <div id="navbar" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="movies.html">
-                                    <img src="assets/images/movie-logo.png" class="menu-icon">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="music.html">
-                                    <img src="assets/images/music-logo.png" class="menu-icon">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="video.html">
-                                    <img src="assets/images/video-logo.png" class="menu-icon">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="season.html">
-                                    <img src="assets/images/season-logo.png" class="menu-icon">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#contact">
-    
-                                    <i class="material-icons icon">search</i>
-                                </a>
-                            </li>
-                            <li class="sign-in">
-                                <button type="button" class="btn-subscribe btn btn-primary ">Subscribe</button>
-                            </li>
-                            <li class="dropdown profile">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                    <image src="assets/images/profile.png" />
-                                    <i class="material-icons pull-down">
-                                        expand_more
-                                    </i>
-                                </a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="/Profile">Profile</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a href="/logout">Sign Out</a>
-                                    </li>
-                                </ul>
-                            </li>
-    
-    
-    
-    
-                        </ul>
-    
-                    </div>
-                    <!--/.nav-collapse -->
+        <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="home.html">
+                        <img src="assets/images/logo.png" class="logo">
+                    </a>
                 </div>
-            </nav>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="movies.html">
+                                <img src="assets/images/movie-logo.png" class="menu-icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="music.html">
+                                <img src="assets/images/music-logo.png" class="menu-icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="video.html">
+                                <img src="assets/images/video-logo.png" class="menu-icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="season.html">
+                                <img src="assets/images/season-logo.png" class="menu-icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact">
+
+                                <i class="material-icons icon">search</i>
+                            </a>
+                        </li>
+                        <li class="sign-in">
+                            <button type="button" class="btn-subscribe btn btn-primary ">Subscribe</button>
+                        </li>
+                        <li class="dropdown profile">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <image src="assets/images/profile.png" />
+                                <i class="material-icons pull-down">
+                                    expand_more
+                                </i>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="/Profile">Profile</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="/logout">Sign Out</a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+
+                    </ul>
+
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
 
 
     </header>
@@ -214,7 +214,7 @@
                     </li>
                 </ul>
 
-                <div class="table-responsive music-table" style="background: #000">
+                <div class="table-responsive music-table" style="background: #000; height: auto;">
                     <table class="table season-table">
                         <thead>
                             <tr>
@@ -265,9 +265,11 @@
 
 
                             <tr class="active-row">
-                                <td class="responsive"> <i class="material-icons play">
+                                <td class="responsive">
+                                    <i class="material-icons play">
                                         play_circle_filled
-                                    </i></td>
+                                    </i>
+                                </td>
                                 <td class="title">Mera Bichra Yaar</td>
                                 <td class="responsive">
                                     <span>
@@ -541,6 +543,372 @@
             <section class="content-section">
                 <h3 class="related-title">People Also Liked</h3>
                 <div class="row">
+
+                    <div class="desc col-lg-12 col-md-12 col-sm-12 col-xs-12 hide" id="season">
+
+                        <div class="desc-before" id="before-season"></div>
+
+                        <div class="container description" id="description-content">
+                            <div class="pull-right quit" onclick="quit('season')">
+                                <i class="material-icons">
+                                    close
+                                </i>
+                            </div>
+                            <div class="desc-container" style="width: 100%">
+                                <div class="desc-content" style="width: 100%">
+                                    <nav class="custom-nav">
+                                        <ul class="custom-tabs" id="custom-tabs">
+                                            <li class="active">
+                                                <a data-toggle="tab" href="#home">Season 1</a>
+                                            </li>
+                                            <li>
+                                                <a data-toggle="tab" href="#menu1">Season 2</a>
+                                            </li>
+                                            <li>
+                                                <a data-toggle="tab" href="#menu2">Season 3</a>
+                                            </li>
+                                            <li>
+                                                <a data-toggle="tab" href="#menu3">Season 4</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+
+
+                                    <div class="music-header">
+                                        <div class="col-md-1 col-sm-2 col-lg-1 col-xs-2 no-padding">
+                                            <img src="assets/images/recent1.png" />
+                                        </div>
+                                        <div class="col-md-8 col-sm-7 col-lg-8 col-xs-7">
+                                            <div class="season-top">
+
+                                                <span>
+                                                    <i class="fas fa-star rating-icon"></i> 8.3
+                                                </span>
+                                                Romance | Biography</div>
+                                            <div class="season-title">Strings: The Band</div>
+                                            <div class="season-sub">1 hr 50 mins | 2,456 Views</div>
+                                            <div class="movie-actions">
+                                                <button type="button" class="season-action btn btn-primary ">
+                                                    <img class="music-action-icon" src="assets/images/play_icon.png">Play All</button>
+                                                <button type="button" class="season-action btn btn-primary ">
+                                                    <img class="music-action-icon" src="assets/images/bookmark.png">Watch Trailer</button>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 col-sm-2 col-lg-2 col-xs-2 no-padding">
+                                            <div class="music-extra">
+                                                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                    <i class="material-icons fav">
+                                                        favorite
+                                                    </i>
+                                                    <p>23</p>
+                                                </div>
+                                                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                    <i class="material-icons add">
+                                                        add
+                                                    </i>
+                                                    <p>Add to Playlist</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-1 col-lg-1 col-sm-1 col-xs-1 no-padding"></div>
+                                    </div>
+                                    <div class="table-responsive music-table">
+                                        <table class="table custom-table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="responsive">Sr</th>
+                                                    <th>Title</th>
+                                                    <th class="responsive">Rating</th>
+                                                    <th class="responsive">Release Date</th>
+                                                    <th>Duration</th>
+                                                    <th class="responsive">Total Plays</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="responsive">1</td>
+                                                    <td class="title">Mera Bichra Yaar</td>
+                                                    <td class="responsive">
+                                                        <span>
+                                                            <i class="fas fa-star rating-icon" style="font-size: 10px;"></i> 8.3
+                                                        </span>
+                                                    </td>
+                                                    <td class="responsive">Mar 31, 2017</td>
+                                                    <td>2:00</td>
+                                                    <td class="responsive">
+                                                        <div class="tile-icon" style="min-height: auto">
+                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                        </div>
+                                                        <div class="tile-label">
+                                                            <p class="continue-text" style="color:#fff">
+                                                                300
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="music-extra" style="text-align: center; margin: 0">
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons fav" style="font-size: 16px;">
+                                                                favorite
+                                                            </i>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons add" style="font-size: 16px;">
+                                                                add
+                                                            </i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+
+                                                <tr class="active-row">
+                                                    <td class="responsive">
+                                                        <i class="material-icons play">
+                                                            play_circle_filled
+                                                        </i>
+                                                    </td>
+                                                    <td class="title">Mera Bichra Yaar</td>
+                                                    <td class="responsive">
+                                                        <span>
+                                                            <i class="fas fa-star rating-icon" style="font-size: 10px;"></i> 8.3
+                                                        </span>
+                                                    </td>
+                                                    <td class="responsive">Mar 31, 2017</td>
+                                                    <td>2:00</td>
+                                                    <td class="responsive">
+                                                        <div class="tile-icon" style="min-height: auto">
+                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                        </div>
+                                                        <div class="tile-label">
+                                                            <p class="continue-text" style="color:#fff">
+                                                                300
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="music-extra" style="text-align: center; margin: 0">
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons fav" style="font-size: 16px;">
+                                                                favorite
+                                                            </i>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons add" style="font-size: 16px;">
+                                                                add
+                                                            </i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="responsive">1</td>
+                                                    <td class="title">Mera Bichra Yaar</td>
+                                                    <td class="responsive">
+                                                        <span>
+                                                            <i class="fas fa-star rating-icon" style="font-size: 10px;"></i> 8.3
+                                                        </span>
+                                                    </td>
+                                                    <td class="responsive">Mar 31, 2017</td>
+                                                    <td>2:00</td>
+                                                    <td class="responsive">
+                                                        <div class="tile-icon" style="min-height: auto">
+                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                        </div>
+                                                        <div class="tile-label">
+                                                            <p class="continue-text" style="color:#fff">
+                                                                300
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="music-extra" style="text-align: center; margin: 0">
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons fav" style="font-size: 16px;">
+                                                                favorite
+                                                            </i>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons add" style="font-size: 16px;">
+                                                                add
+                                                            </i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="responsive">1</td>
+                                                    <td class="title">Mera Bichra Yaar</td>
+                                                    <td class="responsive">
+                                                        <span>
+                                                            <i class="fas fa-star rating-icon" style="font-size: 10px;"></i> 8.3
+                                                        </span>
+                                                    </td>
+                                                    <td class="responsive">Mar 31, 2017</td>
+                                                    <td>2:00</td>
+                                                    <td class="responsive">
+                                                        <div class="tile-icon" style="min-height: auto">
+                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                        </div>
+                                                        <div class="tile-label">
+                                                            <p class="continue-text" style="color:#fff">
+                                                                300
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="music-extra" style="text-align: center; margin: 0">
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons fav" style="font-size: 16px;">
+                                                                favorite
+                                                            </i>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons add" style="font-size: 16px;">
+                                                                add
+                                                            </i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="responsive">1</td>
+                                                    <td class="title">Mera Bichra Yaar</td>
+                                                    <td class="responsive">
+                                                        <span>
+                                                            <i class="fas fa-star rating-icon" style="font-size: 10px;"></i> 8.3
+                                                        </span>
+                                                    </td>
+                                                    <td class="responsive">Mar 31, 2017</td>
+                                                    <td>2:00</td>
+                                                    <td class="responsive">
+                                                        <div class="tile-icon" style="min-height: auto">
+                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                        </div>
+                                                        <div class="tile-label">
+                                                            <p class="continue-text" style="color:#fff">
+                                                                300
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="music-extra" style="text-align: center; margin: 0">
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons fav" style="font-size: 16px;">
+                                                                favorite
+                                                            </i>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons add" style="font-size: 16px;">
+                                                                add
+                                                            </i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="responsive">1</td>
+                                                    <td class="title">Mera Bichra Yaar</td>
+                                                    <td class="responsive">
+                                                        <span>
+                                                            <i class="fas fa-star rating-icon" style="font-size: 10px;"></i> 8.3
+                                                        </span>
+                                                    </td>
+                                                    <td class="responsive">Mar 31, 2017</td>
+                                                    <td>2:00</td>
+                                                    <td class="responsive">
+                                                        <div class="tile-icon" style="min-height: auto">
+                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                        </div>
+                                                        <div class="tile-label">
+                                                            <p class="continue-text" style="color:#fff">
+                                                                300
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="music-extra" style="text-align: center; margin: 0">
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons fav" style="font-size: 16px;">
+                                                                favorite
+                                                            </i>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons add" style="font-size: 16px;">
+                                                                add
+                                                            </i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="responsive">1</td>
+                                                    <td class="title">Mera Bichra Yaar</td>
+                                                    <td class="responsive">
+                                                        <span>
+                                                            <i class="fas fa-star rating-icon" style="font-size: 10px;"></i> 8.3
+                                                        </span>
+                                                    </td>
+                                                    <td class="responsive">Mar 31, 2017</td>
+                                                    <td>2:00</td>
+                                                    <td class="responsive">
+                                                        <div class="tile-icon" style="min-height: auto">
+                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                        </div>
+                                                        <div class="tile-label">
+                                                            <p class="continue-text" style="color:#fff">
+                                                                300
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="music-extra" style="text-align: center; margin: 0">
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons fav" style="font-size: 16px;">
+                                                                favorite
+                                                            </i>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons add" style="font-size: 16px;">
+                                                                add
+                                                            </i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="responsive">1</td>
+                                                    <td class="title">Mera Bichra Yaar</td>
+                                                    <td class="responsive">
+                                                        <span>
+                                                            <i class="fas fa-star rating-icon" style="font-size: 10px;"></i> 8.3
+                                                        </span>
+                                                    </td>
+                                                    <td class="responsive">Mar 31, 2017</td>
+                                                    <td>2:00</td>
+                                                    <td class="responsive">
+                                                        <div class="tile-icon" style="min-height: auto">
+                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                        </div>
+                                                        <div class="tile-label">
+                                                            <p class="continue-text" style="color:#fff">
+                                                                300
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="music-extra" style="text-align: center; margin: 0">
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons fav" style="font-size: 16px;">
+                                                                favorite
+                                                            </i>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                            <i class="material-icons add" style="font-size: 16px;">
+                                                                add
+                                                            </i>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="desc-after" id="after-season"></div>
+                    </div>
 
                     <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="season-1">
                         <div class="card">
