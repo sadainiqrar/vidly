@@ -407,16 +407,16 @@ body{
 }
 
 .movie-extra{
-    position: absolute;
-    bottom: 1%;
-    left: 94%;
+    position: relative;
+    left: 0;
+    bottom: 50px;
 }
 @media(max-width: 991px){
     
 .movie-extra{
     position: relative;
     left: 0;
-    bottom: -50px;
+    bottom: 50px;
 }
 }
 .music-extra p{
@@ -875,12 +875,21 @@ body{
     }
     .profile .dropdown-menu .divider{
         background: transparent;
+        display: none;
     }
     .profile.open a{
         background: transparent !important;
     }
     .pull-down{
         
+    }
+    .left-pad{
+        padding-left: 40px;
+    }
+    @media(max-width: 500px){
+        .left-pad{
+            padding-left: 0px;
+        }
     }
 
     .btn-profile{

@@ -2,7 +2,6 @@ $(window).scroll(function() {
   $("nav").toggleClass("scrolled", $(this).scrollTop() > 50);
 });
 
-/*
 $( window ).resize(function() {
   $( "#movie" ).removeClass( "make-visible" );
   $( "#movie" ).addClass( "hide" );
@@ -13,7 +12,6 @@ $( window ).resize(function() {
   $( "#music" ).removeClass( "make-visible" );
   $( "#music" ).addClass( "hide" );
 });
-*/
 
 function switchPlaylist(firstId, secondId) {
   
