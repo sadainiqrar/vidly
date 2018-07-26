@@ -109,8 +109,8 @@ body{
     overflow-x: hidden;
 }
 
-button, input{
-    -webkit-appearance: none;
+button, input, h1, h2, h3, h4, h5, p, span, i, div, span, ul, li, a, section, header, nav, img{
+    -webkit-appearance: none !important;
 }
 
 .table-responsive{
@@ -172,6 +172,8 @@ button, input{
 .middle .play-button img{
     width: 30%;
     float: none;
+    margin-left: auto;
+    margin-right: auto;
 }
 .middle .play-text{
     padding: 1%;
@@ -927,7 +929,7 @@ button, input{
     .nav>li.default{
         display: inline;
     }
-    @media(max-width: 768px){
+    @media(max-width: 767px){
         .nav>li.mobile{
             display: inline;
         }
