@@ -102,10 +102,15 @@
 body, h1, h2, h3, h4, h5, h6, p, span, a, li, ul, div{
     font-family: 'lato-regular'
 }
+
 body{
     background: #00100e !important;
     color: #fff !important;
     overflow-x: hidden;
+}
+
+button, input{
+    -webkit-appearance: none;
 }
 
 .table-responsive{
@@ -121,9 +126,12 @@ body{
 .card-img, .card-img-top{
     width: 100%;
     opacity: 1;
+    height: 196px;
     display: block;
-    height: auto;
     transition: .5s ease;
+}
+.slick-slide .card-img{
+    height: 250px;
 }
 
 .slider-action{
@@ -548,7 +556,7 @@ body{
 .description{
     background: #000;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     height: 500px;
     padding-left: 15px;
     padding-right: 15px;
@@ -584,7 +592,19 @@ body{
     border-bottom: 1px solid rgb(25,188,152);
     }
     .heading-container .action{
+        width: 8%;
+        float: left;
+        text-align: end;
         padding-top: 2px;
+    }
+    .section-line{
+        padding-left: 0px;
+        width: 84%;
+        float: left;
+    }
+    .section-icon{
+        width: 8%;
+        float: left
     }
     .heading-container .action button{
         color: rgb(25,188,152);
@@ -597,7 +617,9 @@ body{
     }
 
     .card-body{
-        padding: 10px 0px 10px
+        padding: 10px 0px 10px;
+        cursor: pointer;
+        z-index: 9999;
     }
     .tile-title{
         font-family: 'lato-black';
@@ -884,7 +906,34 @@ body{
         background: transparent !important;
     }
     .pull-down{
+        display: inline;
+        position: relative;
+        font-size: 12pt;
+        bottom: -3px;
+        font-weight: 600;
         
+    }
+    .signout{
+        
+        display: inline;
+        position: relative;
+        font-size: 12pt;
+        bottom: -3px;
+        font-weight: 600;
+    }
+    .nav>li.mobile{
+        display: none;
+    }
+    .nav>li.default{
+        display: inline;
+    }
+    @media(max-width: 768px){
+        .nav>li.mobile{
+            display: inline;
+        }
+        .nav>li.default{
+            display: none;
+        }
     }
     .left-pad{
         padding-left: 40px;
@@ -1041,9 +1090,6 @@ body{
         color:#fff;
     }
        .form-group select {
-        -webkit-appearance: menulist ;
-        -moz-appearance: menulist ;
-        appearance: menulist ;
 		
       cursor: pointer;
       }
@@ -1208,14 +1254,14 @@ body{
 
     @media (min-width: 425px) and (max-width: 992px){
         .heading-container .heading{
-            width: 60px;
+            width: 70px;
         
         }
     
     }
     @media (max-width: 600px){
         .heading-container .heading{
-            width: 40px;
+            width: 48px;
         
         }
     
@@ -1297,13 +1343,33 @@ body{
     @media(min-width: 420px) and (max-width: 992px){
         .heading-container .action button{
             
-            font-size: 10px;
+            font-size: 12px;
+        }
+        .heading-container .action{
+            width: 13%;
+        }
+        .section-line{
+            padding-left: 20px;
+            width: 76%;
+        }
+        .section-icon{
+            width: 11%;
         }
     }
     @media(max-width: 420px){
+        .heading-container .action{
+            width: 13%;
+        }
+        .section-line{
+            padding-left: 20px;
+            width: 76%;
+        }
+        .section-icon{
+            width: 11%;
+        }
         .heading-container .action button{
             
-            font-size: 8px;
+            font-size: 10px;
         }
     }
 
@@ -1456,7 +1522,29 @@ body{
     }
 
 
-
+    .search-btn{
+        cursor: pointer;
+        position: relative!important;
+        bottom: 28px !important;
+        padding-right: 5px;
+        float: right;
+        cursor: pointer !important;
+    }
+    .search-field:focus{
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+    .search-field{
+        padding-left: 0px !important;
+      padding-right: 30px !important;
+        background: transparent !important;
+        color: #fff !important;
+        border: none !important;
+    border-bottom: 1px solid #19bc98 !important;
+    border-radius: 0px !important;
+    height: 26px !important;
+    padding-top: 0px !important;
+    }
 
 
     .watch{
@@ -1803,10 +1891,15 @@ body{
     text-decoration: underline;
 }
 
+.continue-space{
+    padding-top: 30px !important;
+    width: 85%;
+
+}
 
 .custom-label{
     position: relative !important;
-    line-height: 12px !important;
+    line-height: 5px !important;
 }
 
 .custom-check{

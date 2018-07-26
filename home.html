@@ -20,6 +20,8 @@
         crossorigin="anonymous">
 
     <link href="assets/css/flickerplate.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" />
 
 
 
@@ -35,6 +37,9 @@
 
     <!-- Include Flickerplate -->
     <script src="assets/js/flickerplate.js"></script>
+
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+
 
 </head>
 
@@ -57,6 +62,25 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
+
+                        <li class="mobile">
+                            <a>
+                                <div>
+                                    <input id="mobile-searchInput" type="text" class="form-control search-field" name="search" placeholder="Search" onkeypress="enterPressed(event);">
+
+                                    <i id="mobile-search-submit" class="material-icons icon search-btn" style="cursor: pointer;" onclick="submitSearch()">search</i>
+                                </div>
+                            </a>
+                            <br>
+                        </li>
+                        <li class="profile mobile">
+                            <a href="profile.html">
+                                <image src="assets/images/profile.png" />
+                                <p class="pull-down">
+                                    Profile
+                                </p>
+                            </a>
+                        </li>
                         <li>
                             <a href="movies.html">
                                 <img src="assets/images/movie-logo.png" class="menu-icon">
@@ -77,19 +101,23 @@
                                 <img src="assets/images/season-logo.png" class="menu-icon">
                             </a>
                         </li>
-                        <li>
-                            <a href="#contact">
+                        <li class="default">
+                            <a>
+                                <div id="search" class="hide">
+                                    <input id="searchInput" type="text" class="form-control search-field" name="search" placeholder="Search" onkeypress="enterPressed(event);">
 
-                                <i class="material-icons icon">search</i>
+                                    <i id="search-submit" class="material-icons icon search-btn" style="cursor: pointer;" onclick="submitSearch()">search</i>
+                                </div>
+                                <i id="search-toggle" class="material-icons icon make-visible" style="cursor: pointer;" onclick="toggleSearch()">search</i>
                             </a>
                         </li>
                         <li class="sign-in">
                             <button type="button" class="btn-subscribe btn btn-primary ">Subscribe</button>
                         </li>
-                        <li class="dropdown profile">
+                        <li class="dropdown profile default">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="">
                                 <image src="assets/images/profile.png" />
-                                <i class="material-icons pull-down">
+                                <i class="material-icons">
                                     expand_more
                                 </i>
                             </a>
@@ -102,6 +130,9 @@
                                     <a href="index.html">Sign Out</a>
                                 </li>
                             </ul>
+                        </li>
+                        <li class="mobile signout">
+                            <a href="index.html">Sign Out</a>
                         </li>
 
 
@@ -128,7 +159,7 @@
                                 produced under the Logos Films & Media banner, is based on the life of boxer Hussain Shah,
                                 who won the bronze medal at the 1988 Summer Olympics </div>
                             <div class="flicker-actions">
-                                <button type="button" class="slider-action btn btn-primary "  onclick="window.location.href='watchmovie.html'">
+                                <button type="button" class="slider-action btn btn-primary " onclick="window.location.href='watchmovie.html'">
                                     <img class="slider-action-icon" src="assets/images/play_icon.png">Watch Now</button>
 
                                 <button type="button" class="slider-action btn btn-primary ">
@@ -143,7 +174,7 @@
                                 produced under the Logos Films & Media banner, is based on the life of boxer Hussain Shah,
                                 who won the bronze medal at the 1988 Summer Olympics </div>
                             <div class="flicker-actions">
-                                <button type="button" class="slider-action btn btn-primary "  onclick="window.location.href='watchmovie.html'">
+                                <button type="button" class="slider-action btn btn-primary " onclick="window.location.href='watchmovie.html'">
                                     <img class="slider-action-icon" src="assets/images/play_icon.png">Watch Now</button>
 
                                 <button type="button" class="slider-action btn btn-primary ">
@@ -158,7 +189,7 @@
                                 produced under the Logos Films & Media banner, is based on the life of boxer Hussain Shah,
                                 who won the bronze medal at the 1988 Summer Olympics </div>
                             <div class="flicker-actions">
-                                <button type="button" class="slider-action btn btn-primary "  onclick="window.location.href='watchmovie.html'">
+                                <button type="button" class="slider-action btn btn-primary " onclick="window.location.href='watchmovie.html'">
                                     <img class="slider-action-icon" src="assets/images/play_icon.png">Watch Now</button>
 
                                 <button type="button" class="slider-action btn btn-primary ">
@@ -172,147 +203,249 @@
 
                 </div>
                 <div class="recent-section">
-                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4 no-padding ">
-                        <div class="card">
-                            <img class="card-img" src="assets/images/recent1.png" alt="Card image cap">
-                            <div class="overlay">
-                                <div class="play-icon">
-                                    <img src="assets/images/play_icon.png">
-
-                                </div>
-                                <div class="play-label">
-                                    <h5>Bechara Dil</h5>
-                                </div>
-
-                            </div>
-                            <div class="middle">
-                                <div class="play-button">
-                                    <img src="assets/images/play_icon.png">
-                                </div>
-                                <div class="play-label">Bechara Dil</div>
-                                <div class="play-text">
-                                    <p>Hindi song from the movie 'xxxx' featureing xyz, abc, alskdlas, askdkas, asmdlaskd, laskdlaskd,
-                                        aksdkasjd, alskdlaskd laskdla askd asksdl laskdlk</p>
-                                </div>
-                            </div>
-
+                    
+        <div class="recent-slider">
+                <div class="card">
+                    <img class="card-img" src="assets/images/recent3.png" alt="Card image cap">
+                    <div class="overlay">
+                        <div class="play-icon">
+                            <img src="assets/images/play_icon.png">
+    
+                        </div>
+                        <div class="play-label">
+                            <h5>Bechara Dil</h5>
+                        </div>
+    
+                    </div>
+                    <div class="middle">
+                        <div class="play-button">
+                            <img src="assets/images/play_icon.png">
+                        </div>
+                        <div class="play-label">Bechara Dil</div>
+                        <div class="play-text">
+                            <p>Hindi song from the movie 'xxxx' featureing xyz, abc, alskdlas, askdkas, asmdlaskd, laskdlaskd, aksdkasjd,
+                                alskdlaskd laskdla askd asksdl laskdlk</p>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4 no-padding">
-                        <div class="card">
-                            <img class="card-img" src="assets/images/recent2.png" alt="Card image cap">
-                            <div class="overlay">
-                                <div class="play-icon">
-                                    <img src="assets/images/play_icon.png">
-                                </div>
-                                <div class="play-label">
-                                    <h5>Bechara Dil</h5>
-                                </div>
-                            </div>
-                            <div class="middle">
-                                <div class="play-button">
-                                    <img src="assets/images/play_icon.png">
-                                </div>
-                                <div class="play-label">Bechara Dil</div>
-                                <div class="play-text">
-                                    <p>Hindi song from the movie 'xxxx' featureing xyz, abc, alskdlas, askdkas, asmdlaskd, laskdlaskd,
-                                        aksdkasjd, alskdlaskd laskdla askd asksdl laskdlk</p>
-                                </div>
-                            </div>
+    
+                </div>
+                <div class="card">
+                    <img class="card-img" src="assets/images/recent4.png" alt="Card image cap">
+                    <div class="overlay">
+                        <div class="play-icon">
+                            <img src="assets/images/play_icon.png">
+    
+                        </div>
+                        <div class="play-label">
+                            <h5>Bechara Dil</h5>
+                        </div>
+    
+                    </div>
+                    <div class="middle">
+                        <div class="play-button">
+                            <img src="assets/images/play_icon.png">
+                        </div>
+                        <div class="play-label">Bechara Dil</div>
+                        <div class="play-text">
+                            <p>Hindi song from the movie 'xxxx' featureing xyz, abc, alskdlas, askdkas, asmdlaskd, laskdlaskd, aksdkasjd,
+                                alskdlaskd laskdla askd asksdl laskdlk</p>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4 no-padding">
-                        <div class="card">
-                            <img class="card-img" src="assets/images/recent3.png" alt="Card image cap">
-                            <div class="overlay">
-                                <div class="play-icon">
-                                    <img src="assets/images/play_icon.png">
-                                </div>
-                                <div class="play-label">
-                                    <h5>Bechara Dil</h5>
-                                </div>
-                            </div>
-                            <div class="middle">
-                                <div class="play-button">
-                                    <img src="assets/images/play_icon.png">
-                                </div>
-                                <div class="play-label">Bechara Dil</div>
-                                <div class="play-text">
-                                    <p>Hindi song from the movie 'xxxx' featureing xyz, abc, alskdlas, askdkas, asmdlaskd, laskdlaskd,
-                                        aksdkasjd, alskdlaskd laskdla askd asksdl laskdlk</p>
-                                </div>
-                            </div>
+    
+                </div>
+                <div class="card">
+                    <img class="card-img" src="assets/images/recent5.png" alt="Card image cap">
+                    <div class="overlay">
+                        <div class="play-icon">
+                            <img src="assets/images/play_icon.png">
+    
+                        </div>
+                        <div class="play-label">
+                            <h5>Bechara Dil</h5>
+                        </div>
+    
+                    </div>
+                    <div class="middle">
+                        <div class="play-button">
+                            <img src="assets/images/play_icon.png">
+                        </div>
+                        <div class="play-label">Bechara Dil</div>
+                        <div class="play-text">
+                            <p>Hindi song from the movie 'xxxx' featureing xyz, abc, alskdlas, askdkas, asmdlaskd, laskdlaskd, aksdkasjd,
+                                alskdlaskd laskdla askd asksdl laskdlk</p>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4 no-padding">
-                        <div class="card">
-                            <img class="card-img" src="assets/images/recent4.png" alt="Card image cap">
-                            <div class="overlay">
-                                <div class="play-icon">
-                                    <img src="assets/images/play_icon.png">
-                                </div>
-                                <div class="play-label">
-                                    <h5>Bechara Dil</h5>
-                                </div>
-                            </div>
-                            <div class="middle">
-                                <div class="play-button">
-                                    <img src="assets/images/play_icon.png">
-                                </div>
-                                <div class="play-label">Bechara Dil</div>
-                                <div class="play-text">
-                                    <p>Hindi song from the movie 'xxxx' featureing xyz, abc, alskdlas, askdkas, asmdlaskd, laskdlaskd,
-                                        aksdkasjd, alskdlaskd laskdla askd asksdl laskdlk</p>
-                                </div>
-                            </div>
+    
+                </div>
+                <div class="card">
+                    <img class="card-img" src="assets/images/recent6.png" alt="Card image cap">
+                    <div class="overlay">
+                        <div class="play-icon">
+                            <img src="assets/images/play_icon.png">
+    
+                        </div>
+                        <div class="play-label">
+                            <h5>Bechara Dil</h5>
+                        </div>
+    
+                    </div>
+                    <div class="middle">
+                        <div class="play-button">
+                            <img src="assets/images/play_icon.png">
+                        </div>
+                        <div class="play-label">Bechara Dil</div>
+                        <div class="play-text">
+                            <p>Hindi song from the movie 'xxxx' featureing xyz, abc, alskdlas, askdkas, asmdlaskd, laskdlaskd, aksdkasjd,
+                                alskdlaskd laskdla askd asksdl laskdlk</p>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4 no-padding">
-                        <div class="card">
-                            <img class="card-img" src="assets/images/recent5.png" alt="Card image cap">
-                            <div class="overlay">
-                                <div class="play-icon">
-                                    <img src="assets/images/play_icon.png">
-                                </div>
-                                <div class="play-label">
-                                    <h5>Bechara Dil</h5>
-                                </div>
-                            </div>
-                            <div class="middle">
-                                <div class="play-button">
-                                    <img src="assets/images/play_icon.png">
-                                </div>
-                                <div class="play-label">Bechara Dil</div>
-                                <div class="play-text">
-                                    <p>Hindi song from the movie 'xxxx' featureing xyz, abc, alskdlas, askdkas, asmdlaskd, laskdlaskd,
-                                        aksdkasjd, alskdlaskd laskdla askd asksdl laskdlk</p>
-                                </div>
-                            </div>
+    
+                </div>
+                <div class="card">
+                    <img class="card-img" src="assets/images/recent1.png" alt="Card image cap">
+                    <div class="overlay">
+                        <div class="play-icon">
+                            <img src="assets/images/play_icon.png">
+    
+                        </div>
+                        <div class="play-label">
+                            <h5>Bechara Dil</h5>
+                        </div>
+    
+                    </div>
+                    <div class="middle">
+                        <div class="play-button">
+                            <img src="assets/images/play_icon.png">
+                        </div>
+                        <div class="play-label">Bechara Dil</div>
+                        <div class="play-text">
+                            <p>Hindi song from the movie 'xxxx' featureing xyz, abc, alskdlas, askdkas, asmdlaskd, laskdlaskd, aksdkasjd,
+                                alskdlaskd laskdla askd asksdl laskdlk</p>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4 no-padding">
-                        <div class="card">
-                            <img class="card-img" src="assets/images/recent6.png" alt="Card image cap">
-                            <div class="overlay">
-                                <div class="play-icon">
-                                    <img src="assets/images/play_icon.png">
-                                </div>
-                                <div class="play-label">
-                                    <h5>Bechara Dil</h5>
-                                </div>
-                            </div>
-                            <div class="middle">
-                                <div class="play-button">
-                                    <img src="assets/images/play_icon.png">
-                                </div>
-                                <div class="play-label">Bechara Dil</div>
-                                <div class="play-text">
-                                    <p>Hindi song from the movie 'xxxx' featureing xyz, abc, alskdlas, askdkas, asmdlaskd, laskdlaskd,
-                                        aksdkasjd, alskdlaskd laskdla askd asksdl laskdlk</p>
-                                </div>
-                            </div>
+    
+                </div>
+                <div class="card">
+                    <img class="card-img" src="assets/images/recent2.png" alt="Card image cap">
+                    <div class="overlay">
+                        <div class="play-icon">
+                            <img src="assets/images/play_icon.png">
+    
+                        </div>
+                        <div class="play-label">
+                            <h5>Bechara Dil</h5>
+                        </div>
+    
+                    </div>
+                    <div class="middle">
+                        <div class="play-button">
+                            <img src="assets/images/play_icon.png">
+                        </div>
+                        <div class="play-label">Bechara Dil</div>
+                        <div class="play-text">
+                            <p>Hindi song from the movie 'xxxx' featureing xyz, abc, alskdlas, askdkas, asmdlaskd, laskdlaskd, aksdkasjd,
+                                alskdlaskd laskdla askd asksdl laskdlk</p>
                         </div>
                     </div>
+    
+                </div>
+                <div class="card">
+                    <img class="card-img" src="assets/images/recent3.png" alt="Card image cap">
+                    <div class="overlay">
+                        <div class="play-icon">
+                            <img src="assets/images/play_icon.png">
+    
+                        </div>
+                        <div class="play-label">
+                            <h5>Bechara Dil</h5>
+                        </div>
+    
+                    </div>
+                    <div class="middle">
+                        <div class="play-button">
+                            <img src="assets/images/play_icon.png">
+                        </div>
+                        <div class="play-label">Bechara Dil</div>
+                        <div class="play-text">
+                            <p>Hindi song from the movie 'xxxx' featureing xyz, abc, alskdlas, askdkas, asmdlaskd, laskdlaskd, aksdkasjd,
+                                alskdlaskd laskdla askd asksdl laskdlk</p>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="card">
+                    <img class="card-img" src="assets/images/recent4.png" alt="Card image cap">
+                    <div class="overlay">
+                        <div class="play-icon">
+                            <img src="assets/images/play_icon.png">
+    
+                        </div>
+                        <div class="play-label">
+                            <h5>Bechara Dil</h5>
+                        </div>
+    
+                    </div>
+                    <div class="middle">
+                        <div class="play-button">
+                            <img src="assets/images/play_icon.png">
+                        </div>
+                        <div class="play-label">Bechara Dil</div>
+                        <div class="play-text">
+                            <p>Hindi song from the movie 'xxxx' featureing xyz, abc, alskdlas, askdkas, asmdlaskd, laskdlaskd, aksdkasjd,
+                                alskdlaskd laskdla askd asksdl laskdlk</p>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="card">
+                    <img class="card-img" src="assets/images/recent5.png" alt="Card image cap">
+                    <div class="overlay">
+                        <div class="play-icon">
+                            <img src="assets/images/play_icon.png">
+    
+                        </div>
+                        <div class="play-label">
+                            <h5>Bechara Dil</h5>
+                        </div>
+    
+                    </div>
+                    <div class="middle">
+                        <div class="play-button">
+                            <img src="assets/images/play_icon.png">
+                        </div>
+                        <div class="play-label">Bechara Dil</div>
+                        <div class="play-text">
+                            <p>Hindi song from the movie 'xxxx' featureing xyz, abc, alskdlas, askdkas, asmdlaskd, laskdlaskd, aksdkasjd,
+                                alskdlaskd laskdla askd asksdl laskdlk</p>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="card">
+                    <img class="card-img" src="assets/images/recent6.png" alt="Card image cap">
+                    <div class="overlay">
+                        <div class="play-icon">
+                            <img src="assets/images/play_icon.png">
+    
+                        </div>
+                        <div class="play-label">
+                            <h5>Bechara Dil</h5>
+                        </div>
+    
+                    </div>
+                    <div class="middle">
+                        <div class="play-button">
+                            <img src="assets/images/play_icon.png">
+                        </div>
+                        <div class="play-label">Bechara Dil</div>
+                        <div class="play-text">
+                            <p>Hindi song from the movie 'xxxx' featureing xyz, abc, alskdlas, askdkas, asmdlaskd, laskdlaskd, aksdkasjd,
+                                alskdlaskd laskdla askd asksdl laskdlk</p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
 
                 </div>
             </section>
@@ -325,7 +458,7 @@
                     </i>
                 </div>
                 <div class="container">
-                    <div class="watch">
+                    <div class="watch continue-space">
                         <div class="tile-icon">
                             <i class="material-icons icon outlined" style="-webkit-text-stroke-color: #fff !important; -webkit-text-stroke-width: 2px !important;">play_arrow</i>
                         </div>
@@ -346,7 +479,7 @@
                                     Ae Dil he Mushkil
                                 </h5>
                             </div>
-                            <div class="continue"  onclick="window.location.href='watchmovie.html'">
+                            <div class="continue" onclick="window.location.href='watchmovie.html'">
                                 <div class="tile-icon">
                                     <i class="material-icons icon outlined" style="stroke-width: 2px !important">play_arrow</i>
                                 </div>
@@ -392,7 +525,7 @@
                                     Ae Dil he Mushkil
                                 </h5>
                             </div>
-                            <div class="continue"  onclick="window.location.href='watchmovie.html'">
+                            <div class="continue" onclick="window.location.href='watchmovie.html'">
                                 <div class="tile-icon">
                                     <i class="material-icons icon outlined" style="stroke-width: 2px !important">play_arrow</i>
                                 </div>
@@ -411,22 +544,23 @@
             </section>
         </div>
 
+
     </header>
 
     <div class="container">
         <article class="content section">
             <div class="heading-container">
-                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 no-padding">
+                <div class="section-icon no-padding">
                     <img src="assets/images/movie-logo.png" class="heading ">
                 </div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                <div class="section-line">
 
                     <div class="wrap">
                         <div class="line">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 no-padding action">
+                <div class="no-padding action">
                     <button onclick="window.location.href='movies.html'">See&nbsp;More</button>
                 </div>
             </div>
@@ -434,7 +568,7 @@
                 <div class="row">
                     <div class="desc col-lg-12 col-md-12 col-sm-12 col-xs-12 hide" id="movie">
                         <div class="desc-before" id="before-movie"></div>
-                        <div class="description" id="description-content" style="background: url(assets/images/movie-back.png)">
+                        <div class="description" id="description-content" style="background-image: url(assets/images/movie-back.png)">
                             <div class="pull-right quit" onclick="quit('movie')">
                                 <i class="material-icons">
                                     close
@@ -855,17 +989,17 @@
 
         <article class="content section">
             <div class="heading-container">
-                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 no-padding">
+                <div class="section-icon no-padding">
                     <img src="assets/images/music-logo.png" class="heading ">
                 </div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                <div class="section-line">
 
                     <div class="wrap">
                         <div class="line">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 no-padding action">
+                <div class="no-padding action">
                     <button onclick="window.location.href='music.html'">See&nbsp;More</button>
                 </div>
             </div>
@@ -1511,17 +1645,17 @@
     <div class="container">
         <article class="content section">
             <div class="heading-container">
-                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 no-padding">
+                <div class="section-icon no-padding">
                     <img src="assets/images/video-logo.png" class="heading ">
                 </div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                <div class="section-line">
 
                     <div class="wrap">
                         <div class="line">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 no-padding action">
+                <div class="no-padding action">
 
                     <button onclick="window.location.href='video.html'">See&nbsp;More</button>
                 </div>
@@ -1530,7 +1664,7 @@
                 <div class="row">
                     <div class="desc col-lg-12 col-md-12 col-sm-12 col-xs-12 hide" id="video">
                         <div class="desc-before" id="before-video"></div>
-                        <div class="description" id="description-content" style="background: url(assets/images/video-back.png)">
+                        <div class="description" id="description-content" style="background-image: url(assets/images/video-back.png)">
                             <div class="pull-right quit" onclick="quit('video')">
                                 <i class="material-icons">
                                     close
@@ -1950,17 +2084,17 @@
 
         <article class="content section">
             <div class="heading-container">
-                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 no-padding">
+                <div class="section-icon no-padding">
                     <img src="assets/images/season-logo.png" class="heading ">
                 </div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                <div class="section-line">
 
                     <div class="wrap">
                         <div class="line">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 no-padding action">
+                <div class="no-padding action">
 
                     <button onclick="window.location.href='season.html'">See&nbsp;More</button>
                 </div>
@@ -2013,7 +2147,7 @@
                                             <div class="season-title">Strings: The Band</div>
                                             <div class="season-sub">1 hr 50 mins | 2,456 Views</div>
                                             <div class="movie-actions">
-                                                <button type="button" class="season-action btn btn-primary "  onclick="window.location.href='watchseason.html'">
+                                                <button type="button" class="season-action btn btn-primary " onclick="window.location.href='watchseason.html'">
                                                     <img class="music-action-icon" src="assets/images/play_icon.png">Play All</button>
                                                 <button type="button" class="season-action btn btn-primary ">
                                                     <img class="music-action-icon" src="assets/images/bookmark.png">Watch Trailer</button>
@@ -2856,8 +2990,9 @@
 
 
     <script>
-        new flickerplate('.flicker-example');
     </script>
+    
+    <script type="text/javascript" src="assets/js/slick-custom.js"></script>
 
 </body>
 
