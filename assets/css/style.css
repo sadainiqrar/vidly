@@ -110,7 +110,21 @@ body{
 }
 
 button, input, h1, h2, h3, h4, h5, p, span, i, div, span, ul, li, a, section, header, nav, img{
-    -webkit-appearance: none !important;
+
+}
+.background-overlay{
+    
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
 }
 
 .table-responsive{
@@ -130,8 +144,51 @@ button, input, h1, h2, h3, h4, h5, p, span, i, div, span, ul, li, a, section, he
     display: block;
     transition: .5s ease;
 }
+@media(min-width: 550px) and (max-width: 991px){
+    .card-img, .card-img-top{
+        height: 300px;
+    }
+}
+@media(min-width: 450px) and (max-width: 549px){
+    .card-img, .card-img-top{
+        height: 275px;
+    }
+}
+@media(max-width: 449px){
+    .card-img, .card-img-top{
+        height: 196px;
+    }
+}
+
+
 .slick-slide .card-img{
-    height: 250px;
+    height: 450px;
+}
+@media(min-width: 992px) and (max-width: 1500px){
+    .slick-slide .card-img{
+        height: 250px;
+    }
+}
+
+@media(min-width: 650px) and (max-width: 991px){
+    .slick-slide .card-img{
+        height: 450px;
+    }
+}
+@media(min-width: 475px) and (max-width: 649px){
+    .slick-slide .card-img{
+        height: 350px;
+    }
+}
+@media(min-width: 320px) and (max-width: 474px){
+    .slick-slide .card-img{
+        height: 300px;
+    }
+}
+@media(min-width: 1px) and (max-width: 400px){
+    .slick-slide .card-img{
+        height: 250px;
+    }
 }
 
 .slider-action{
@@ -419,14 +476,14 @@ button, input, h1, h2, h3, h4, h5, p, span, i, div, span, ul, li, a, section, he
 .movie-extra{
     position: relative;
     left: 0;
-    bottom: 50px;
+    bottom: 10px;
 }
 @media(max-width: 991px){
     
 .movie-extra{
     position: relative;
     left: 0;
-    bottom: 50px;
+    bottom: 10px;
 }
 }
 .music-extra p{
@@ -556,7 +613,6 @@ button, input, h1, h2, h3, h4, h5, p, span, i, div, span, ul, li, a, section, he
 .description img{
 }
 .description{
-    background: #000;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 500px;
@@ -668,7 +724,6 @@ button, input, h1, h2, h3, h4, h5, p, span, i, div, span, ul, li, a, section, he
 }
 
 .quit{
-    padding-right: 15px;
     padding-top: 15px;
     cursor: pointer
 }
@@ -2297,7 +2352,52 @@ button, input, h1, h2, h3, h4, h5, p, span, i, div, span, ul, li, a, section, he
 
 
 }
+.search-label{
+    color: rgb(25,188,152);
+    font-family: 'lato-regular';
+    font-weight: 600;
+    font-size: 18pt;
+}
+
+.search-main{
+    width: 82%;
+    background: transparent;
+    border: 2px solid;
+    padding: 5px 20px;
+    border-color: rgb(25,188,152);
+    border-radius: 20px 0px 0px 20px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'lato-regular';
+}
+.search-action{
+    
+    width: 18%;
+    border: 1px solid transparent;
+    background: rgb(25,188,152);
+    padding: 6px 0px;
+    margin-left: -3px;
+    border-color: rgb(25,188,152);
+    border-radius: 0px 20px 20px 0px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'lato-regular';
+
+}
  
+.search-main:focus{
+    outline: none;
+}
+.custom-right{
+    float: right;
+}
+@media(max-width: 767px){
+    .custom-right{
+        float: none;
+    }
+}
     
       
         
