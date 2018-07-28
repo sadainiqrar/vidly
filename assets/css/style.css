@@ -112,6 +112,13 @@ body{
 button, input, h1, h2, h3, h4, h5, p, span, i, div, span, ul, li, a, section, header, nav, img{
 
 }
+button, input[type="dropdown"], input[type="button"], input[type="text"]{
+    -webkit-appearance: none !important;
+}
+select{
+    -webkit-appearance: menulist !important;
+}
+
 .background-overlay{
     
     padding-left: 15px;
@@ -517,7 +524,8 @@ button, input, h1, h2, h3, h4, h5, p, span, i, div, span, ul, li, a, section, he
     border: none !important;
     padding: 4px 20px !important;
     margin-right: 10px;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px !important;
     margin-left: 10px;
     border-radius: 20px !important;
     font-size: 12px !important;
@@ -530,7 +538,8 @@ button, input, h1, h2, h3, h4, h5, p, span, i, div, span, ul, li, a, section, he
     border: none !important;
     padding: 4px 20px !important;
     margin-right: 10px;
-    margin-top: 20px;
+    margin-top: 15px;
+    margin-bottom: 5px !important;
     margin-left: 10px;
     border-radius: 20px !important;
     font-size: 12px !important;
@@ -1135,14 +1144,22 @@ button, input, h1, h2, h3, h4, h5, p, span, i, div, span, ul, li, a, section, he
         outline: none;
        }
        .dropdown-select option:not(:checked) {
-        background-color: white; 
-        color:rgb(25,188,152);
+        background-color: #000; 
+        color:#fff;
+    }
+    .dropdown-select option:active {
+        background-color: #000; 
+        color:#fff;
     }
     .dropdown-select option:checked {
-        background-color: white; 
-        color:rgb(25,188,152);
+        background-color: #000; 
+        color:#fff;
     }
-    .dropdown-select option:hover,.dropdown-select option:focus, .dropdown-select option:active  {
+    .dropdown-select option:checked:after {
+        background-color: red; 
+        color:blue;
+    }
+    .dropdown-select option:hover,.dropdown-select option:focus  {
         background-color: rgb(25,188,152); 
         color:#fff;
     }
@@ -1969,10 +1986,10 @@ button, input, h1, h2, h3, h4, h5, p, span, i, div, span, ul, li, a, section, he
 
 @media(max-width: 480px){
     .music-title{
-        line-height: 14px;
+        line-height: 16pt;
         font-size: 12pt;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
         
     }
     .season-top{
