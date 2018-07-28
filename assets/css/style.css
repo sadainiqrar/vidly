@@ -215,10 +215,10 @@ button, input[type="dropdown"], input[type="button"], input[type="text"], select
 
 }
 .slider-action-icon{
-    width: 30px;
-    margin-top: -23px;
-    margin-bottom: -20px;
-    margin-left: -32px;
+    width: 27px;
+    margin-top: -19px;
+    margin-bottom: -16px;
+    margin-left: -21px;
     margin-right: 5px;
 }
 
@@ -463,9 +463,9 @@ button, input[type="dropdown"], input[type="button"], input[type="text"], select
 .music-action-icon{
     width: 25px !important;
     height: 25px !important;
-    margin-top: -5px;
+    margin-top: -4px;
     margin-bottom: -20px;
-    margin-left: -32px;
+    margin-left: -21px;
     margin-right: 5px;
 
 }
@@ -529,7 +529,6 @@ button, input[type="dropdown"], input[type="button"], input[type="text"], select
     margin-right: 10px;
     margin-top: 5px;
     margin-bottom: 5px !important;
-    margin-left: 10px;
     border-radius: 20px !important;
     font-size: 12px !important;
 
@@ -543,7 +542,6 @@ button, input[type="dropdown"], input[type="button"], input[type="text"], select
     margin-right: 10px;
     margin-top: 15px;
     margin-bottom: 5px !important;
-    margin-left: 10px;
     border-radius: 20px !important;
     font-size: 12px !important;
 
@@ -553,7 +551,7 @@ button, input[type="dropdown"], input[type="button"], input[type="text"], select
     width: 25px !important;
     margin-top: -23px;
     margin-bottom: -20px;
-    margin-left: -32px;
+    margin-left: -21px;
     margin-right: 5px;
 }
 
@@ -1387,10 +1385,14 @@ button, input[type="dropdown"], input[type="button"], input[type="text"], select
         .overlay .play-label h5{
             font-size: 14px
         }
+    }
+    
+    @media(max-width: 991px){
         .play-icon img {
             width: 26px;
         }
     }
+
 
     @media(min-width: 1441px){
         .overlay .play-label h5{
