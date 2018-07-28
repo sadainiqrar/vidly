@@ -109,19 +109,17 @@ body{
     overflow-x: hidden;
 }
 
-button, input, h1, h2, h3, h4, h5, p, span, i, div, span, ul, li, a, section, header, nav, img{
+button{
+    display: -webkit-inline-box !important;
 
 }
-button, input[type="dropdown"], input[type="button"], input[type="text"]{
+button, input[type="dropdown"], input[type="button"], input[type="text"], select{
     -webkit-appearance: none !important;
     -moz-appearance: none !important;
-
     appearance: none !important;
 }
-select{
-    -webkit-appearance: menulist !important;
-    -moz-appearance: menulist !important;
-    appearance: menulist !important;
+.dropdown-select{
+    
 }
 
 .background-overlay{
@@ -1132,9 +1130,11 @@ select{
        }
        
        .dropdown-select{
-           font-family: 'lato-regular';
+           
+        background: url(../images/icon-down.png) no-repeat right transparent;
+        background-size: 20px;
+        font-family: 'lato-regular';
         cursor: pointer;
-        background: transparent;
         color: #fff;
         border-color: rgb(25,188,152) ;
         padding: 4px 20px ;
