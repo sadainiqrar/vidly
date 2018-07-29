@@ -1895,6 +1895,7 @@ button, input[type="dropdown"], input[type="button"], input[type="text"], select
 .subscribe-bg{
     min-height: 660px;
     height: -webkit-fill-available;
+    height: -moz-fill-available;
     max-height: 1200px;
     background-image: url(../images/signin-bg.png);
     background-position: center;

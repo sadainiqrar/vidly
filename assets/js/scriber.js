@@ -75,6 +75,7 @@ function clicked(el) {
   d.classList.remove("hide");
 
   smoothScroll(section);
+  el.stopPropagation();
 }
 
 function quit(id) {
