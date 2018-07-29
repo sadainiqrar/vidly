@@ -42,355 +42,381 @@
 
 <body>
     <div class="content">
-    <header>
-        <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-                        aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="home.html">
-                        <img src="assets/images/logo.png" class="logo">
-                    </a>
+        <header>
+            <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                            aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="home.html">
+                            <img src="assets/images/logo.png" class="logo">
+                        </a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+
+                            <li class="mobile">
+                                <a>
+                                    <div>
+                                        <input id="mobile-searchInput" type="text" class="form-control search-field" name="search" placeholder="Search" onkeypress="enterPressed(event);">
+
+                                        <i id="mobile-search-submit" class="material-icons icon search-btn" style="cursor: pointer;" onclick="submitSearch()">search</i>
+                                    </div>
+                                </a>
+                                <br>
+                            </li>
+                            <li class="profile mobile">
+                                <a href="profile.html">
+                                    <image src="assets/images/profile.png" />
+                                    <p class="pull-down">
+                                        Profile
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="movies.html">
+                                    <img src="assets/images/movie-logo.png" class="menu-icon">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="music.html">
+                                    <img src="assets/images/music-logo.png" class="menu-icon">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="video.html">
+                                    <img src="assets/images/video-logo.png" class="menu-icon">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="season.html">
+                                    <img src="assets/images/season-logo.png" class="menu-icon">
+                                </a>
+                            </li>
+                            <li class="default">
+                                <a>
+                                    <div id="search" class="hide">
+                                        <input id="searchInput" type="text" class="form-control search-field" name="search" placeholder="Search" onkeypress="enterPressed(event);">
+
+                                        <i id="search-submit" class="material-icons icon search-btn" style="cursor: pointer;" onclick="submitSearch()">search</i>
+                                    </div>
+                                    <i id="search-toggle" class="material-icons icon make-visible" style="cursor: pointer;" onclick="toggleSearch()">search</i>
+                                </a>
+                            </li>
+                            <li class="sign-in">
+                                <button type="button" class="btn-subscribe btn btn-primary " onclick="window.location.href='signup.html'">Subscribe</button>
+                            </li>
+                            <li class="dropdown profile default">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="">
+                                    <image src="assets/images/profile.png" />
+                                    <i class="material-icons">
+                                        expand_more
+                                    </i>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="profile.html">Profile</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="index.html">Sign Out</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mobile signout">
+                                <a href="index.html">Sign Out</a>
+                            </li>
+
+
+
+
+                        </ul>
+
+                    </div>
+                    <!--/.nav-collapse -->
                 </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="movies.html">
-                                <img src="assets/images/movie-logo.png" class="menu-icon">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="music.html">
-                                <img src="assets/images/music-logo.png" class="menu-icon">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="video.html">
-                                <img src="assets/images/video-logo.png" class="menu-icon">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="season.html">
-                                <img src="assets/images/season-logo.png" class="menu-icon">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contact">
+            </nav>
 
-                                <i class="material-icons icon">search</i>
-                            </a>
-                        </li>
-                        <li class="sign-in">
-                            <button type="button" class="btn-subscribe btn btn-primary ">Subscribe</button>
-                        </li>
-                        <li class="dropdown profile">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                <image src="assets/images/profile.png" />
-                                <i class="material-icons pull-down">
-                                    expand_more
-                                </i>
-                            </a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="profile.html">Profile</a>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <a href="index.html">Sign Out</a>
-                                </li>
-                            </ul>
-                        </li>
+
+        </header>
+
+        <!-- Trigger the modal with a button -->
+        <!-- Remove This Button for modal usage -->
+        <button type="button" class="btn btn-info" style="margin-top: 100px" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+        <div class="container">
 
 
 
+            <article class="content watch">
+                <section class="player-section">
+                    <div class="video-path">Home/Movies/Movie1</div>
+                    <div class="video-section">
+                        <video id="watch-video" class="video-js vjs-fluid vjs-big-play-centered custom-video" controls preload="auto" width="640"
+                            height="264" poster="assets/images/banner1.png" data-setup="{}">
+                            <source src="https://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>
+                            <track kind="captions" src="" srclang="en" label="English"></track>
+                            <!-- Tracks need an ending tag thanks to IE9 -->
+                            <track kind="subtitles" src="" srclang="en" label="English"></track>
+                            <!-- Tracks need an ending tag thanks to IE9 -->
 
-                    </ul>
+                            <p class="vjs-no-js">
+                                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                            </p>
+                        </video>
+                        <div class="container video-content">
+                            <div class="play-title">Batman Vs Superman | Dawn of the Justice</div>
+                            <div class="play-sub">1 hr 50 min | 2016 | Fantasy / Sci-Fi</div>
+                            <div class="play-rating">
+                                <span>
+                                    <i class="fas fa-heart like"></i> 23
+                                </span>
+                                <span>
+                                    <i class="fas fa-eye view"></i> 300
+                                </span>
+                                <span>
+                                    <i class="fas fa-star rate"></i> 6.6
+                                </span>
+                            </div>
+                            <div class="play-sub-text">Shah is a 2015 Pakistani biographical sports film directed and written by Adnan Sarwar. The film,
+                                produced under the Logos Films & Media banner, is based on the life of boxer Hussain Shah,
+                                who won the bronze medal at the 1988 Summer Olympics </div>
+                            <div class="play-content-title">Cast</div>
+                            <div class="play-content">
+                                <div class="image-item">
+                                    <img src="assets/images/recent1.png" />
+                                    <h1>Henry Cavil</h5>
+                                        <p>Superman</p>
+                                </div>
+                                <div class="image-item">
+                                    <img src="assets/images/recent1.png" />
+                                    <h1>Henry Cavil</h5>
+                                        <p>Superman</p>
+                                </div>
+                                <div class="image-item">
+                                    <img src="assets/images/recent1.png" />
+                                    <h1>Henry Cavil</h5>
+                                        <p>Superman</p>
+                                </div>
+                                <div class="image-item">
+                                    <img src="assets/images/recent1.png" />
+                                    <h1>Catherine Zeta Jones</h5>
+                                        <p>Superman</p>
+                                </div>
+                                <div class="image-item">
+                                    <img src="assets/images/recent1.png" />
+                                    <h1>Henry Cavil</h5>
+                                        <p>Superman</p>
+                                </div>
+                                <div class="image-item">
+                                    <img src="assets/images/recent1.png" />
+                                    <h1>Henry Cavil</h5>
+                                        <p>Superman</p>
+                                </div>
+                                <div class="image-item">
+                                    <img src="assets/images/recent1.png" />
+                                    <h1>Henry Cavil</h5>
+                                        <p>Superman</p>
+                                </div>
+                                <div class="image-item">
+                                    <img src="assets/images/recent1.png" />
+                                    <h1>Henry Cavil</h5>
+                                        <p>Superman</p>
+                                </div>
 
-                </div>
-                <!--/.nav-collapse -->
-            </div>
-        </nav>
-
-
-    </header>
-
-    <!-- Trigger the modal with a button -->
-    <!-- Remove This Button for modal usage -->
-    <button type="button" class="btn btn-info" style="margin-top: 100px"  data-toggle="modal" data-target="#myModal">Open Modal</button>
-
-    <div class="container">
-
-
-
-        <article class="content watch">
-            <section class="player-section">
-                <div class="video-path">Home/Movies/Movie1</div>
-                <div class="video-section">
-                    <video id="watch-video" class="video-js vjs-fluid vjs-big-play-centered custom-video" controls preload="auto" width="640"
-                        height="264" poster="assets/images/banner1.png" data-setup="{}">
-                        <source src="https://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>
-                        <track kind="captions" src="" srclang="en" label="English"></track>
-                        <!-- Tracks need an ending tag thanks to IE9 -->
-                        <track kind="subtitles" src="" srclang="en" label="English"></track>
-                        <!-- Tracks need an ending tag thanks to IE9 -->
-
-                        <p class="vjs-no-js">
-                            To view this video please enable JavaScript, and consider upgrading to a web browser that
-                            <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                        </p>
-                    </video>
-                    <div class="container video-content">
-                        <div class="play-title">Batman Vs Superman | Dawn of the Justice</div>
-                        <div class="play-sub">1 hr 50 min | 2016 | Fantasy / Sci-Fi</div>
-                        <div class="play-rating">
-                            <span>
-                                <i class="fas fa-heart like"></i> 23
-                            </span>
-                            <span>
-                                <i class="fas fa-eye view"></i> 300
-                            </span>
-                            <span>
-                                <i class="fas fa-star rate"></i> 6.6
-                            </span>
+                            </div>
                         </div>
-                        <div class="play-sub-text">Shah is a 2015 Pakistani biographical sports film directed and written by Adnan Sarwar. The film,
-                            produced under the Logos Films & Media banner, is based on the life of boxer Hussain Shah, who
-                            won the bronze medal at the 1988 Summer Olympics </div>
-                        <div class="play-content-title">Cast</div>
-                        <div class="play-content">
-                            <div class="image-item">
-                                <img src="assets/images/recent1.png" />
-                                <h1>Henry Cavil</h5>
-                                    <p>Superman</p>
-                            </div>
-                            <div class="image-item">
-                                <img src="assets/images/recent1.png" />
-                                <h1>Henry Cavil</h5>
-                                    <p>Superman</p>
-                            </div>
-                            <div class="image-item">
-                                <img src="assets/images/recent1.png" />
-                                <h1>Henry Cavil</h5>
-                                    <p>Superman</p>
-                            </div>
-                            <div class="image-item">
-                                <img src="assets/images/recent1.png" />
-                                <h1>Catherine Zeta Jones</h5>
-                                    <p>Superman</p>
-                            </div>
-                            <div class="image-item">
-                                <img src="assets/images/recent1.png" />
-                                <h1>Henry Cavil</h5>
-                                    <p>Superman</p>
-                            </div>
-                            <div class="image-item">
-                                <img src="assets/images/recent1.png" />
-                                <h1>Henry Cavil</h5>
-                                    <p>Superman</p>
-                            </div>
-                            <div class="image-item">
-                                <img src="assets/images/recent1.png" />
-                                <h1>Henry Cavil</h5>
-                                    <p>Superman</p>
-                            </div>
-                            <div class="image-item">
-                                <img src="assets/images/recent1.png" />
-                                <h1>Henry Cavil</h5>
-                                    <p>Superman</p>
-                            </div>
+                    </div>
+                </section>
+            </article>
 
+        </div>
+
+
+
+        <footer class="container-fluid footer-section" style="padding:0">
+            <div class="container bottom">
+                <div class="col-md-4">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo.png" />
+                    </div>
+                    <div class="footer-desc">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                            ut laoreet dolore magna aliquam erat volutpat. </p>
+                        <a href="">Read More...</a>
+                    </div>
+                    <div class="footer-copy">
+                        <span>Copyright © 2018</span> |
+                        <span>Privacy Policy</span> |
+                        <span>FAQ</span> |
+                        <span>Support</span>
+                    </div>
+                </div>
+                <div class="col-md-5 text-center">
+                    <div class="col-lg-6 col-md-6  links">
+                        <div class="footer-support">
+                            <h4>Support</h4>
+                        </div>
+                        <div class="footer-support">
+                            <a hred="">Help Center</a>
+                        </div>
+                        <div class="footer-support">
+                            <a hred="">Get Started</a>
+                        </div>
+                        <div class="footer-support">
+                            <a hred="">Contact Us</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 links">
+                        <div class="footer-support">
+                            <h4>About Us</h4>
+                        </div>
+                        <div class="footer-support">
+                            <a hred="">About Us</a>
+                        </div>
+                        <div class="footer-support">
+                            <a hred="">Terms of Use</a>
+                        </div>
+                        <div class="footer-support">
+                            <a hred="">Privacy Policy</a>
                         </div>
                     </div>
                 </div>
-            </section>
-        </article>
+                <div class="col-md-3">
+                    <div class="col-lg-3 col-md-3 links">
+                        <div class="footer-social">
+                            <a hred="">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                        <div class="footer-social">
+                            <a hred="">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                        <div class="footer-social">
+                            <a hred="">
+                                <i class="fab fa-google-plus-g"></i>
+                            </a>
+                        </div>
+                    </div>
 
-    </div>
+                    <div class="col-lg-3 col-md-3  links">
+                        <div class="footer-social">
+                            <a hred="">
+                                <i class="fab fa-tumblr"></i>
+                            </a>
+                        </div>
+                        <div class="footer-social">
+                            <a hred="">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                        </div>
+                        <div class="footer-social">
+                            <a hred="">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
 
-
-    <footer class="container-fluid footer-section" style="padding:0">
-        <div class="container bottom">
-            <div class="col-md-4">
+            <div class="container bottom-mobile">
                 <div class="footer-logo">
                     <img src="assets/images/logo.png" />
                 </div>
-                <div class="footer-desc">
+                <div class="footer-desc-mobile">
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
                         laoreet dolore magna aliquam erat volutpat. </p>
                     <a href="">Read More...</a>
                 </div>
-                <div class="footer-copy">
+
+                <div class="footer-social-mobile">
+                    <ul>
+                        <li>
+                            <a href="https://twitter.com">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com">
+                                <i class="fab fa-google-plus-g"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://facebook.com">
+                                <i class="fab fa-tumblr"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://pinterest.com">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-copy-mobile">
+
                     <span>Copyright © 2018</span> |
                     <span>Privacy Policy</span> |
                     <span>FAQ</span> |
                     <span>Support</span>
                 </div>
             </div>
-            <div class="col-md-5 text-center">
-                <div class="col-lg-6 col-md-6  links">
-                    <div class="footer-support">
-                        <h4>Support</h4>
-                    </div>
-                    <div class="footer-support">
-                        <a hred="">Help Center</a>
-                    </div>
-                    <div class="footer-support">
-                        <a hred="">Get Started</a>
-                    </div>
-                    <div class="footer-support">
-                        <a hred="">Contact Us</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-6 links">
-                    <div class="footer-support">
-                        <h4>About Us</h4>
-                    </div>
-                    <div class="footer-support">
-                        <a hred="">About Us</a>
-                    </div>
-                    <div class="footer-support">
-                        <a hred="">Terms of Use</a>
-                    </div>
-                    <div class="footer-support">
-                        <a hred="">Privacy Policy</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="col-lg-3 col-md-3 links">
-                    <div class="footer-social">
-                        <a hred="">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </div>
-                    <div class="footer-social">
-                        <a hred="">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </div>
-                    <div class="footer-social">
-                        <a hred="">
-                            <i class="fab fa-google-plus-g"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-3  links">
-                    <div class="footer-social">
-                        <a hred="">
-                            <i class="fab fa-tumblr"></i>
-                        </a>
-                    </div>
-                    <div class="footer-social">
-                        <a hred="">
-                            <i class="fab fa-pinterest-p"></i>
-                        </a>
-                    </div>
-                    <div class="footer-social">
-                        <a hred="">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-        <div class="container bottom-mobile">
-            <div class="footer-logo">
-                <img src="assets/images/logo.png" />
-            </div>
-            <div class="footer-desc-mobile">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                    dolore magna aliquam erat volutpat. </p>
-                <a href="">Read More...</a>
-            </div>
-
-            <div class="footer-social-mobile">
-                <ul>
-                    <li>
-                        <a href="https://twitter.com">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com">
-                            <i class="fab fa-google-plus-g"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://facebook.com">
-                            <i class="fab fa-tumblr"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://instagram.com">
-                            <i class="fab fa-pinterest-p"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://pinterest.com">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footer-copy-mobile">
-
-                <span>Copyright © 2018</span> |
-                <span>Privacy Policy</span> |
-                <span>FAQ</span> |
-                <span>Support</span>
-            </div>
-        </div>
-    </footer>
-</div>
+        </footer>
+    </div>
 
     <!-- Modal -->
     <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
-            
-                <div class="signin-text">
-                    <div class="dialog bg" style="background-image: url(assets/images/success-bg.png)">
-                        <div>
+
+            <div class="signin-text">
+                <div class="dialog bg" style="background-image: url(assets/images/success-bg.png)">
+                    <div>
                         <div class="pull-right modal-close" data-dismiss="modal">
                             <i class="material-icons">
                                 close
                             </i>
                         </div>
                     </div>
-                        <div class="top" style="padding-top: 23px; padding-bottom: 50px">
-                            <i class="far fa-bell message"></i>
+                    <div class="top" style="padding-top: 23px; padding-bottom: 50px">
+                        <i class="far fa-bell message"></i>
+                    </div>
+
+                    <form>
+
+                        <div class="input-container pad-down" style="margin: 60px 60px 0px; height: 70px;">
+                            <p style="font-size: 12pt;">You need to subscribe in order to see the rest of this video.</p>
                         </div>
 
-                        <form>
+                        <div class="input-container">
+                            <button class="btn-login btn btn-primary" data-dismiss="modal" onclick="window.location.href='signup.html'">Subscribe</button>
+                        </div>
+                    </form>
 
-                            <div class="input-container pad-down" style="margin: 60px 60px 0px; height: 70px;">
-                                <p style="font-size: 12pt;">You need to subscribe in order to see the rest of this video.</p>
-                            </div>
-
-                            <div class="input-container">
-                                <button class="btn-login btn btn-primary" data-dismiss="modal">Subscribe</button>
-                            </div>
-                        </form>
-
-                    </div>
+                </div>
 
                 <!--
                 <div class="modal-footer">

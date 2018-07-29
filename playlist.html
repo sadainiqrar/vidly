@@ -59,6 +59,25 @@
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
+
+                            <li class="mobile">
+                                <a>
+                                    <div>
+                                        <input id="mobile-searchInput" type="text" class="form-control search-field" name="search" placeholder="Search" onkeypress="enterPressed(event);">
+
+                                        <i id="mobile-search-submit" class="material-icons icon search-btn" style="cursor: pointer;" onclick="submitSearch()">search</i>
+                                    </div>
+                                </a>
+                                <br>
+                            </li>
+                            <li class="profile mobile">
+                                <a href="profile.html">
+                                    <image src="assets/images/profile.png" />
+                                    <p class="pull-down">
+                                        Profile
+                                    </p>
+                                </a>
+                            </li>
                             <li>
                                 <a href="movies.html">
                                     <img src="assets/images/movie-logo.png" class="menu-icon">
@@ -79,19 +98,23 @@
                                     <img src="assets/images/season-logo.png" class="menu-icon">
                                 </a>
                             </li>
-                            <li>
-                                <a href="#contact">
+                            <li class="default">
+                                <a>
+                                    <div id="search" class="hide">
+                                        <input id="searchInput" type="text" class="form-control search-field" name="search" placeholder="Search" onkeypress="enterPressed(event);">
 
-                                    <i class="material-icons icon">search</i>
+                                        <i id="search-submit" class="material-icons icon search-btn" style="cursor: pointer;" onclick="submitSearch()">search</i>
+                                    </div>
+                                    <i id="search-toggle" class="material-icons icon make-visible" style="cursor: pointer;" onclick="toggleSearch()">search</i>
                                 </a>
                             </li>
                             <li class="sign-in">
-                                <button type="button" class="btn-subscribe btn btn-primary ">Subscribe</button>
+                                <button type="button" class="btn-subscribe btn btn-primary " onclick="window.location.href='signup.html'">Subscribe</button>
                             </li>
-                            <li class="dropdown profile">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <li class="dropdown profile default">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="">
                                     <image src="assets/images/profile.png" />
-                                    <i class="material-icons pull-down">
+                                    <i class="material-icons">
                                         expand_more
                                     </i>
                                 </a>
@@ -104,6 +127,9 @@
                                         <a href="index.html">Sign Out</a>
                                     </li>
                                 </ul>
+                            </li>
+                            <li class="mobile signout">
+                                <a href="index.html">Sign Out</a>
                             </li>
 
 
@@ -395,69 +421,55 @@
                             <div class="bar" style="background: #ddd"></div>
                         </div>
                         <div class="dialog-table">
-                        <table class="table list-table">
-                            <tbody>
-                                <tr>
-                                    <td class="first">
-                                        <img src="assets/images/recent1.png">
-                                    </td>
-                                    <td class="text">
-                                        <p class="title">My Bollywood List</p>
-                                        <p class="sub-title">8 Tracks</p>
-
-                                    </td>
-                                    <td class="button">
-                                        <button type="button" class="playlist-button active">Added</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="first">
-                                        <img src="assets/images/recent1.png">
-                                    </td>
-                                    <td class="text">
-                                        <p class="title">My Bollywood List</p>
-                                        <p class="sub-title">8 Tracks</p>
-
-                                    </td>
-                                    <td class="button">
-                                        <button type="button" class="playlist-button">Added</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="first">
-                                        <img src="assets/images/recent1.png">
-                                    </td>
-                                    <td class="text">
-                                        <p class="title">My Bollywood List</p>
-                                        <p class="sub-title">8 Tracks</p>
-
-                                    </td>
-                                    <td class="button">
-                                        <button type="button" class="playlist-button">Added</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="first">
-                                        <img src="assets/images/recent1.png">
-                                    </td>
-                                    <td class="text">
-                                        <p class="title">My Bollywood List</p>
-                                        <p class="sub-title">8 Tracks</p>
-
-                                    </td>
-                                    <td class="button">
-                                        <button type="button" class="playlist-button">Added</button>
-                                    </td>
-                                </tr>
-
-                                <tr>
+                            <table class="table list-table">
+                                <tbody>
+                                    <tr>
                                         <td class="first">
                                             <img src="assets/images/recent1.png">
                                         </td>
                                         <td class="text">
                                             <p class="title">My Bollywood List</p>
                                             <p class="sub-title">8 Tracks</p>
-    
+
+                                        </td>
+                                        <td class="button">
+                                            <button type="button" class="playlist-button active">Added</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <img src="assets/images/recent1.png">
+                                        </td>
+                                        <td class="text">
+                                            <p class="title">My Bollywood List</p>
+                                            <p class="sub-title">8 Tracks</p>
+
+                                        </td>
+                                        <td class="button">
+                                            <button type="button" class="playlist-button">Added</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <img src="assets/images/recent1.png">
+                                        </td>
+                                        <td class="text">
+                                            <p class="title">My Bollywood List</p>
+                                            <p class="sub-title">8 Tracks</p>
+
+                                        </td>
+                                        <td class="button">
+                                            <button type="button" class="playlist-button">Added</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <img src="assets/images/recent1.png">
+                                        </td>
+                                        <td class="text">
+                                            <p class="title">My Bollywood List</p>
+                                            <p class="sub-title">8 Tracks</p>
+
                                         </td>
                                         <td class="button">
                                             <button type="button" class="playlist-button">Added</button>
@@ -465,127 +477,141 @@
                                     </tr>
 
                                     <tr>
-                                            <td class="first">
-                                                <img src="assets/images/recent1.png">
-                                            </td>
-                                            <td class="text">
-                                                <p class="title">My Bollywood List</p>
-                                                <p class="sub-title">8 Tracks</p>
-        
-                                            </td>
-                                            <td class="button">
-                                                <button type="button" class="playlist-button">Added</button>
-                                            </td>
-                                        </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                                        <td class="first">
+                                            <img src="assets/images/recent1.png">
+                                        </td>
+                                        <td class="text">
+                                            <p class="title">My Bollywood List</p>
+                                            <p class="sub-title">8 Tracks</p>
+
+                                        </td>
+                                        <td class="button">
+                                            <button type="button" class="playlist-button">Added</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="first">
+                                            <img src="assets/images/recent1.png">
+                                        </td>
+                                        <td class="text">
+                                            <p class="title">My Bollywood List</p>
+                                            <p class="sub-title">8 Tracks</p>
+
+                                        </td>
+                                        <td class="button">
+                                            <button type="button" class="playlist-button">Added</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
 
                     </div>
 
                     <div id="new" class="tab-pane fade hide">
-                            <div class="input-container modal-input" style="margin-bottom: 5px;">
+                        <div class="input-container modal-input" style="margin-bottom: 5px;">
 
-                                    <input type="text" id="#{label}" required="required">
-                                    <label for="#{label}" style="top: 2px;">
-                                        Playlist Title</label>
-                                    <div class="bar" style="background: #ddd"></div>
-                                </div>
-                                <div class="dialog-table">
-                                <table class="table list-table">
-                                    <tbody>
-                                        <tr>
-                                            <td class="first">
-                                                <img src="assets/images/recent1.png">
-                                            </td>
-                                            <td class="text">
-                                                <p class="title">My Bollywood List</p>
-                                                <p class="sub-title">8 Tracks</p>
-        
-                                            </td>
-                                            <td class="button">
-                                                <button type="button" class="playlist-button active">Added</button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="divider">
-                                Add more songs to your playlist
-                            </div>
-                            <div class="dialog-table">
-                                    <table class="table list-table">
-                                        <tbody>
-                                            <tr>
-                                                <td class="first">
-                                                    <img src="assets/images/recent1.png">
-                                                </td>
-                                                <td class="text">
-                                                    <p class="title">My Bollywood List</p>
-                                                    <p class="sub-title">8 Tracks</p>
-            
-                                                </td>
-                                                <td class="button">
-                                                    <button type="button" class="playlist-button">Added</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="first">
-                                                    <img src="assets/images/recent1.png">
-                                                </td>
-                                                <td class="text">
-                                                    <p class="title">My Bollywood List</p>
-                                                    <p class="sub-title">8 Tracks</p>
-            
-                                                </td>
-                                                <td class="button">
-                                                    <button type="button" class="playlist-button">Added</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="first">
-                                                    <img src="assets/images/recent1.png">
-                                                </td>
-                                                <td class="text">
-                                                    <p class="title">My Bollywood List</p>
-                                                    <p class="sub-title">8 Tracks</p>
-            
-                                                </td>
-                                                <td class="button">
-                                                    <button type="button" class="playlist-button">Added</button>
-                                                </td>
-                                            </tr>
-            
-                                            <tr>
-                                                    <td class="first">
-                                                        <img src="assets/images/recent1.png">
-                                                    </td>
-                                                    <td class="text">
-                                                        <p class="title">My Bollywood List</p>
-                                                        <p class="sub-title">8 Tracks</p>
-                
-                                                    </td>
-                                                    <td class="button">
-                                                        <button type="button" class="playlist-button">Added</button>
-                                                    </td>
-                                                </tr>
-            
-                                                <tr>
-                                                        <td class="first">
-                                                            <img src="assets/images/recent1.png">
-                                                        </td>
-                                                        <td class="text">
-                                                            <p class="title">My Bollywood List</p>
-                                                            <p class="sub-title">8 Tracks</p>
-                    
-                                                        </td>
-                                                        <td class="button">
-                                                            <button type="button" class="playlist-button">Added</button>
-                                                        </td>
-                                                    </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                            <input type="text" id="#{label}" required="required">
+                            <label for="#{label}" style="top: 2px;">
+                                Playlist Title</label>
+                            <div class="bar" style="background: #ddd"></div>
+                        </div>
+                        <div class="dialog-table">
+                            <table class="table list-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="first">
+                                            <img src="assets/images/recent1.png">
+                                        </td>
+                                        <td class="text">
+                                            <p class="title">My Bollywood List</p>
+                                            <p class="sub-title">8 Tracks</p>
+
+                                        </td>
+                                        <td class="button">
+                                            <button type="button" class="playlist-button active">Added</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="divider">
+                            Add more songs to your playlist
+                        </div>
+                        <div class="dialog-table">
+                            <table class="table list-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="first">
+                                            <img src="assets/images/recent1.png">
+                                        </td>
+                                        <td class="text">
+                                            <p class="title">My Bollywood List</p>
+                                            <p class="sub-title">8 Tracks</p>
+
+                                        </td>
+                                        <td class="button">
+                                            <button type="button" class="playlist-button">Added</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <img src="assets/images/recent1.png">
+                                        </td>
+                                        <td class="text">
+                                            <p class="title">My Bollywood List</p>
+                                            <p class="sub-title">8 Tracks</p>
+
+                                        </td>
+                                        <td class="button">
+                                            <button type="button" class="playlist-button">Added</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first">
+                                            <img src="assets/images/recent1.png">
+                                        </td>
+                                        <td class="text">
+                                            <p class="title">My Bollywood List</p>
+                                            <p class="sub-title">8 Tracks</p>
+
+                                        </td>
+                                        <td class="button">
+                                            <button type="button" class="playlist-button">Added</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="first">
+                                            <img src="assets/images/recent1.png">
+                                        </td>
+                                        <td class="text">
+                                            <p class="title">My Bollywood List</p>
+                                            <p class="sub-title">8 Tracks</p>
+
+                                        </td>
+                                        <td class="button">
+                                            <button type="button" class="playlist-button">Added</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="first">
+                                            <img src="assets/images/recent1.png">
+                                        </td>
+                                        <td class="text">
+                                            <p class="title">My Bollywood List</p>
+                                            <p class="sub-title">8 Tracks</p>
+
+                                        </td>
+                                        <td class="button">
+                                            <button type="button" class="playlist-button">Added</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 
 

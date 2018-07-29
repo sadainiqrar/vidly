@@ -57,6 +57,25 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
+
+                        <li class="mobile">
+                            <a>
+                                <div>
+                                    <input id="mobile-searchInput" type="text" class="form-control search-field" name="search" placeholder="Search" onkeypress="enterPressed(event);">
+
+                                    <i id="mobile-search-submit" class="material-icons icon search-btn" style="cursor: pointer;" onclick="submitSearch()">search</i>
+                                </div>
+                            </a>
+                            <br>
+                        </li>
+                        <li class="profile mobile">
+                            <a href="profile.html">
+                                <image src="assets/images/profile.png" />
+                                <p class="pull-down">
+                                    Profile
+                                </p>
+                            </a>
+                        </li>
                         <li>
                             <a href="movies.html">
                                 <img src="assets/images/movie-logo.png" class="menu-icon">
@@ -77,19 +96,23 @@
                                 <img src="assets/images/season-logo.png" class="menu-icon">
                             </a>
                         </li>
-                        <li>
-                            <a href="#contact">
+                        <li class="default">
+                            <a>
+                                <div id="search" class="hide">
+                                    <input id="searchInput" type="text" class="form-control search-field" name="search" placeholder="Search" onkeypress="enterPressed(event);">
 
-                                <i class="material-icons icon">search</i>
+                                    <i id="search-submit" class="material-icons icon search-btn" style="cursor: pointer;" onclick="submitSearch()">search</i>
+                                </div>
+                                <i id="search-toggle" class="material-icons icon make-visible" style="cursor: pointer;" onclick="toggleSearch()">search</i>
                             </a>
                         </li>
                         <li class="sign-in">
-                            <button type="button" class="btn-subscribe btn btn-primary ">Subscribe</button>
+                            <button type="button" class="btn-subscribe btn btn-primary " onclick="window.location.href='signup.html'">Subscribe</button>
                         </li>
-                        <li class="dropdown profile">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <li class="dropdown profile default">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="">
                                 <image src="assets/images/profile.png" />
-                                <i class="material-icons pull-down">
+                                <i class="material-icons">
                                     expand_more
                                 </i>
                             </a>
@@ -102,6 +125,9 @@
                                     <a href="index.html">Sign Out</a>
                                 </li>
                             </ul>
+                        </li>
+                        <li class="mobile signout">
+                            <a href="index.html">Sign Out</a>
                         </li>
 
 
@@ -263,14 +289,15 @@
                 </div>
 
 
-
                 <article class="content">
-
                     <section class="content-section">
                         <div class="row">
                             <div class="desc col-lg-12 col-md-12 col-sm-12 col-xs-12 hide" id="video">
                                 <div class="desc-before" id="before-video"></div>
-                                <div class="description" id="description-content" style="background: url(assets/images/video-back.png)">
+                                <div class="description" id="description-content">
+
+
+                                    <img src="assets/images/video-back.png" class="background-overlay" />
                                     <div class="pull-right quit" onclick="quit('video')">
                                         <i class="material-icons">
                                             close
@@ -689,7 +716,7 @@
                 <div class="row padding">
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="profile-title">Most Played</div>
+                        <div class="profile-title">Most Liked</div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding">
 
@@ -721,13 +748,12 @@
 
 
                 <article class="content">
-
                     <section class="content-section">
                         <div class="row">
                             <div class="desc col-lg-12 col-md-12 col-sm-12 col-xs-12 hide" id="music">
                                 <div class="desc-before" id="before-music"></div>
 
-                                <div class="description" id="description-content">
+                                <div class="description" id="description-content" style="background-color: #000">
                                     <div class="pull-right quit" onclick="quit('music')">
                                         <i class="material-icons">
                                             close
@@ -1374,12 +1400,12 @@
 
 
                 <article class="content">
-
                     <section class="content-section">
                         <div class="row">
                             <div class="desc col-lg-12 col-md-12 col-sm-12 col-xs-12 hide" id="playlist">
                                 <div class="desc-before" id="before-playlist"></div>
-                                <div class="description" id="description-content">
+
+                                <div class="description" id="description-content" style="background-color: #000">
                                     <div class="pull-right quit" onclick="quit('playlist')">
                                         <i class="material-icons">
                                             close
@@ -1392,8 +1418,8 @@
                                                     <img src="assets/images/recent1.png" />
                                                 </div>
                                                 <div class="col-md-8 col-sm-7 col-lg-8 col-xs-7">
-                                                    <div class="music-title">My List</div>
-                                                    <div class="movie-sub">3 Tracks | 20 mins</div>
+                                                    <div class="music-title">Strings: The Band</div>
+                                                    <div class="music-sub">3 Tracks | 20 mins | 256 Total Plays</div>
                                                     <div class="movie-actions">
                                                         <button type="button" class="movie-action btn btn-primary ">
                                                             <img class="music-action-icon" src="assets/images/play_icon.png">Play All</button>
@@ -1422,50 +1448,21 @@
                                                 <table class="table custom-table">
                                                     <thead>
                                                         <tr>
-                                                            <th>Sr</th>
+                                                            <th class="responsive">Sr</th>
                                                             <th>Title</th>
-                                                            <th>Album</th>
+                                                            <th class="responsive">Album</th>
                                                             <th>Duration</th>
-                                                            <th>Total Plays</th>
+                                                            <th class="responsive">Total Plays</th>
                                                             <th></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>1</td>
+                                                            <td class="responsive">1</td>
                                                             <td class="title">Mera Bichra Yaar</td>
-                                                            <td>Mera Bichra Yaar</td>
+                                                            <td class="responsive">Mera Bichra Yaar</td>
                                                             <td>2:00</td>
-                                                            <td>
-                                                                <div class="tile-icon" style="min-height: auto">
-                                                                    <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
-                                                                </div>
-                                                                <div class="tile-label">
-                                                                    <p class="continue-text" style="color:#fff">
-                                                                        300
-                                                                    </p>
-                                                                </div>
-                                                            </td>
-                                                            <td class="music-extra" style="text-align: center; margin: 0">
-                                                                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
-                                                                    <i class="material-icons fav" style="font-size: 16px;">
-                                                                        favorite
-                                                                    </i>
-                                                                </div>
-                                                                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
-                                                                    <i class="material-icons add" style="font-size: 16px;">
-                                                                        add
-                                                                    </i>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>1</td>
-                                                            <td class="title">Mera Bichra Yaar</td>
-                                                            <td>Mera Bichra Yaar</td>
-                                                            <td>2:00</td>
-                                                            <td>
+                                                            <td class="responsive">
                                                                 <div class="tile-icon" style="min-height: auto">
                                                                     <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
                                                                 </div>
@@ -1490,15 +1487,16 @@
                                                         </tr>
 
                                                         <tr class="active-row">
-                                                            <td>
+                                                            <td class="responsive">
                                                                 <i class="material-icons play">
                                                                     play_circle_filled
                                                                 </i>
                                                             </td>
                                                             <td class="title">Mera Bichra Yaar</td>
-                                                            <td>Mera Bichra Yaar</td>
+                                                            <td class="responsive">Mera Bichra Yaar</td>
                                                             <td>2:00</td>
-                                                            <td>
+                                                            <td class="responsive">
+                                                                12
                                                                 <div class="tile-icon" style="min-height: auto">
                                                                     <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
                                                                 </div>
@@ -1523,11 +1521,11 @@
                                                         </tr>
 
                                                         <tr>
-                                                            <td>1</td>
+                                                            <td class="responsive">1</td>
                                                             <td class="title">Mera Bichra Yaar</td>
-                                                            <td>Mera Bichra Yaar</td>
+                                                            <td class="responsive">Mera Bichra Yaar</td>
                                                             <td>2:00</td>
-                                                            <td>
+                                                            <td class="responsive">
                                                                 <div class="tile-icon" style="min-height: auto">
                                                                     <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
                                                                 </div>
@@ -1552,11 +1550,11 @@
                                                         </tr>
 
                                                         <tr>
-                                                            <td>1</td>
+                                                            <td class="responsive">1</td>
                                                             <td class="title">Mera Bichra Yaar</td>
-                                                            <td>Mera Bichra Yaar</td>
+                                                            <td class="responsive">Mera Bichra Yaar</td>
                                                             <td>2:00</td>
-                                                            <td>
+                                                            <td class="responsive">
                                                                 <div class="tile-icon" style="min-height: auto">
                                                                     <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
                                                                 </div>
@@ -1581,11 +1579,11 @@
                                                         </tr>
 
                                                         <tr>
-                                                            <td>1</td>
+                                                            <td class="responsive">1</td>
                                                             <td class="title">Mera Bichra Yaar</td>
-                                                            <td>Mera Bichra Yaar</td>
+                                                            <td class="responsive">Mera Bichra Yaar</td>
                                                             <td>2:00</td>
-                                                            <td>
+                                                            <td class="responsive">
                                                                 <div class="tile-icon" style="min-height: auto">
                                                                     <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
                                                                 </div>
@@ -1610,11 +1608,11 @@
                                                         </tr>
 
                                                         <tr>
-                                                            <td>1</td>
+                                                            <td class="responsive">1</td>
                                                             <td class="title">Mera Bichra Yaar</td>
-                                                            <td>Mera Bichra Yaar</td>
+                                                            <td class="responsive">Mera Bichra Yaar</td>
                                                             <td>2:00</td>
-                                                            <td>
+                                                            <td class="responsive">
                                                                 <div class="tile-icon" style="min-height: auto">
                                                                     <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
                                                                 </div>
@@ -1638,34 +1636,6 @@
                                                             </td>
                                                         </tr>
 
-                                                        <tr>
-                                                            <td>1</td>
-                                                            <td class="title">Mera Bichra Yaar</td>
-                                                            <td>Mera Bichra Yaar</td>
-                                                            <td>2:00</td>
-                                                            <td>
-                                                                <div class="tile-icon" style="min-height: auto">
-                                                                    <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
-                                                                </div>
-                                                                <div class="tile-label">
-                                                                    <p class="continue-text" style="color:#fff">
-                                                                        300
-                                                                    </p>
-                                                                </div>
-                                                            </td>
-                                                            <td class="music-extra" style="text-align: center; margin: 0">
-                                                                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
-                                                                    <i class="material-icons fav" style="font-size: 16px;">
-                                                                        favorite
-                                                                    </i>
-                                                                </div>
-                                                                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
-                                                                    <i class="material-icons add" style="font-size: 16px;">
-                                                                        add
-                                                                    </i>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -2082,13 +2052,14 @@
 
 
 
-                <article class="content">
 
+                <article class="content">
                     <section class="content-section">
                         <div class="row">
                             <div class="desc col-lg-12 col-md-12 col-sm-12 col-xs-12 hide" id="list1">
                                 <div class="desc-before" id="before-list1"></div>
-                                <div class="description" id="description-content">
+
+                                <div class="description" id="description-content" style="background-color: #000">
                                     <div class="pull-right quit" onclick="quit('list1')">
                                         <i class="material-icons">
                                             close
@@ -2101,8 +2072,8 @@
                                                     <img src="assets/images/recent1.png" />
                                                 </div>
                                                 <div class="col-md-8 col-sm-7 col-lg-8 col-xs-7">
-                                                    <div class="music-title">My List</div>
-                                                    <div class="movie-sub">3 Tracks | 20 mins</div>
+                                                    <div class="music-title">Strings: The Band</div>
+                                                    <div class="music-sub">3 Tracks | 20 mins | 256 Total Plays</div>
                                                     <div class="movie-actions">
                                                         <button type="button" class="movie-action btn btn-primary ">
                                                             <img class="music-action-icon" src="assets/images/play_icon.png">Play All</button>
@@ -2131,50 +2102,21 @@
                                                 <table class="table custom-table">
                                                     <thead>
                                                         <tr>
-                                                            <th>Sr</th>
+                                                            <th class="responsive">Sr</th>
                                                             <th>Title</th>
-                                                            <th>Album</th>
+                                                            <th class="responsive">Album</th>
                                                             <th>Duration</th>
-                                                            <th>Total Plays</th>
+                                                            <th class="responsive">Total Plays</th>
                                                             <th></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>1</td>
+                                                            <td class="responsive">1</td>
                                                             <td class="title">Mera Bichra Yaar</td>
-                                                            <td>Mera Bichra Yaar</td>
+                                                            <td class="responsive">Mera Bichra Yaar</td>
                                                             <td>2:00</td>
-                                                            <td>
-                                                                <div class="tile-icon" style="min-height: auto">
-                                                                    <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
-                                                                </div>
-                                                                <div class="tile-label">
-                                                                    <p class="continue-text" style="color:#fff">
-                                                                        300
-                                                                    </p>
-                                                                </div>
-                                                            </td>
-                                                            <td class="music-extra" style="text-align: center; margin: 0">
-                                                                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
-                                                                    <i class="material-icons fav" style="font-size: 16px;">
-                                                                        favorite
-                                                                    </i>
-                                                                </div>
-                                                                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
-                                                                    <i class="material-icons add" style="font-size: 16px;">
-                                                                        add
-                                                                    </i>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>1</td>
-                                                            <td class="title">Mera Bichra Yaar</td>
-                                                            <td>Mera Bichra Yaar</td>
-                                                            <td>2:00</td>
-                                                            <td>
+                                                            <td class="responsive">
                                                                 <div class="tile-icon" style="min-height: auto">
                                                                     <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
                                                                 </div>
@@ -2199,15 +2141,16 @@
                                                         </tr>
 
                                                         <tr class="active-row">
-                                                            <td>
+                                                            <td class="responsive">
                                                                 <i class="material-icons play">
                                                                     play_circle_filled
                                                                 </i>
                                                             </td>
                                                             <td class="title">Mera Bichra Yaar</td>
-                                                            <td>Mera Bichra Yaar</td>
+                                                            <td class="responsive">Mera Bichra Yaar</td>
                                                             <td>2:00</td>
-                                                            <td>
+                                                            <td class="responsive">
+                                                                12
                                                                 <div class="tile-icon" style="min-height: auto">
                                                                     <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
                                                                 </div>
@@ -2232,11 +2175,11 @@
                                                         </tr>
 
                                                         <tr>
-                                                            <td>1</td>
+                                                            <td class="responsive">1</td>
                                                             <td class="title">Mera Bichra Yaar</td>
-                                                            <td>Mera Bichra Yaar</td>
+                                                            <td class="responsive">Mera Bichra Yaar</td>
                                                             <td>2:00</td>
-                                                            <td>
+                                                            <td class="responsive">
                                                                 <div class="tile-icon" style="min-height: auto">
                                                                     <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
                                                                 </div>
@@ -2261,11 +2204,11 @@
                                                         </tr>
 
                                                         <tr>
-                                                            <td>1</td>
+                                                            <td class="responsive">1</td>
                                                             <td class="title">Mera Bichra Yaar</td>
-                                                            <td>Mera Bichra Yaar</td>
+                                                            <td class="responsive">Mera Bichra Yaar</td>
                                                             <td>2:00</td>
-                                                            <td>
+                                                            <td class="responsive">
                                                                 <div class="tile-icon" style="min-height: auto">
                                                                     <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
                                                                 </div>
@@ -2290,11 +2233,11 @@
                                                         </tr>
 
                                                         <tr>
-                                                            <td>1</td>
+                                                            <td class="responsive">1</td>
                                                             <td class="title">Mera Bichra Yaar</td>
-                                                            <td>Mera Bichra Yaar</td>
+                                                            <td class="responsive">Mera Bichra Yaar</td>
                                                             <td>2:00</td>
-                                                            <td>
+                                                            <td class="responsive">
                                                                 <div class="tile-icon" style="min-height: auto">
                                                                     <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
                                                                 </div>
@@ -2319,11 +2262,11 @@
                                                         </tr>
 
                                                         <tr>
-                                                            <td>1</td>
+                                                            <td class="responsive">1</td>
                                                             <td class="title">Mera Bichra Yaar</td>
-                                                            <td>Mera Bichra Yaar</td>
+                                                            <td class="responsive">Mera Bichra Yaar</td>
                                                             <td>2:00</td>
-                                                            <td>
+                                                            <td class="responsive">
                                                                 <div class="tile-icon" style="min-height: auto">
                                                                     <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
                                                                 </div>
@@ -2347,41 +2290,12 @@
                                                             </td>
                                                         </tr>
 
-                                                        <tr>
-                                                            <td>1</td>
-                                                            <td class="title">Mera Bichra Yaar</td>
-                                                            <td>Mera Bichra Yaar</td>
-                                                            <td>2:00</td>
-                                                            <td>
-                                                                <div class="tile-icon" style="min-height: auto">
-                                                                    <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
-                                                                </div>
-                                                                <div class="tile-label">
-                                                                    <p class="continue-text" style="color:#fff">
-                                                                        300
-                                                                    </p>
-                                                                </div>
-                                                            </td>
-                                                            <td class="music-extra" style="text-align: center; margin: 0">
-                                                                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
-                                                                    <i class="material-icons fav" style="font-size: 16px;">
-                                                                        favorite
-                                                                    </i>
-                                                                </div>
-                                                                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
-                                                                    <i class="material-icons add" style="font-size: 16px;">
-                                                                        add
-                                                                    </i>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="desc-after" id="after-list1"></div>
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="list1-1">

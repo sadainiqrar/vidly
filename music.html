@@ -57,6 +57,25 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
+
+                        <li class="mobile">
+                            <a>
+                                <div>
+                                    <input id="mobile-searchInput" type="text" class="form-control search-field" name="search" placeholder="Search" onkeypress="enterPressed(event);">
+
+                                    <i id="mobile-search-submit" class="material-icons icon search-btn" style="cursor: pointer;" onclick="submitSearch()">search</i>
+                                </div>
+                            </a>
+                            <br>
+                        </li>
+                        <li class="profile mobile">
+                            <a href="profile.html">
+                                <image src="assets/images/profile.png" />
+                                <p class="pull-down">
+                                    Profile
+                                </p>
+                            </a>
+                        </li>
                         <li>
                             <a href="movies.html">
                                 <img src="assets/images/movie-logo.png" class="menu-icon">
@@ -77,19 +96,23 @@
                                 <img src="assets/images/season-logo.png" class="menu-icon">
                             </a>
                         </li>
-                        <li>
-                            <a href="#contact">
+                        <li class="default">
+                            <a>
+                                <div id="search" class="hide">
+                                    <input id="searchInput" type="text" class="form-control search-field" name="search" placeholder="Search" onkeypress="enterPressed(event);">
 
-                                <i class="material-icons icon">search</i>
+                                    <i id="search-submit" class="material-icons icon search-btn" style="cursor: pointer;" onclick="submitSearch()">search</i>
+                                </div>
+                                <i id="search-toggle" class="material-icons icon make-visible" style="cursor: pointer;" onclick="toggleSearch()">search</i>
                             </a>
                         </li>
                         <li class="sign-in">
-                            <button type="button" class="btn-subscribe btn btn-primary ">Subscribe</button>
+                            <button type="button" class="btn-subscribe btn btn-primary " onclick="window.location.href='signup.html'">Subscribe</button>
                         </li>
-                        <li class="dropdown profile">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <li class="dropdown profile default">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="">
                                 <image src="assets/images/profile.png" />
-                                <i class="material-icons pull-down">
+                                <i class="material-icons">
                                     expand_more
                                 </i>
                             </a>
@@ -102,6 +125,9 @@
                                     <a href="index.html">Sign Out</a>
                                 </li>
                             </ul>
+                        </li>
+                        <li class="mobile signout">
+                            <a href="index.html">Sign Out</a>
                         </li>
 
 
@@ -168,634 +194,636 @@
 
 
         <article class="content">
-
-            <div class="heading-container">
-                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 no-padding">
-                    <img src="assets/images/music-logo.png" class="heading ">
-                </div>
-                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="padding-right: 0">
-
-                    <div class="wrap">
-                        <div class="line">
+                <div class="heading-container">
+                    <div class="section-icon no-padding">
+                        <img src="assets/images/music-logo.png" class="heading ">
+                    </div>
+                    <div class="section-line">
+    
+                        <div class="wrap">
+                            <div class="line">
+                            </div>
                         </div>
                     </div>
+                    <div class="no-padding action">
+                        <button onclick="window.location.href='music.html'">See&nbsp;More</button>
+                    </div>
                 </div>
-            </div>
-            <section class="content-section">
-                <div class="row">
-                    <div class="desc col-lg-12 col-md-12 col-sm-12 col-xs-12 hide" id="music">
-                        <div class="desc-before" id="before-music"></div>
-
-                        <div class="description" id="description-content">
-                            <div class="pull-right quit" onclick="quit('music')">
-                                <i class="material-icons">
-                                    close
-                                </i>
-                            </div>
-                            <div class="desc-container" style="width: 100%; min-height: 80%; max-height: 80%">
-                                <div class="desc-content" style="width: 100%">
-                                    <div class="music-header">
-                                        <div class="col-md-1 col-sm-2 col-lg-1 col-xs-2 no-padding">
-                                            <img src="assets/images/recent1.png" />
-                                        </div>
-                                        <div class="col-md-8 col-sm-7 col-lg-8 col-xs-7">
-                                            <div class="music-title">Strings: The Band</div>
-                                            <div class="music-sub">3 Tracks | 20 mins | 256 Total Plays</div>
-                                            <div class="movie-actions">
-                                                <button type="button" class="movie-action btn btn-primary ">
-                                                    <img class="music-action-icon" src="assets/images/play_icon.png">Play All</button>
+                <section class="content-section">
+                    <div class="row">
+                        <div class="desc col-lg-12 col-md-12 col-sm-12 col-xs-12 hide" id="music">
+                            <div class="desc-before" id="before-music"></div>
+    
+                            <div class="description" id="description-content" style="background-color: #000">
+                                <div class="pull-right quit" onclick="quit('music')">
+                                    <i class="material-icons">
+                                        close
+                                    </i>
+                                </div>
+                                <div class="desc-container" style="width: 100%; min-height: 80%; max-height: 80%">
+                                    <div class="desc-content" style="width: 100%">
+                                        <div class="music-header">
+                                            <div class="col-md-1 col-sm-2 col-lg-1 col-xs-2 no-padding">
+                                                <img src="assets/images/recent1.png" />
                                             </div>
-                                        </div>
-                                        <div class="col-md-2 col-sm-2 col-lg-2 col-xs-2 no-padding">
-                                            <div class="music-extra">
-                                                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
-                                                    <i class="material-icons fav">
-                                                        favorite
-                                                    </i>
-                                                    <p>23</p>
-                                                </div>
-                                                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
-                                                    <i class="material-icons add">
-                                                        add
-                                                    </i>
-                                                    <p>Add to Playlist</p>
+                                            <div class="col-md-8 col-sm-7 col-lg-8 col-xs-7">
+                                                <div class="music-title">Strings: The Band</div>
+                                                <div class="music-sub">3 Tracks | 20 mins | 256 Total Plays</div>
+                                                <div class="movie-actions">
+                                                    <button type="button" class="movie-action btn btn-primary ">
+                                                        <img class="music-action-icon" src="assets/images/play_icon.png">Play All</button>
                                                 </div>
                                             </div>
-                                        </div>
-
-                                        <div class="col-md-1 col-lg-1 col-sm-1 col-xs-1 no-padding"></div>
-                                    </div>
-                                    <div class="table-responsive music-table">
-                                        <table class="table custom-table">
-                                            <thead>
-                                                <tr>
-                                                    <th class="responsive">Sr</th>
-                                                    <th>Title</th>
-                                                    <th class="responsive">Album</th>
-                                                    <th>Duration</th>
-                                                    <th class="responsive">Total Plays</th>
-                                                    <th></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="responsive">1</td>
-                                                    <td class="title">Mera Bichra Yaar</td>
-                                                    <td class="responsive">Mera Bichra Yaar</td>
-                                                    <td>2:00</td>
-                                                    <td class="responsive">
-                                                        <div class="tile-icon" style="min-height: auto">
-                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
-                                                        </div>
-                                                        <div class="tile-label">
-                                                            <p class="continue-text" style="color:#fff">
-                                                                300
-                                                            </p>
-                                                        </div>
-                                                    </td>
-                                                    <td class="music-extra" style="text-align: center; margin: 0">
-                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
-                                                            <i class="material-icons fav" style="font-size: 16px;">
-                                                                favorite
-                                                            </i>
-                                                        </div>
-                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
-                                                            <i class="material-icons add" style="font-size: 16px;">
-                                                                add
-                                                            </i>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-                                                <tr class="active-row">
-                                                    <td class="responsive">
-                                                        <i class="material-icons play">
-                                                            play_circle_filled
+                                            <div class="col-md-2 col-sm-2 col-lg-2 col-xs-2 no-padding">
+                                                <div class="music-extra">
+                                                    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                        <i class="material-icons fav">
+                                                            favorite
                                                         </i>
-                                                    </td>
-                                                    <td class="title">Mera Bichra Yaar</td>
-                                                    <td class="responsive">Mera Bichra Yaar</td>
-                                                    <td>2:00</td>
-                                                    <td class="responsive">
-                                                        12
-                                                        <div class="tile-icon" style="min-height: auto">
-                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
-                                                        </div>
-                                                        <div class="tile-label">
-                                                            <p class="continue-text" style="color:#fff">
-                                                                300
-                                                            </p>
-                                                        </div>
-                                                    </td>
-                                                    <td class="music-extra" style="text-align: center; margin: 0">
-                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
-                                                            <i class="material-icons fav" style="font-size: 16px;">
-                                                                favorite
+                                                        <p>23</p>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                        <i class="material-icons add">
+                                                            add
+                                                        </i>
+                                                        <p>Add to Playlist</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="col-md-1 col-lg-1 col-sm-1 col-xs-1 no-padding"></div>
+                                        </div>
+                                        <div class="table-responsive music-table">
+                                            <table class="table custom-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="responsive">Sr</th>
+                                                        <th>Title</th>
+                                                        <th class="responsive">Album</th>
+                                                        <th>Duration</th>
+                                                        <th class="responsive">Total Plays</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="responsive">1</td>
+                                                        <td class="title">Mera Bichra Yaar</td>
+                                                        <td class="responsive">Mera Bichra Yaar</td>
+                                                        <td>2:00</td>
+                                                        <td class="responsive">
+                                                            <div class="tile-icon" style="min-height: auto">
+                                                                <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                            </div>
+                                                            <div class="tile-label">
+                                                                <p class="continue-text" style="color:#fff">
+                                                                    300
+                                                                </p>
+                                                            </div>
+                                                        </td>
+                                                        <td class="music-extra" style="text-align: center; margin: 0">
+                                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                                <i class="material-icons fav" style="font-size: 16px;">
+                                                                    favorite
+                                                                </i>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                                <i class="material-icons add" style="font-size: 16px;">
+                                                                    add
+                                                                </i>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+    
+                                                    <tr class="active-row">
+                                                        <td class="responsive">
+                                                            <i class="material-icons play">
+                                                                play_circle_filled
                                                             </i>
-                                                        </div>
-                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
-                                                            <i class="material-icons add" style="font-size: 16px;">
-                                                                add
-                                                            </i>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="responsive">1</td>
-                                                    <td class="title">Mera Bichra Yaar</td>
-                                                    <td class="responsive">Mera Bichra Yaar</td>
-                                                    <td>2:00</td>
-                                                    <td class="responsive">
-                                                        <div class="tile-icon" style="min-height: auto">
-                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
-                                                        </div>
-                                                        <div class="tile-label">
-                                                            <p class="continue-text" style="color:#fff">
-                                                                300
-                                                            </p>
-                                                        </div>
-                                                    </td>
-                                                    <td class="music-extra" style="text-align: center; margin: 0">
-                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
-                                                            <i class="material-icons fav" style="font-size: 16px;">
-                                                                favorite
-                                                            </i>
-                                                        </div>
-                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
-                                                            <i class="material-icons add" style="font-size: 16px;">
-                                                                add
-                                                            </i>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="responsive">1</td>
-                                                    <td class="title">Mera Bichra Yaar</td>
-                                                    <td class="responsive">Mera Bichra Yaar</td>
-                                                    <td>2:00</td>
-                                                    <td class="responsive">
-                                                        <div class="tile-icon" style="min-height: auto">
-                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
-                                                        </div>
-                                                        <div class="tile-label">
-                                                            <p class="continue-text" style="color:#fff">
-                                                                300
-                                                            </p>
-                                                        </div>
-                                                    </td>
-                                                    <td class="music-extra" style="text-align: center; margin: 0">
-                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
-                                                            <i class="material-icons fav" style="font-size: 16px;">
-                                                                favorite
-                                                            </i>
-                                                        </div>
-                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
-                                                            <i class="material-icons add" style="font-size: 16px;">
-                                                                add
-                                                            </i>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="responsive">1</td>
-                                                    <td class="title">Mera Bichra Yaar</td>
-                                                    <td class="responsive">Mera Bichra Yaar</td>
-                                                    <td>2:00</td>
-                                                    <td class="responsive">
-                                                        <div class="tile-icon" style="min-height: auto">
-                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
-                                                        </div>
-                                                        <div class="tile-label">
-                                                            <p class="continue-text" style="color:#fff">
-                                                                300
-                                                            </p>
-                                                        </div>
-                                                    </td>
-                                                    <td class="music-extra" style="text-align: center; margin: 0">
-                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
-                                                            <i class="material-icons fav" style="font-size: 16px;">
-                                                                favorite
-                                                            </i>
-                                                        </div>
-                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
-                                                            <i class="material-icons add" style="font-size: 16px;">
-                                                                add
-                                                            </i>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="responsive">1</td>
-                                                    <td class="title">Mera Bichra Yaar</td>
-                                                    <td class="responsive">Mera Bichra Yaar</td>
-                                                    <td>2:00</td>
-                                                    <td class="responsive">
-                                                        <div class="tile-icon" style="min-height: auto">
-                                                            <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
-                                                        </div>
-                                                        <div class="tile-label">
-                                                            <p class="continue-text" style="color:#fff">
-                                                                300
-                                                            </p>
-                                                        </div>
-                                                    </td>
-                                                    <td class="music-extra" style="text-align: center; margin: 0">
-                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
-                                                            <i class="material-icons fav" style="font-size: 16px;">
-                                                                favorite
-                                                            </i>
-                                                        </div>
-                                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
-                                                            <i class="material-icons add" style="font-size: 16px;">
-                                                                add
-                                                            </i>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-                                            </tbody>
-                                        </table>
+                                                        </td>
+                                                        <td class="title">Mera Bichra Yaar</td>
+                                                        <td class="responsive">Mera Bichra Yaar</td>
+                                                        <td>2:00</td>
+                                                        <td class="responsive">
+                                                            12
+                                                            <div class="tile-icon" style="min-height: auto">
+                                                                <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                            </div>
+                                                            <div class="tile-label">
+                                                                <p class="continue-text" style="color:#fff">
+                                                                    300
+                                                                </p>
+                                                            </div>
+                                                        </td>
+                                                        <td class="music-extra" style="text-align: center; margin: 0">
+                                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                                <i class="material-icons fav" style="font-size: 16px;">
+                                                                    favorite
+                                                                </i>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                                <i class="material-icons add" style="font-size: 16px;">
+                                                                    add
+                                                                </i>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+    
+                                                    <tr>
+                                                        <td class="responsive">1</td>
+                                                        <td class="title">Mera Bichra Yaar</td>
+                                                        <td class="responsive">Mera Bichra Yaar</td>
+                                                        <td>2:00</td>
+                                                        <td class="responsive">
+                                                            <div class="tile-icon" style="min-height: auto">
+                                                                <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                            </div>
+                                                            <div class="tile-label">
+                                                                <p class="continue-text" style="color:#fff">
+                                                                    300
+                                                                </p>
+                                                            </div>
+                                                        </td>
+                                                        <td class="music-extra" style="text-align: center; margin: 0">
+                                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                                <i class="material-icons fav" style="font-size: 16px;">
+                                                                    favorite
+                                                                </i>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                                <i class="material-icons add" style="font-size: 16px;">
+                                                                    add
+                                                                </i>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+    
+                                                    <tr>
+                                                        <td class="responsive">1</td>
+                                                        <td class="title">Mera Bichra Yaar</td>
+                                                        <td class="responsive">Mera Bichra Yaar</td>
+                                                        <td>2:00</td>
+                                                        <td class="responsive">
+                                                            <div class="tile-icon" style="min-height: auto">
+                                                                <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                            </div>
+                                                            <div class="tile-label">
+                                                                <p class="continue-text" style="color:#fff">
+                                                                    300
+                                                                </p>
+                                                            </div>
+                                                        </td>
+                                                        <td class="music-extra" style="text-align: center; margin: 0">
+                                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                                <i class="material-icons fav" style="font-size: 16px;">
+                                                                    favorite
+                                                                </i>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                                <i class="material-icons add" style="font-size: 16px;">
+                                                                    add
+                                                                </i>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+    
+                                                    <tr>
+                                                        <td class="responsive">1</td>
+                                                        <td class="title">Mera Bichra Yaar</td>
+                                                        <td class="responsive">Mera Bichra Yaar</td>
+                                                        <td>2:00</td>
+                                                        <td class="responsive">
+                                                            <div class="tile-icon" style="min-height: auto">
+                                                                <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                            </div>
+                                                            <div class="tile-label">
+                                                                <p class="continue-text" style="color:#fff">
+                                                                    300
+                                                                </p>
+                                                            </div>
+                                                        </td>
+                                                        <td class="music-extra" style="text-align: center; margin: 0">
+                                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                                <i class="material-icons fav" style="font-size: 16px;">
+                                                                    favorite
+                                                                </i>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                                <i class="material-icons add" style="font-size: 16px;">
+                                                                    add
+                                                                </i>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+    
+                                                    <tr>
+                                                        <td class="responsive">1</td>
+                                                        <td class="title">Mera Bichra Yaar</td>
+                                                        <td class="responsive">Mera Bichra Yaar</td>
+                                                        <td>2:00</td>
+                                                        <td class="responsive">
+                                                            <div class="tile-icon" style="min-height: auto">
+                                                                <i class="material-icons icon" style="stroke-width: 2px !important">play_arrow</i>
+                                                            </div>
+                                                            <div class="tile-label">
+                                                                <p class="continue-text" style="color:#fff">
+                                                                    300
+                                                                </p>
+                                                            </div>
+                                                        </td>
+                                                        <td class="music-extra" style="text-align: center; margin: 0">
+                                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                                <i class="material-icons fav" style="font-size: 16px;">
+                                                                    favorite
+                                                                </i>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 no-padding">
+                                                                <i class="material-icons add" style="font-size: 16px;">
+                                                                    add
+                                                                </i>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+    
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="desc-after" id="after-music"></div>
                         </div>
-                        <div class="desc-after" id="after-music"></div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="music-1">
-                        <div class="card">
-                            <img class="card-img" src="assets/images/recent1.png" alt="Card image cap">
-                            <div class="middle item-overlay">
-                                <div class="v-align">
-                                    <div class="play-button">
-                                        <img src="assets/images/play_icon.png">
+                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="music-1">
+                            <div class="card">
+                                <img class="card-img" src="assets/images/recent1.png" alt="Card image cap">
+                                <div class="middle item-overlay">
+                                    <div class="v-align">
+                                        <div class="play-button">
+                                            <img src="assets/images/play_icon.png">
+                                        </div>
+                                        <div class="play-label overlay-label">Bechara Dil</div>
+                                        <div class="play-text overlay-text">
+                                            <p>Genre: Romance</p>
+                                        </div>
+    
+    
                                     </div>
-                                    <div class="play-label overlay-label">Bechara Dil</div>
-                                    <div class="play-text overlay-text">
-                                        <p>Genre: Romance</p>
-                                    </div>
-
-
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star rating-icon"></i> 6.3
                                 </div>
                             </div>
-                            <div class="rating">
-                                <i class="fas fa-star rating-icon"></i> 6.3
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="tile-icon">
-                                <i class="material-icons icon outlined">play_arrow</i>
-                            </div>
-                            <div class="tile-label">
-                                <h5 class="tile-title">
-                                    Ae Dil he Mushkil
-                                </h5>
-                                <p class="tile-text">Genre: Romance</p>
-                                <p class="tile-text"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="music-2">
-                        <div class="card">
-                            <img class="card-img" src="assets/images/recent2.png" alt="Card image cap">
-                            <div class="middle item-overlay">
-                                <div class="v-align">
-                                    <div class="play-button">
-                                        <img src="assets/images/play_icon.png">
-                                    </div>
-                                    <div class="play-label overlay-label">Bechara Dil</div>
-                                    <div class="play-text overlay-text">
-                                        <p>Genre: Romance</p>
-                                    </div>
-
-
+                            <div class="card-body">
+                                <div class="tile-icon">
+                                    <i class="material-icons icon outlined">play_arrow</i>
+                                </div>
+                                <div class="tile-label">
+                                    <h5 class="tile-title">
+                                        Ae Dil he Mushkil
+                                    </h5>
+                                    <p class="tile-text">Genre: Romance</p>
+                                    <p class="tile-text"></p>
                                 </div>
                             </div>
-                            <div class="rating">
-                                <i class="fas fa-star rating-icon"></i> 6.3
-                            </div>
                         </div>
-                        <div class="card-body">
-                            <div class="tile-icon">
-                                <i class="material-icons icon outlined">play_arrow</i>
-                            </div>
-                            <div class="tile-label">
-                                <h5 class="tile-title">
-                                    Ae Dil he Mushkil
-                                </h5>
-                                <p class="tile-text">Genre: Romance</p>
-                                <p class="tile-text"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6  tile" onclick="clicked(event)" id="music-3">
-                        <div class="card">
-                            <img class="card-img" src="assets/images/recent3.png" alt="Card image cap">
-                            <div class="middle item-overlay">
-                                <div class="v-align">
-                                    <div class="play-button">
-                                        <img src="assets/images/play_icon.png">
+                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="music-2">
+                            <div class="card">
+                                <img class="card-img" src="assets/images/recent2.png" alt="Card image cap">
+                                <div class="middle item-overlay">
+                                    <div class="v-align">
+                                        <div class="play-button">
+                                            <img src="assets/images/play_icon.png">
+                                        </div>
+                                        <div class="play-label overlay-label">Bechara Dil</div>
+                                        <div class="play-text overlay-text">
+                                            <p>Genre: Romance</p>
+                                        </div>
+    
+    
                                     </div>
-                                    <div class="play-label overlay-label">Bechara Dil</div>
-                                    <div class="play-text overlay-text">
-                                        <p>Genre: Romance</p>
-                                    </div>
-
-
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star rating-icon"></i> 6.3
                                 </div>
                             </div>
-                            <div class="rating">
-                                <i class="fas fa-star rating-icon"></i> 6.3
-                            </div>
-
-                        </div>
-                        <div class="card-body">
-                            <div class="tile-icon">
-                                <i class="material-icons icon outlined">play_arrow</i>
-                            </div>
-                            <div class="tile-label">
-                                <h5 class="tile-title">
-                                    Ae Dil he Mushkil
-                                </h5>
-                                <p class="tile-text">Genre: Romance</p>
-                                <p class="tile-text"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="music-4">
-                        <div class="card">
-                            <img class="card-img" src="assets/images/recent4.png" alt="Card image cap">
-                            <div class="middle item-overlay">
-                                <div class="v-align">
-                                    <div class="play-button">
-                                        <img src="assets/images/play_icon.png">
-                                    </div>
-                                    <div class="play-label overlay-label">Bechara Dil</div>
-                                    <div class="play-text overlay-text">
-                                        <p>Genre: Romance</p>
-                                    </div>
-
-
+                            <div class="card-body">
+                                <div class="tile-icon">
+                                    <i class="material-icons icon outlined">play_arrow</i>
+                                </div>
+                                <div class="tile-label">
+                                    <h5 class="tile-title">
+                                        Ae Dil he Mushkil
+                                    </h5>
+                                    <p class="tile-text">Genre: Romance</p>
+                                    <p class="tile-text"></p>
                                 </div>
                             </div>
-                            <div class="rating">
-                                <i class="fas fa-star rating-icon"></i> 6.3
-                            </div>
-
                         </div>
-                        <div class="card-body">
-                            <div class="tile-icon">
-                                <i class="material-icons icon outlined">play_arrow</i>
-                            </div>
-                            <div class="tile-label">
-                                <h5 class="tile-title">
-                                    Ae Dil he Mushkil
-                                </h5>
-                                <p class="tile-text">Genre: Romance</p>
-                                <p class="tile-text"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="music-5">
-                        <div class="card">
-                            <img class="card-img" src="assets/images/recent5.png" alt="Card image cap">
-                            <div class="middle item-overlay">
-                                <div class="v-align">
-                                    <div class="play-button">
-                                        <img src="assets/images/play_icon.png">
+                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6  tile" onclick="clicked(event)" id="music-3">
+                            <div class="card">
+                                <img class="card-img" src="assets/images/recent3.png" alt="Card image cap">
+                                <div class="middle item-overlay">
+                                    <div class="v-align">
+                                        <div class="play-button">
+                                            <img src="assets/images/play_icon.png">
+                                        </div>
+                                        <div class="play-label overlay-label">Bechara Dil</div>
+                                        <div class="play-text overlay-text">
+                                            <p>Genre: Romance</p>
+                                        </div>
+    
+    
                                     </div>
-                                    <div class="play-label overlay-label">Bechara Dil</div>
-                                    <div class="play-text overlay-text">
-                                        <p>Genre: Romance</p>
-                                    </div>
-
-
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star rating-icon"></i> 6.3
+                                </div>
+    
+                            </div>
+                            <div class="card-body">
+                                <div class="tile-icon">
+                                    <i class="material-icons icon outlined">play_arrow</i>
+                                </div>
+                                <div class="tile-label">
+                                    <h5 class="tile-title">
+                                        Ae Dil he Mushkil
+                                    </h5>
+                                    <p class="tile-text">Genre: Romance</p>
+                                    <p class="tile-text"></p>
                                 </div>
                             </div>
-                            <div class="rating">
-                                <i class="fas fa-star rating-icon"></i> 6.3
-                            </div>
                         </div>
-                        <div class="card-body">
-                            <div class="tile-icon">
-                                <i class="material-icons icon outlined">play_arrow</i>
-                            </div>
-                            <div class="tile-label">
-                                <h5 class="tile-title">
-                                    Ae Dil he Mushkil
-                                </h5>
-                                <p class="tile-text">Genre: Romance</p>
-                                <p class="tile-text"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="music-6">
-                        <div class="card">
-                            <img class="card-img" src="assets/images/recent6.png" alt="Card image cap">
-                            <div class="middle item-overlay">
-                                <div class="v-align">
-                                    <div class="play-button">
-                                        <img src="assets/images/play_icon.png">
+                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="music-4">
+                            <div class="card">
+                                <img class="card-img" src="assets/images/recent4.png" alt="Card image cap">
+                                <div class="middle item-overlay">
+                                    <div class="v-align">
+                                        <div class="play-button">
+                                            <img src="assets/images/play_icon.png">
+                                        </div>
+                                        <div class="play-label overlay-label">Bechara Dil</div>
+                                        <div class="play-text overlay-text">
+                                            <p>Genre: Romance</p>
+                                        </div>
+    
+    
                                     </div>
-                                    <div class="play-label overlay-label">Bechara Dil</div>
-                                    <div class="play-text overlay-text">
-                                        <p>Genre: Romance</p>
-                                    </div>
-
-
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star rating-icon"></i> 6.3
+                                </div>
+    
+                            </div>
+                            <div class="card-body">
+                                <div class="tile-icon">
+                                    <i class="material-icons icon outlined">play_arrow</i>
+                                </div>
+                                <div class="tile-label">
+                                    <h5 class="tile-title">
+                                        Ae Dil he Mushkil
+                                    </h5>
+                                    <p class="tile-text">Genre: Romance</p>
+                                    <p class="tile-text"></p>
                                 </div>
                             </div>
-                            <div class="rating">
-                                <i class="fas fa-star rating-icon"></i> 6.3
-                            </div>
                         </div>
-                        <div class="card-body">
-                            <div class="tile-icon">
-                                <i class="material-icons icon outlined">play_arrow</i>
-                            </div>
-                            <div class="tile-label">
-                                <h5 class="tile-title">
-                                    Ae Dil he Mushkil
-                                </h5>
-                                <p class="tile-text">Genre: Romance</p>
-                                <p class="tile-text">2 Tracks</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="music-7">
-                        <div class="card">
-                            <img class="card-img" src="assets/images/recent1.png" alt="Card image cap">
-                            <div class="middle item-overlay">
-                                <div class="v-align">
-                                    <div class="play-button">
-                                        <img src="assets/images/play_icon.png">
+                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="music-5">
+                            <div class="card">
+                                <img class="card-img" src="assets/images/recent5.png" alt="Card image cap">
+                                <div class="middle item-overlay">
+                                    <div class="v-align">
+                                        <div class="play-button">
+                                            <img src="assets/images/play_icon.png">
+                                        </div>
+                                        <div class="play-label overlay-label">Bechara Dil</div>
+                                        <div class="play-text overlay-text">
+                                            <p>Genre: Romance</p>
+                                        </div>
+    
+    
                                     </div>
-                                    <div class="play-label overlay-label">Bechara Dil</div>
-                                    <div class="play-text overlay-text">
-                                        <p>Genre: Romance</p>
-                                    </div>
-
-
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star rating-icon"></i> 6.3
                                 </div>
                             </div>
-                            <div class="rating">
-                                <i class="fas fa-star rating-icon"></i> 6.3
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="tile-icon">
-                                <i class="material-icons icon outlined">play_arrow</i>
-                            </div>
-                            <div class="tile-label">
-                                <h5 class="tile-title">
-                                    Ae Dil he Mushkil
-                                </h5>
-                                <p class="tile-text">Genre: Romance</p>
-                                <p class="tile-text"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="music-8">
-                        <div class="card">
-                            <img class="card-img" src="assets/images/recent2.png" alt="Card image cap">
-                            <div class="middle item-overlay">
-                                <div class="v-align">
-                                    <div class="play-button">
-                                        <img src="assets/images/play_icon.png">
-                                    </div>
-                                    <div class="play-label overlay-label">Bechara Dil</div>
-                                    <div class="play-text overlay-text">
-                                        <p>Genre: Romance</p>
-                                    </div>
-
-
+                            <div class="card-body">
+                                <div class="tile-icon">
+                                    <i class="material-icons icon outlined">play_arrow</i>
+                                </div>
+                                <div class="tile-label">
+                                    <h5 class="tile-title">
+                                        Ae Dil he Mushkil
+                                    </h5>
+                                    <p class="tile-text">Genre: Romance</p>
+                                    <p class="tile-text"></p>
                                 </div>
                             </div>
-                            <div class="rating">
-                                <i class="fas fa-star rating-icon"></i> 6.3
-                            </div>
                         </div>
-                        <div class="card-body">
-                            <div class="tile-icon">
-                                <i class="material-icons icon outlined">play_arrow</i>
-                            </div>
-                            <div class="tile-label">
-                                <h5 class="tile-title">
-                                    Ae Dil he Mushkil
-                                </h5>
-                                <p class="tile-text">Genre: Romance</p>
-                                <p class="tile-text"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6  tile" onclick="clicked(event)" id="music-9">
-                        <div class="card">
-                            <img class="card-img" src="assets/images/recent3.png" alt="Card image cap">
-                            <div class="middle item-overlay">
-                                <div class="v-align">
-                                    <div class="play-button">
-                                        <img src="assets/images/play_icon.png">
+                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="music-6">
+                            <div class="card">
+                                <img class="card-img" src="assets/images/recent6.png" alt="Card image cap">
+                                <div class="middle item-overlay">
+                                    <div class="v-align">
+                                        <div class="play-button">
+                                            <img src="assets/images/play_icon.png">
+                                        </div>
+                                        <div class="play-label overlay-label">Bechara Dil</div>
+                                        <div class="play-text overlay-text">
+                                            <p>Genre: Romance</p>
+                                        </div>
+    
+    
                                     </div>
-                                    <div class="play-label overlay-label">Bechara Dil</div>
-                                    <div class="play-text overlay-text">
-                                        <p>Genre: Romance</p>
-                                    </div>
-
-
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star rating-icon"></i> 6.3
                                 </div>
                             </div>
-                            <div class="rating">
-                                <i class="fas fa-star rating-icon"></i> 6.3
-                            </div>
-
-                        </div>
-                        <div class="card-body">
-                            <div class="tile-icon">
-                                <i class="material-icons icon outlined">play_arrow</i>
-                            </div>
-                            <div class="tile-label">
-                                <h5 class="tile-title">
-                                    Ae Dil he Mushkil
-                                </h5>
-                                <p class="tile-text">Genre: Romance</p>
-                                <p class="tile-text"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="music-10">
-                        <div class="card">
-                            <img class="card-img" src="assets/images/recent4.png" alt="Card image cap">
-                            <div class="middle item-overlay">
-                                <div class="v-align">
-                                    <div class="play-button">
-                                        <img src="assets/images/play_icon.png">
-                                    </div>
-                                    <div class="play-label overlay-label">Bechara Dil</div>
-                                    <div class="play-text overlay-text">
-                                        <p>Genre: Romance</p>
-                                    </div>
-
-
+                            <div class="card-body">
+                                <div class="tile-icon">
+                                    <i class="material-icons icon outlined">play_arrow</i>
+                                </div>
+                                <div class="tile-label">
+                                    <h5 class="tile-title">
+                                        Ae Dil he Mushkil
+                                    </h5>
+                                    <p class="tile-text">Genre: Romance</p>
+                                    <p class="tile-text">2 Tracks</p>
                                 </div>
                             </div>
-                            <div class="rating">
-                                <i class="fas fa-star rating-icon"></i> 6.3
-                            </div>
-
                         </div>
-                        <div class="card-body">
-                            <div class="tile-icon">
-                                <i class="material-icons icon outlined">play_arrow</i>
-                            </div>
-                            <div class="tile-label">
-                                <h5 class="tile-title">
-                                    Ae Dil he Mushkil
-                                </h5>
-                                <p class="tile-text">Genre: Romance</p>
-                                <p class="tile-text"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="music-11">
-                        <div class="card">
-                            <img class="card-img" src="assets/images/recent5.png" alt="Card image cap">
-                            <div class="middle item-overlay">
-                                <div class="v-align">
-                                    <div class="play-button">
-                                        <img src="assets/images/play_icon.png">
+    
+                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="music-7">
+                            <div class="card">
+                                <img class="card-img" src="assets/images/recent1.png" alt="Card image cap">
+                                <div class="middle item-overlay">
+                                    <div class="v-align">
+                                        <div class="play-button">
+                                            <img src="assets/images/play_icon.png">
+                                        </div>
+                                        <div class="play-label overlay-label">Bechara Dil</div>
+                                        <div class="play-text overlay-text">
+                                            <p>Genre: Romance</p>
+                                        </div>
+    
+    
                                     </div>
-                                    <div class="play-label overlay-label">Bechara Dil</div>
-                                    <div class="play-text overlay-text">
-                                        <p>Genre: Romance</p>
-                                    </div>
-
-
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star rating-icon"></i> 6.3
                                 </div>
                             </div>
-                            <div class="rating">
-                                <i class="fas fa-star rating-icon"></i> 6.3
+                            <div class="card-body">
+                                <div class="tile-icon">
+                                    <i class="material-icons icon outlined">play_arrow</i>
+                                </div>
+                                <div class="tile-label">
+                                    <h5 class="tile-title">
+                                        Ae Dil he Mushkil
+                                    </h5>
+                                    <p class="tile-text">Genre: Romance</p>
+                                    <p class="tile-text"></p>
+                                </div>
                             </div>
                         </div>
-                        <div class="card-body">
-                            <div class="tile-icon">
-                                <i class="material-icons icon outlined">play_arrow</i>
+                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="music-8">
+                            <div class="card">
+                                <img class="card-img" src="assets/images/recent2.png" alt="Card image cap">
+                                <div class="middle item-overlay">
+                                    <div class="v-align">
+                                        <div class="play-button">
+                                            <img src="assets/images/play_icon.png">
+                                        </div>
+                                        <div class="play-label overlay-label">Bechara Dil</div>
+                                        <div class="play-text overlay-text">
+                                            <p>Genre: Romance</p>
+                                        </div>
+    
+    
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star rating-icon"></i> 6.3
+                                </div>
                             </div>
-                            <div class="tile-label">
-                                <h5 class="tile-title">
-                                    Ae Dil he Mushkil
-                                </h5>
-                                <p class="tile-text">Genre: Romance</p>
-                                <p class="tile-text"></p>
+                            <div class="card-body">
+                                <div class="tile-icon">
+                                    <i class="material-icons icon outlined">play_arrow</i>
+                                </div>
+                                <div class="tile-label">
+                                    <h5 class="tile-title">
+                                        Ae Dil he Mushkil
+                                    </h5>
+                                    <p class="tile-text">Genre: Romance</p>
+                                    <p class="tile-text"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6  tile" onclick="clicked(event)" id="music-9">
+                            <div class="card">
+                                <img class="card-img" src="assets/images/recent3.png" alt="Card image cap">
+                                <div class="middle item-overlay">
+                                    <div class="v-align">
+                                        <div class="play-button">
+                                            <img src="assets/images/play_icon.png">
+                                        </div>
+                                        <div class="play-label overlay-label">Bechara Dil</div>
+                                        <div class="play-text overlay-text">
+                                            <p>Genre: Romance</p>
+                                        </div>
+    
+    
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star rating-icon"></i> 6.3
+                                </div>
+    
+                            </div>
+                            <div class="card-body">
+                                <div class="tile-icon">
+                                    <i class="material-icons icon outlined">play_arrow</i>
+                                </div>
+                                <div class="tile-label">
+                                    <h5 class="tile-title">
+                                        Ae Dil he Mushkil
+                                    </h5>
+                                    <p class="tile-text">Genre: Romance</p>
+                                    <p class="tile-text"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="music-10">
+                            <div class="card">
+                                <img class="card-img" src="assets/images/recent4.png" alt="Card image cap">
+                                <div class="middle item-overlay">
+                                    <div class="v-align">
+                                        <div class="play-button">
+                                            <img src="assets/images/play_icon.png">
+                                        </div>
+                                        <div class="play-label overlay-label">Bechara Dil</div>
+                                        <div class="play-text overlay-text">
+                                            <p>Genre: Romance</p>
+                                        </div>
+    
+    
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star rating-icon"></i> 6.3
+                                </div>
+    
+                            </div>
+                            <div class="card-body">
+                                <div class="tile-icon">
+                                    <i class="material-icons icon outlined">play_arrow</i>
+                                </div>
+                                <div class="tile-label">
+                                    <h5 class="tile-title">
+                                        Ae Dil he Mushkil
+                                    </h5>
+                                    <p class="tile-text">Genre: Romance</p>
+                                    <p class="tile-text"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 tile" onclick="clicked(event)" id="music-11">
+                            <div class="card">
+                                <img class="card-img" src="assets/images/recent5.png" alt="Card image cap">
+                                <div class="middle item-overlay">
+                                    <div class="v-align">
+                                        <div class="play-button">
+                                            <img src="assets/images/play_icon.png">
+                                        </div>
+                                        <div class="play-label overlay-label">Bechara Dil</div>
+                                        <div class="play-text overlay-text">
+                                            <p>Genre: Romance</p>
+                                        </div>
+    
+    
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star rating-icon"></i> 6.3
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="tile-icon">
+                                    <i class="material-icons icon outlined">play_arrow</i>
+                                </div>
+                                <div class="tile-label">
+                                    <h5 class="tile-title">
+                                        Ae Dil he Mushkil
+                                    </h5>
+                                    <p class="tile-text">Genre: Romance</p>
+                                    <p class="tile-text"></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </article>
+                </section>
+            </article>
 
     </div>
 

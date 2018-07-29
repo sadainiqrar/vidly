@@ -110,7 +110,6 @@ body{
 }
 
 button{
-    display: -webkit-inline-box !important;
 
 }
 button, input[type="dropdown"], input[type="button"], input[type="text"], select{
@@ -150,10 +149,11 @@ button, input[type="dropdown"], input[type="button"], input[type="text"], select
 .card-img, .card-img-top{
     width: 100%;
     opacity: 1;
-    height: 196px;
+    height: auto;
     display: block;
     transition: .5s ease;
 }
+/*
 @media(min-width: 550px) and (max-width: 991px){
     .card-img, .card-img-top{
         height: 300px;
@@ -201,6 +201,8 @@ button, input[type="dropdown"], input[type="button"], input[type="text"], select
     }
 }
 
+*/
+
 .slider-action{
     
     background: transparent !important;
@@ -209,7 +211,6 @@ button, input[type="dropdown"], input[type="button"], input[type="text"], select
     padding: 4px 20px !important;
     margin-right: 20px;
     margin-top: 20px;
-    margin-left: 10px;
     border-radius: 20px !important;
     font-size: 12px !important;
 
@@ -1078,13 +1079,13 @@ button, input[type="dropdown"], input[type="button"], input[type="text"], select
         
      font-family: 'lato-light';
         color: rgba(0, 0, 0, 0.801);
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 500;
         cursor: pointer;
     }
     .footer-support a:hover{
         color: #000;        
-        font-size: 13px;
+        font-size: 15px;
         text-decoration: transparent;
     }
     .footer-social a i{
@@ -1134,8 +1135,8 @@ button, input[type="dropdown"], input[type="button"], input[type="text"], select
         font-family: 'lato-regular';
         cursor: pointer;
         color: #fff;
-        border-color: rgb(25,188,152) ;
-        padding: 4px 20px ;
+        border-color: rgb(25,188,152);
+        padding: 4px 25px 4px 16px;
         border-radius: 20px;
        }
        .dropdown-select:hover{
@@ -1865,7 +1866,20 @@ button, input[type="dropdown"], input[type="button"], input[type="text"], select
     font-size: 10pt;
     font-family: 'lato-light'
 }
+.season-table tbody tr:hover td{
+    background: rgb(25,188,152);
+    color: #000;
+}
+.season-table tbody tr:hover td .continue-text{
+    color: #000 !important;
+}
+.season-table tbody tr:hover td .fav, .season-table tbody tr:hover td .add{
+    -webkit-text-stroke-color: #000;
+}
 
+.season-table tbody tr:hover td .icon{
+    color: #000;
+}
 .signin-text{
     padding: 40px 80px
 }

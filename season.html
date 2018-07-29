@@ -57,6 +57,25 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
+
+                        <li class="mobile">
+                            <a>
+                                <div>
+                                    <input id="mobile-searchInput" type="text" class="form-control search-field" name="search" placeholder="Search" onkeypress="enterPressed(event);">
+
+                                    <i id="mobile-search-submit" class="material-icons icon search-btn" style="cursor: pointer;" onclick="submitSearch()">search</i>
+                                </div>
+                            </a>
+                            <br>
+                        </li>
+                        <li class="profile mobile">
+                            <a href="profile.html">
+                                <image src="assets/images/profile.png" />
+                                <p class="pull-down">
+                                    Profile
+                                </p>
+                            </a>
+                        </li>
                         <li>
                             <a href="movies.html">
                                 <img src="assets/images/movie-logo.png" class="menu-icon">
@@ -77,19 +96,23 @@
                                 <img src="assets/images/season-logo.png" class="menu-icon">
                             </a>
                         </li>
-                        <li>
-                            <a href="#contact">
+                        <li class="default">
+                            <a>
+                                <div id="search" class="hide">
+                                    <input id="searchInput" type="text" class="form-control search-field" name="search" placeholder="Search" onkeypress="enterPressed(event);">
 
-                                <i class="material-icons icon">search</i>
+                                    <i id="search-submit" class="material-icons icon search-btn" style="cursor: pointer;" onclick="submitSearch()">search</i>
+                                </div>
+                                <i id="search-toggle" class="material-icons icon make-visible" style="cursor: pointer;" onclick="toggleSearch()">search</i>
                             </a>
                         </li>
                         <li class="sign-in">
-                            <button type="button" class="btn-subscribe btn btn-primary ">Subscribe</button>
+                            <button type="button" class="btn-subscribe btn btn-primary " onclick="window.location.href='signup.html'">Subscribe</button>
                         </li>
-                        <li class="dropdown profile">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <li class="dropdown profile default">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="">
                                 <image src="assets/images/profile.png" />
-                                <i class="material-icons pull-down">
+                                <i class="material-icons">
                                     expand_more
                                 </i>
                             </a>
@@ -102,6 +125,9 @@
                                     <a href="index.html">Sign Out</a>
                                 </li>
                             </ul>
+                        </li>
+                        <li class="mobile signout">
+                            <a href="index.html">Sign Out</a>
                         </li>
 
 
@@ -167,28 +193,33 @@
 
 
 
-        <article class="content">
 
+        <article class="content">
             <div class="heading-container">
-                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 no-padding">
+                <div class="section-icon no-padding">
                     <img src="assets/images/season-logo.png" class="heading ">
                 </div>
-                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="padding-right: 0">
+                <div class="section-line">
 
                     <div class="wrap">
                         <div class="line">
                         </div>
                     </div>
                 </div>
+                <div class="no-padding action">
+
+                    <button onclick="window.location.href='season.html'">See&nbsp;More</button>
+                </div>
             </div>
             <section class="content-section">
                 <div class="row">
 
+
                     <div class="desc col-lg-12 col-md-12 col-sm-12 col-xs-12 hide" id="season">
-                        
+
                         <div class="desc-before" id="before-season"></div>
 
-                        <div class="description" id="description-content">
+                        <div class="description" id="description-content" style="background-color: #000">
                             <div class="pull-right quit" onclick="quit('season')">
                                 <i class="material-icons">
                                     close
@@ -196,22 +227,22 @@
                             </div>
                             <div class="desc-container" style="width: 100%; min-height: 80%; max-height: 80%">
                                 <div class="desc-content" style="width: 100%">
-                                <nav class="custom-nav">
-                                    <ul class="custom-tabs" id="custom-tabs">
-                                        <li class="active">
-                                            <a data-toggle="tab" href="#home">Season 1</a>
-                                        </li>
-                                        <li>
-                                            <a data-toggle="tab" href="#menu1">Season 2</a>
-                                        </li>
-                                        <li>
-                                            <a data-toggle="tab" href="#menu2">Season 3</a>
-                                        </li>
-                                        <li>
-                                            <a data-toggle="tab" href="#menu3">Season 4</a>
-                                        </li>
-                                    </ul>
-                                </nav>
+                                    <nav class="custom-nav">
+                                        <ul class="custom-tabs" id="custom-tabs">
+                                            <li class="active">
+                                                <a data-toggle="tab" href="#home">Season 1</a>
+                                            </li>
+                                            <li>
+                                                <a data-toggle="tab" href="#menu1">Season 2</a>
+                                            </li>
+                                            <li>
+                                                <a data-toggle="tab" href="#menu2">Season 3</a>
+                                            </li>
+                                            <li>
+                                                <a data-toggle="tab" href="#menu3">Season 4</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
 
 
                                     <div class="music-header">
@@ -228,7 +259,7 @@
                                             <div class="season-title">Strings: The Band</div>
                                             <div class="season-sub">1 hr 50 mins | 2,456 Views</div>
                                             <div class="movie-actions">
-                                                <button type="button" class="season-action btn btn-primary "  onclick="window.location.href='watchseason.html'">
+                                                <button type="button" class="season-action btn btn-primary " onclick="window.location.href='watchseason.html'">
                                                     <img class="music-action-icon" src="assets/images/play_icon.png">Play All</button>
                                                 <button type="button" class="season-action btn btn-primary ">
                                                     <img class="music-action-icon" src="assets/images/bookmark.png">Watch Trailer</button>

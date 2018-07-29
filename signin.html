@@ -51,12 +51,23 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="home.html">
                         <img src="assets/images/logo.png" class="logo">
                     </a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
+
+                        <li class="mobile">
+                            <a>
+                                <div>
+                                    <input id="mobile-searchInput" type="text" class="form-control search-field" name="search" placeholder="Search" onkeypress="enterPressed(event);">
+
+                                    <i id="mobile-search-submit" class="material-icons icon search-btn" style="cursor: pointer;" onclick="submitSearch()">search</i>
+                                </div>
+                            </a>
+                            <br>
+                        </li>
                         <li>
                             <a href="movies.html">
                                 <img src="assets/images/movie-logo.png" class="menu-icon">
@@ -77,10 +88,10 @@
                                 <img src="assets/images/season-logo.png" class="menu-icon">
                             </a>
                         </li>
-                        <li>
+                        <li class="default">
                             <a>
                                 <div id="search" class="hide">
-                                    <input id="searchInput" type="text" class="form-control search-field" name="search" placeholder="Search" onkeypress="enterPressed(event);" >
+                                    <input id="searchInput" type="text" class="form-control search-field" name="search" placeholder="Search" onkeypress="enterPressed(event);">
 
                                     <i id="search-submit" class="material-icons icon search-btn" style="cursor: pointer;" onclick="submitSearch()">search</i>
                                 </div>

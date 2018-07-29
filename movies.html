@@ -41,78 +41,104 @@
 <body>
 
     <header>
-            <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-                            aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="home.html">
-                            <img src="assets/images/logo.png" class="logo">
-                        </a>
-                    </div>
-                    <div id="navbar" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="active">
-                                <a href="movies.html">
-                                    <img src="assets/images/movie-logo.png" class="menu-icon">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="music.html">
-                                    <img src="assets/images/music-logo.png" class="menu-icon">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="video.html">
-                                    <img src="assets/images/video-logo.png" class="menu-icon">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="season.html">
-                                    <img src="assets/images/season-logo.png" class="menu-icon">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#contact">
-    
-                                    <i class="material-icons icon">search</i>
-                                </a>
-                            </li>
-                            <li class="sign-in">
-                                <button type="button" class="btn-subscribe btn btn-primary ">Subscribe</button>
-                            </li>
-                            <li class="dropdown profile">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                    <image src="assets/images/profile.png" />
-                                    <i class="material-icons pull-down">
-                                        expand_more
-                                    </i>
-                                </a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="profile.html">Profile</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a href="index.html">Sign Out</a>
-                                    </li>
-                                </ul>
-                            </li>
-    
-    
-    
-    
-                        </ul>
-    
-                    </div>
-                    <!--/.nav-collapse -->
+        <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="home.html">
+                        <img src="assets/images/logo.png" class="logo">
+                    </a>
                 </div>
-            </nav>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li class="mobile">
+                            <a>
+                                <div>
+                                    <input id="mobile-searchInput" type="text" class="form-control search-field" name="search" placeholder="Search" onkeypress="enterPressed(event);">
+
+                                    <i id="mobile-search-submit" class="material-icons icon search-btn" style="cursor: pointer;" onclick="submitSearch()">search</i>
+                                </div>
+                            </a>
+                            <br>
+                        </li>
+                        <li class="profile mobile">
+                            <a href="profile.html">
+                                <image src="assets/images/profile.png" />
+                                <p class="pull-down">
+                                    Profile
+                                </p>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="movies.html">
+                                <img src="assets/images/movie-logo.png" class="menu-icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="music.html">
+                                <img src="assets/images/music-logo.png" class="menu-icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="video.html">
+                                <img src="assets/images/video-logo.png" class="menu-icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="season.html">
+                                <img src="assets/images/season-logo.png" class="menu-icon">
+                            </a>
+                        </li>
+                        <li class="default">
+                            <a>
+                                <div id="search" class="hide">
+                                    <input id="searchInput" type="text" class="form-control search-field" name="search" placeholder="Search" onkeypress="enterPressed(event);">
+
+                                    <i id="search-submit" class="material-icons icon search-btn" style="cursor: pointer;" onclick="submitSearch()">search</i>
+                                </div>
+                                <i id="search-toggle" class="material-icons icon make-visible" style="cursor: pointer;" onclick="toggleSearch()">search</i>
+                            </a>
+                        </li>
+                        <li class="sign-in">
+                            <button type="button" class="btn-subscribe btn btn-primary " onclick="window.location.href='signup.html'">Subscribe</button>
+                        </li>
+                        <li class="dropdown profile default">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="">
+                                <image src="assets/images/profile.png" />
+                                <i class="material-icons">
+                                    expand_more
+                                </i>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="profile.html">Profile</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="index.html">Sign Out</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mobile signout">
+                            <a href="index.html">Sign Out</a>
+                        </li>
+
+
+
+
+                    </ul>
+
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
 
         <div class="container-fluid" style="padding: 0">
             <section class="banner-image" style="background-image: url(assets/images/movies-banner.png)">
@@ -168,24 +194,28 @@
 
 
         <article class="content">
-
             <div class="heading-container">
-                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 no-padding">
+                <div class="section-icon no-padding">
                     <img src="assets/images/movie-logo.png" class="heading ">
                 </div>
-                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11" style="padding-right: 0">
+                <div class="section-line">
 
                     <div class="wrap">
                         <div class="line">
                         </div>
                     </div>
                 </div>
+                <div class="no-padding action">
+                    <button onclick="window.location.href='movies.html'">See&nbsp;More</button>
+                </div>
             </div>
             <section class="content-section">
                 <div class="row">
                     <div class="desc col-lg-12 col-md-12 col-sm-12 col-xs-12 hide" id="movie">
                         <div class="desc-before" id="before-movie"></div>
-                        <div class="description" id="description-content" style="background: url(assets/images/movie-back.png)">
+                        <div class="description" id="description-content">
+
+                            <img src="assets/images/movie-back.png" class="background-overlay" />
                             <div class="pull-right quit" onclick="quit('movie')">
                                 <i class="material-icons">
                                     close
@@ -222,6 +252,7 @@
                                 </i>
                             </div>
                         </div>
+
                         <div class="desc-after" id="after-movie"></div>
                     </div>
 
