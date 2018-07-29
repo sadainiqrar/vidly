@@ -1617,6 +1617,7 @@ button, input[type="dropdown"], input[type="button"], input[type="text"], select
         box-shadow: none !important;
     }
     .search-field{
+        box-shadow: none !important;
         padding-left: 0px !important;
       padding-right: 30px !important;
         background: transparent !important;
